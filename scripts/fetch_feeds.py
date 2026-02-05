@@ -53,10 +53,26 @@ def parse_rss_2_0(root, url):
         description = item.find('description')
         pub_date = item.find('pubDate')
 
+        # 优先读取 content:encoded 字段（全文）
+        content_encoded = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
+
+        # 确定内容和是否为全文
+        if content_encoded is not None and content_encoded.text:
+            content = content_encoded.text
+            is_fulltext = True
+        elif description is not None and description.text:
+            content = description.text
+            is_fulltext = len(description.text) > 1000  # 超过1000字符认为是全文
+        else:
+            content = ''
+            is_fulltext = False
+
         items.append({
             'title': title.text if title is not None else 'No Title',
             'link': link.text if link is not None else '',
+            'content': content,
             'description': description.text if description is not None else '',
+            'is_fulltext': is_fulltext,
             'pub_date': pub_date.text if pub_date is not None else ''
         })
 
@@ -90,6 +106,11 @@ def parse_atom(root, url):
             link = entry.find('link')
         link_href = link.get('href') if link is not None else ''
 
+        # 优先读取 content 字段（全文）
+        content_elem = entry.find('atom:content', ns)
+        if content_elem is None:
+            content_elem = entry.find('content')
+
         summary = entry.find('atom:summary', ns)
         if summary is None:
             summary = entry.find('summary')
@@ -98,10 +119,23 @@ def parse_atom(root, url):
         if updated is None:
             updated = entry.find('updated')
 
+        # 确定内容和是否为全文
+        if content_elem is not None and content_elem.text:
+            content = content_elem.text
+            is_fulltext = True
+        elif summary is not None and summary.text:
+            content = summary.text
+            is_fulltext = len(summary.text) > 1000  # 超过1000字符认为是全文
+        else:
+            content = ''
+            is_fulltext = False
+
         items.append({
             'title': title.text if title is not None else 'No Title',
             'link': link_href,
+            'content': content,
             'description': summary.text if summary is not None else '',
+            'is_fulltext': is_fulltext,
             'pub_date': updated.text if updated is not None else ''
         })
 
@@ -165,10 +199,15 @@ if __name__ == "__main__":
 
                 # 去重检查
                 if url_hash not in processed_urls:
+                    # 使用完整内容，不再限制字符数
+                    content = item.get('content', item.get('description', ''))
+
                     article = {
                         'title': clean_html(item['title']),
                         'link': item['link'],
-                        'description': clean_html(item['description'])[:300],
+                        'content': content,  # 完整内容（可能包含 HTML）
+                        'description': clean_html(item.get('description', ''))[:500],  # 纯文本摘要，用于预览
+                        'is_fulltext': item.get('is_fulltext', False),
                         'source': result['feed_title'],
                         'pub_date': item['pub_date'],
                         'fetched_at': datetime.now().isoformat(),

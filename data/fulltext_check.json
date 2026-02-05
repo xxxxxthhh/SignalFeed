@@ -1,0 +1,174 @@
+[
+  {
+    "url": "https://minimaxir.com/index.xml",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 61,
+    "content_length": 49595,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://www.seangoedecke.com/rss.xml",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 0,
+    "content_length": 8874,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://www.troyhunt.com/rss/",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 262,
+    "content_length": 2935,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://jyn.dev/atom.xml",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 0,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://xeiaso.net/blog.rss",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 70,
+    "content_length": 343,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://www.abortretry.fail/feed",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 26,
+    "content_length": 151,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://jayd.ml/feed.xml",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 0,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://computer.rip/rss.xml",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 24596,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://entropicthoughts.com/feed.xml",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 0,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://www.downtowndougbrown.com/feed/",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 358,
+    "content_length": 15513,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://rachelbythebay.com/w/atom.xml",
+    "status": "error",
+    "error": "<urlopen error [Errno 101] Network is unreachable>"
+  },
+  {
+    "url": "https://micahflee.com/feed/",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 538,
+    "content_length": 8002,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://borretti.me/feed.xml",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 44,
+    "content_length": 13064,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://dfarq.homeip.net/feed/",
+    "status": "error",
+    "error": "not well-formed (invalid token): line 1, column 0"
+  },
+  {
+    "url": "https://herman.bearblog.dev/feed/",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 0,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://danieldelaney.net/feed",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 3526,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://worksonmymachine.substack.com/feed",
+    "has_content_encoded": true,
+    "has_full_content": false,
+    "description_length": 43,
+    "content_length": 71564,
+    "is_fulltext": true,
+    "status": "success"
+  },
+  {
+    "url": "https://idiallo.com/feed.rss",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 6514,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "http://www.aaronsw.com/2002/feeds/pgessays.rss",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 0,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  },
+  {
+    "url": "https://bernsteinbear.com/feed.xml",
+    "has_content_encoded": false,
+    "has_full_content": false,
+    "description_length": 344,
+    "content_length": 0,
+    "is_fulltext": false,
+    "status": "success"
+  }
+]
