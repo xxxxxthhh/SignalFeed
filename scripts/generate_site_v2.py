@@ -68,8 +68,8 @@ def generate_html(articles):
     # 按发布时间倒序排列（最新的在前）
     articles.sort(key=lambda x: parse_pub_date(x.get('pub_date', '')), reverse=True)
 
-    # 显示所有文章（不限制数量）
-    # articles = articles[:100]
+    # 收集所有作者（用于筛选）
+    sources = sorted(set(article.get('source', 'Unknown') for article in articles))
 
     html = """<!DOCTYPE html>
 <html lang="zh-CN">
@@ -89,11 +89,25 @@ def generate_html(articles):
 
     <main class="container">
         <div class="stats">
-            <span>📊 共 """ + str(len(articles)) + """ 篇文章</span>
+            <span id="article-count">📊 共 """ + str(len(articles)) + """ 篇文章</span>
             <span>🕐 最后更新: """ + datetime.now().strftime('%Y-%m-%d %H:%M') + """</span>
         </div>
 
-        <div class="articles">
+        <div class="filters">
+            <label for="source-filter">📝 按作者筛选：</label>
+            <select id="source-filter">
+                <option value="all">全部作者</option>
+"""
+
+    # 添加作者选项
+    for source in sources:
+        html += f"""                <option value="{source}">{source}</option>
+"""
+
+    html += """            </select>
+        </div>
+
+        <div class="articles" id="articles-container">
 """
 
     for i, article in enumerate(articles, 1):
@@ -110,7 +124,7 @@ def generate_html(articles):
         tags = ai_enhanced.get('tags', [])
 
         html += f"""
-            <article class="article-card">
+            <article class="article-card" data-source="{source}">
                 <div class="article-header">
                     <span class="article-number">{i}</span>
                     <div class="article-title-group">
@@ -178,6 +192,12 @@ def generate_html(articles):
 
     html += """
         </div>
+
+        <div class="pagination" id="pagination">
+            <button id="prev-page" class="page-btn">← 上一页</button>
+            <span id="page-info">第 1 页</span>
+            <button id="next-page" class="page-btn">下一页 →</button>
+        </div>
     </main>
 
     <footer>
@@ -186,6 +206,8 @@ def generate_html(articles):
             <p><a href="https://github.com/xxxxxthhh/SignalFeed" target="_blank">View on GitHub</a></p>
         </div>
     </footer>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
 """

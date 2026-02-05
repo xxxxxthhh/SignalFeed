@@ -16,13 +16,112 @@
 
     <main class="container">
         <div class="stats">
-            <span>📊 共 439 篇文章</span>
-            <span>🕐 最后更新: 2026-02-05 05:51</span>
+            <span id="article-count">📊 共 439 篇文章</span>
+            <span>🕐 最后更新: 2026-02-05 05:57</span>
         </div>
 
-        <div class="articles">
+        <div class="filters">
+            <label for="source-filter">📝 按作者筛选：</label>
+            <select id="source-filter">
+                <option value="all">全部作者</option>
+                <option value="
+<antirez>
+">
+<antirez>
+</option>
+                <option value="Abort Retry Fail">Abort Retry Fail</option>
+                <option value="Andrew Nesbitt">Andrew Nesbitt</option>
+                <option value="Anil Dash">Anil Dash</option>
+                <option value="Aresluna">Aresluna</option>
+                <option value="Armin Ronacher's Thoughts and Writings">Armin Ronacher's Thoughts and Writings</option>
+                <option value="Beej's Bit Bucket">Beej's Bit Bucket</option>
+                <option value="Bert Hubert's writings">Bert Hubert's writings</option>
+                <option value="Blog - Daniel Wirtz">Blog - Daniel Wirtz</option>
+                <option value="BogdanTheGeek's Blog">BogdanTheGeek's Blog</option>
+                <option value="Chad Nauseam Home">Chad Nauseam Home</option>
+                <option value="Chris's Wiki :: blog">Chris's Wiki :: blog</option>
+                <option value="Computer Things">Computer Things</option>
+                <option value="Construction Physics">Construction Physics</option>
+                <option value="DYNOMIGHT">DYNOMIGHT</option>
+                <option value="Daniel De Laney">Daniel De Laney</option>
+                <option value="Daniel Hooper">Daniel Hooper</option>
+                <option value="Daring Fireball">Daring Fireball</option>
+                <option value="Derek Thompson | The Atlantic">Derek Thompson | The Atlantic</option>
+                <option value="Downtown Doug Brown">Downtown Doug Brown</option>
+                <option value="Dr Paris Buttfield-Addison">Dr Paris Buttfield-Addison</option>
+                <option value="Dwarkesh Podcast">Dwarkesh Podcast</option>
+                <option value="Ed Zitron's Where's Your Ed At">Ed Zitron's Where's Your Ed At</option>
+                <option value="Eli Bendersky's website">Eli Bendersky's website</option>
+                <option value="Entropic Thoughts">Entropic Thoughts</option>
+                <option value="Eric Migicovsky's Blog RSS Feed">Eric Migicovsky's Blog RSS Feed</option>
+                <option value="Evan Hahn (dot com)">Evan Hahn (dot com)</option>
+                <option value="Experimental History">Experimental History</option>
+                <option value="Fabien Sanglard">Fabien Sanglard</option>
+                <option value="Fernando Borretti">Fernando Borretti</option>
+                <option value="Geoffrey Litt">Geoffrey Litt</option>
+                <option value="Giles' blog">Giles' blog</option>
+                <option value="Grant Slatton's Blog">Grant Slatton's Blog</option>
+                <option value="Gwern.net Newsletter">Gwern.net Newsletter</option>
+                <option value="Herman's blog">Herman's blog</option>
+                <option value="Hugo Tunius - Blog">Hugo Tunius - Blog</option>
+                <option value="IT Notes">IT Notes</option>
+                <option value="Jayden’s Blog">Jayden’s Blog</option>
+                <option value="Jeff Geerling">Jeff Geerling</option>
+                <option value="Jim Nielsen’s Blog">Jim Nielsen’s Blog</option>
+                <option value="John D. Cook">John D. Cook</option>
+                <option value="Ken Shirriff's blog">Ken Shirriff's blog</option>
+                <option value="Keygen Blog">Keygen Blog</option>
+                <option value="Krebs on Security">Krebs on Security</option>
+                <option value="Mahad Kalam">Mahad Kalam</option>
+                <option value="Marcus on AI">Marcus on AI</option>
+                <option value="Martin Alderson">Martin Alderson</option>
+                <option value="Matt Godbolt’s blog">Matt Godbolt’s blog</option>
+                <option value="Matthew Garrett">Matthew Garrett</option>
+                <option value="Maurycy's Blog">Maurycy's Blog</option>
+                <option value="Max Bernstein's Blog">Max Bernstein's Blog</option>
+                <option value="Max Woolf's Blog">Max Woolf's Blog</option>
+                <option value="Michael Stapelbergs Website">Michael Stapelbergs Website</option>
+                <option value="Miguel Grinberg's Blog">Miguel Grinberg's Blog</option>
+                <option value="Mitchell Hashimoto">Mitchell Hashimoto</option>
+                <option value="Old Vintage Computing Research">Old Vintage Computing Research</option>
+                <option value="Paul Graham: Essays">Paul Graham: Essays</option>
+                <option value="Philip Laine">Philip Laine</option>
+                <option value="Pluralistic: Daily links from Cory Doctorow">Pluralistic: Daily links from Cory Doctorow</option>
+                <option value="Rakhim's blog">Rakhim's blog</option>
+                <option value="Refactoring English">Refactoring English</option>
+                <option value="Simon Tatham's quasi-blog">Simon Tatham's quasi-blog</option>
+                <option value="Simon Willison's Weblog">Simon Willison's Weblog</option>
+                <option value="Simone Salis">Simone Salis</option>
+                <option value="Steve Blank">Steve Blank</option>
+                <option value="Susam Pal">Susam Pal</option>
+                <option value="Tedium: The Dull Side of the Internet.">Tedium: The Dull Side of the Internet.</option>
+                <option value="Terence Eden’s Blog">Terence Eden’s Blog</option>
+                <option value="Terrible Software">Terrible Software</option>
+                <option value="The Digital Antiquarian">The Digital Antiquarian</option>
+                <option value="The Old New Thing">The Old New Thing</option>
+                <option value="Tom Renner on My place to put things">Tom Renner on My place to put things</option>
+                <option value="Troy Hunt">Troy Hunt</option>
+                <option value="Westenberg.">Westenberg.</option>
+                <option value="Works on My Machine">Works on My Machine</option>
+                <option value="Xe Iaso's blog">Xe Iaso's blog</option>
+                <option value="computers are bad">computers are bad</option>
+                <option value="iDiallo.com">iDiallo.com</option>
+                <option value="lcamtuf’s thing">lcamtuf’s thing</option>
+                <option value="matduggan.com">matduggan.com</option>
+                <option value="matklad">matklad</option>
+                <option value="micahflee">micahflee</option>
+                <option value="overreacted — A blog by Dan Abramov">overreacted — A blog by Dan Abramov</option>
+                <option value="seangoedecke.com RSS feed">seangoedecke.com RSS feed</option>
+                <option value="skull's blog">skull's blog</option>
+                <option value="the singularity is nearer">the singularity is nearer</option>
+                <option value="the website of jyn">the website of jyn</option>
+                <option value="tim.sh">tim.sh</option>
+            </select>
+        </div>
 
-            <article class="article-card">
+        <div class="articles" id="articles-container">
+
+            <article class="article-card" data-source="Simon Willison's Weblog">
                 <div class="article-header">
                     <span class="article-number">1</span>
                     <div class="article-title-group">
@@ -39,7 +138,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Willison's Weblog">
                 <div class="article-header">
                     <span class="article-number">2</span>
                     <div class="article-title-group">
@@ -56,7 +155,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Marcus on AI">
                 <div class="article-header">
                     <span class="article-number">3</span>
                     <div class="article-title-group">
@@ -73,7 +172,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Pluralistic: Daily links from Cory Doctorow">
                 <div class="article-header">
                     <span class="article-number">4</span>
                     <div class="article-title-group">
@@ -90,7 +189,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Old New Thing">
                 <div class="article-header">
                     <span class="article-number">5</span>
                     <div class="article-title-group">
@@ -107,7 +206,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Old New Thing">
                 <div class="article-header">
                     <span class="article-number">6</span>
                     <div class="article-title-group">
@@ -124,7 +223,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Willison's Weblog">
                 <div class="article-header">
                     <span class="article-number">7</span>
                     <div class="article-title-group">
@@ -141,7 +240,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Computer Things">
                 <div class="article-header">
                     <span class="article-number">8</span>
                     <div class="article-title-group">
@@ -158,7 +257,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terence Eden’s Blog">
                 <div class="article-header">
                     <span class="article-number">9</span>
                     <div class="article-title-group">
@@ -175,7 +274,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="iDiallo.com">
                 <div class="article-header">
                     <span class="article-number">10</span>
                     <div class="article-title-group">
@@ -192,7 +291,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Miguel Grinberg's Blog">
                 <div class="article-header">
                     <span class="article-number">11</span>
                     <div class="article-title-group">
@@ -209,7 +308,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chris's Wiki :: blog">
                 <div class="article-header">
                     <span class="article-number">12</span>
                     <div class="article-title-group">
@@ -224,7 +323,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Troy Hunt">
                 <div class="article-header">
                     <span class="article-number">13</span>
                     <div class="article-title-group">
@@ -241,7 +340,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daring Fireball">
                 <div class="article-header">
                     <span class="article-number">14</span>
                     <div class="article-title-group">
@@ -256,7 +355,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daring Fireball">
                 <div class="article-header">
                     <span class="article-number">15</span>
                     <div class="article-title-group">
@@ -271,7 +370,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Xe Iaso's blog">
                 <div class="article-header">
                     <span class="article-number">16</span>
                     <div class="article-title-group">
@@ -288,7 +387,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Andrew Nesbitt">
                 <div class="article-header">
                     <span class="article-number">17</span>
                     <div class="article-title-group">
@@ -305,7 +404,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Willison's Weblog">
                 <div class="article-header">
                     <span class="article-number">18</span>
                     <div class="article-title-group">
@@ -322,7 +421,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chris's Wiki :: blog">
                 <div class="article-header">
                     <span class="article-number">19</span>
                     <div class="article-title-group">
@@ -337,7 +436,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Marcus on AI">
                 <div class="article-header">
                     <span class="article-number">20</span>
                     <div class="article-title-group">
@@ -354,7 +453,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jim Nielsen’s Blog">
                 <div class="article-header">
                     <span class="article-number">21</span>
                     <div class="article-title-group">
@@ -371,7 +470,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Experimental History">
                 <div class="article-header">
                     <span class="article-number">22</span>
                     <div class="article-title-group">
@@ -388,7 +487,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Old New Thing">
                 <div class="article-header">
                     <span class="article-number">23</span>
                     <div class="article-title-group">
@@ -405,7 +504,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Pluralistic: Daily links from Cory Doctorow">
                 <div class="article-header">
                     <span class="article-number">24</span>
                     <div class="article-title-group">
@@ -422,7 +521,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Steve Blank">
                 <div class="article-header">
                     <span class="article-number">25</span>
                     <div class="article-title-group">
@@ -439,7 +538,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="John D. Cook">
                 <div class="article-header">
                     <span class="article-number">26</span>
                     <div class="article-title-group">
@@ -456,7 +555,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terence Eden’s Blog">
                 <div class="article-header">
                     <span class="article-number">27</span>
                     <div class="article-title-group">
@@ -473,7 +572,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Willison's Weblog">
                 <div class="article-header">
                     <span class="article-number">28</span>
                     <div class="article-title-group">
@@ -490,7 +589,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Andrew Nesbitt">
                 <div class="article-header">
                     <span class="article-number">29</span>
                     <div class="article-title-group">
@@ -507,7 +606,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Entropic Thoughts">
                 <div class="article-header">
                     <span class="article-number">30</span>
                     <div class="article-title-group">
@@ -522,7 +621,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Westenberg.">
                 <div class="article-header">
                     <span class="article-number">31</span>
                     <div class="article-title-group">
@@ -539,7 +638,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="John D. Cook">
                 <div class="article-header">
                     <span class="article-number">32</span>
                     <div class="article-title-group">
@@ -556,7 +655,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Marcus on AI">
                 <div class="article-header">
                     <span class="article-number">33</span>
                     <div class="article-title-group">
@@ -573,7 +672,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Pluralistic: Daily links from Cory Doctorow">
                 <div class="article-header">
                     <span class="article-number">34</span>
                     <div class="article-title-group">
@@ -590,7 +689,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Old New Thing">
                 <div class="article-header">
                     <span class="article-number">35</span>
                     <div class="article-title-group">
@@ -607,7 +706,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terrible Software">
                 <div class="article-header">
                     <span class="article-number">36</span>
                     <div class="article-title-group">
@@ -624,7 +723,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terence Eden’s Blog">
                 <div class="article-header">
                     <span class="article-number">37</span>
                     <div class="article-title-group">
@@ -641,7 +740,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="iDiallo.com">
                 <div class="article-header">
                     <span class="article-number">38</span>
                     <div class="article-title-group">
@@ -658,7 +757,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Bert Hubert's writings">
                 <div class="article-header">
                     <span class="article-number">39</span>
                     <div class="article-title-group">
@@ -675,7 +774,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chris's Wiki :: blog">
                 <div class="article-header">
                     <span class="article-number">40</span>
                     <div class="article-title-group">
@@ -690,7 +789,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Marcus on AI">
                 <div class="article-header">
                     <span class="article-number">41</span>
                     <div class="article-title-group">
@@ -707,7 +806,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jim Nielsen’s Blog">
                 <div class="article-header">
                     <span class="article-number">42</span>
                     <div class="article-title-group">
@@ -724,7 +823,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terence Eden’s Blog">
                 <div class="article-header">
                     <span class="article-number">43</span>
                     <div class="article-title-group">
@@ -741,7 +840,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chris's Wiki :: blog">
                 <div class="article-header">
                     <span class="article-number">44</span>
                     <div class="article-title-group">
@@ -756,7 +855,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Martin Alderson">
                 <div class="article-header">
                     <span class="article-number">45</span>
                     <div class="article-title-group">
@@ -773,7 +872,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Grant Slatton's Blog">
                 <div class="article-header">
                     <span class="article-number">46</span>
                     <div class="article-title-group">
@@ -790,7 +889,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Construction Physics">
                 <div class="article-header">
                     <span class="article-number">47</span>
                     <div class="article-title-group">
@@ -807,7 +906,7 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terence Eden’s Blog">
                 <div class="article-header">
                     <span class="article-number">48</span>
                     <div class="article-title-group">
@@ -824,7 +923,9 @@
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="
+<antirez>
+">
                 <div class="article-header">
                     <span class="article-number">49</span>
                     <div class="article-title-group">
@@ -845,7 +946,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chris's Wiki :: blog">
                 <div class="article-header">
                     <span class="article-number">50</span>
                     <div class="article-title-group">
@@ -860,7 +961,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Westenberg.">
                 <div class="article-header">
                     <span class="article-number">51</span>
                     <div class="article-title-group">
@@ -877,7 +978,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="seangoedecke.com RSS feed">
                 <div class="article-header">
                     <span class="article-number">52</span>
                     <div class="article-title-group">
@@ -892,7 +993,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Armin Ronacher's Thoughts and Writings">
                 <div class="article-header">
                     <span class="article-number">53</span>
                     <div class="article-title-group">
@@ -907,7 +1008,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Evan Hahn (dot com)">
                 <div class="article-header">
                     <span class="article-number">54</span>
                     <div class="article-title-group">
@@ -924,7 +1025,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fernando Borretti">
                 <div class="article-header">
                     <span class="article-number">55</span>
                     <div class="article-title-group">
@@ -941,7 +1042,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="micahflee">
                 <div class="article-header">
                     <span class="article-number">56</span>
                     <div class="article-title-group">
@@ -958,7 +1059,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daring Fireball">
                 <div class="article-header">
                     <span class="article-number">57</span>
                     <div class="article-title-group">
@@ -973,7 +1074,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daring Fireball">
                 <div class="article-header">
                     <span class="article-number">58</span>
                     <div class="article-title-group">
@@ -988,7 +1089,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="John D. Cook">
                 <div class="article-header">
                     <span class="article-number">59</span>
                     <div class="article-title-group">
@@ -1005,7 +1106,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Digital Antiquarian">
                 <div class="article-header">
                     <span class="article-number">60</span>
                     <div class="article-title-group">
@@ -1022,7 +1123,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ed Zitron's Where's Your Ed At">
                 <div class="article-header">
                     <span class="article-number">61</span>
                     <div class="article-title-group">
@@ -1039,7 +1140,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="John D. Cook">
                 <div class="article-header">
                     <span class="article-number">62</span>
                     <div class="article-title-group">
@@ -1056,7 +1157,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Old New Thing">
                 <div class="article-header">
                     <span class="article-number">63</span>
                     <div class="article-title-group">
@@ -1073,7 +1174,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Pluralistic: Daily links from Cory Doctorow">
                 <div class="article-header">
                     <span class="article-number">64</span>
                     <div class="article-title-group">
@@ -1090,7 +1191,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="iDiallo.com">
                 <div class="article-header">
                     <span class="article-number">65</span>
                     <div class="article-title-group">
@@ -1107,7 +1208,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Andrew Nesbitt">
                 <div class="article-header">
                     <span class="article-number">66</span>
                     <div class="article-title-group">
@@ -1124,7 +1225,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daring Fireball">
                 <div class="article-header">
                     <span class="article-number">67</span>
                     <div class="article-title-group">
@@ -1139,7 +1240,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jeff Geerling">
                 <div class="article-header">
                     <span class="article-number">68</span>
                     <div class="article-title-group">
@@ -1156,7 +1257,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tedium: The Dull Side of the Internet.">
                 <div class="article-header">
                     <span class="article-number">69</span>
                     <div class="article-title-group">
@@ -1173,7 +1274,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Construction Physics">
                 <div class="article-header">
                     <span class="article-number">70</span>
                     <div class="article-title-group">
@@ -1190,7 +1291,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Pluralistic: Daily links from Cory Doctorow">
                 <div class="article-header">
                     <span class="article-number">71</span>
                     <div class="article-title-group">
@@ -1207,7 +1308,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Miguel Grinberg's Blog">
                 <div class="article-header">
                     <span class="article-number">72</span>
                     <div class="article-title-group">
@@ -1224,7 +1325,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Andrew Nesbitt">
                 <div class="article-header">
                     <span class="article-number">73</span>
                     <div class="article-title-group">
@@ -1241,7 +1342,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Entropic Thoughts">
                 <div class="article-header">
                     <span class="article-number">74</span>
                     <div class="article-title-group">
@@ -1256,7 +1357,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jim Nielsen’s Blog">
                 <div class="article-header">
                     <span class="article-number">75</span>
                     <div class="article-title-group">
@@ -1273,7 +1374,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Works on My Machine">
                 <div class="article-header">
                     <span class="article-number">76</span>
                     <div class="article-title-group">
@@ -1290,7 +1391,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="iDiallo.com">
                 <div class="article-header">
                     <span class="article-number">77</span>
                     <div class="article-title-group">
@@ -1307,7 +1408,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Andrew Nesbitt">
                 <div class="article-header">
                     <span class="article-number">78</span>
                     <div class="article-title-group">
@@ -1324,7 +1425,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="IT Notes">
                 <div class="article-header">
                     <span class="article-number">79</span>
                     <div class="article-title-group">
@@ -1341,7 +1442,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mahad Kalam">
                 <div class="article-header">
                     <span class="article-number">80</span>
                     <div class="article-title-group">
@@ -1358,7 +1459,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Experimental History">
                 <div class="article-header">
                     <span class="article-number">81</span>
                     <div class="article-title-group">
@@ -1375,7 +1476,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Troy Hunt">
                 <div class="article-header">
                     <span class="article-number">82</span>
                     <div class="article-title-group">
@@ -1392,7 +1493,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Westenberg.">
                 <div class="article-header">
                     <span class="article-number">83</span>
                     <div class="article-title-group">
@@ -1409,7 +1510,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Xe Iaso's blog">
                 <div class="article-header">
                     <span class="article-number">84</span>
                     <div class="article-title-group">
@@ -1424,7 +1525,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Armin Ronacher's Thoughts and Writings">
                 <div class="article-header">
                     <span class="article-number">85</span>
                     <div class="article-title-group">
@@ -1439,7 +1540,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matklad">
                 <div class="article-header">
                     <span class="article-number">86</span>
                     <div class="article-title-group">
@@ -1456,7 +1557,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Evan Hahn (dot com)">
                 <div class="article-header">
                     <span class="article-number">87</span>
                     <div class="article-title-group">
@@ -1473,7 +1574,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Susam Pal">
                 <div class="article-header">
                     <span class="article-number">88</span>
                     <div class="article-title-group">
@@ -1490,7 +1591,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="lcamtuf’s thing">
                 <div class="article-header">
                     <span class="article-number">89</span>
                     <div class="article-title-group">
@@ -1507,7 +1608,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jeff Geerling">
                 <div class="article-header">
                     <span class="article-number">90</span>
                     <div class="article-title-group">
@@ -1524,7 +1625,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Entropic Thoughts">
                 <div class="article-header">
                     <span class="article-number">91</span>
                     <div class="article-title-group">
@@ -1539,7 +1640,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jim Nielsen’s Blog">
                 <div class="article-header">
                     <span class="article-number">92</span>
                     <div class="article-title-group">
@@ -1556,7 +1657,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the singularity is nearer">
                 <div class="article-header">
                     <span class="article-number">93</span>
                     <div class="article-title-group">
@@ -1573,7 +1674,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="iDiallo.com">
                 <div class="article-header">
                     <span class="article-number">94</span>
                     <div class="article-title-group">
@@ -1590,7 +1691,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="seangoedecke.com RSS feed">
                 <div class="article-header">
                     <span class="article-number">95</span>
                     <div class="article-title-group">
@@ -1605,7 +1706,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the singularity is nearer">
                 <div class="article-header">
                     <span class="article-number">96</span>
                     <div class="article-title-group">
@@ -1622,7 +1723,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Old Vintage Computing Research">
                 <div class="article-header">
                     <span class="article-number">97</span>
                     <div class="article-title-group">
@@ -1637,7 +1738,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ken Shirriff's blog">
                 <div class="article-header">
                     <span class="article-number">98</span>
                     <div class="article-title-group">
@@ -1652,7 +1753,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eric Migicovsky's Blog RSS Feed">
                 <div class="article-header">
                     <span class="article-number">99</span>
                     <div class="article-title-group">
@@ -1669,7 +1770,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Martin Alderson">
                 <div class="article-header">
                     <span class="article-number">100</span>
                     <div class="article-title-group">
@@ -1686,7 +1787,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="computers are bad">
                 <div class="article-header">
                     <span class="article-number">101</span>
                     <div class="article-title-group">
@@ -1703,7 +1804,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Works on My Machine">
                 <div class="article-header">
                     <span class="article-number">102</span>
                     <div class="article-title-group">
@@ -1720,7 +1821,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="John D. Cook">
                 <div class="article-header">
                     <span class="article-number">103</span>
                     <div class="article-title-group">
@@ -1737,7 +1838,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the singularity is nearer">
                 <div class="article-header">
                     <span class="article-number">104</span>
                     <div class="article-title-group">
@@ -1754,7 +1855,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Construction Physics">
                 <div class="article-header">
                     <span class="article-number">105</span>
                     <div class="article-title-group">
@@ -1771,7 +1872,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="seangoedecke.com RSS feed">
                 <div class="article-header">
                     <span class="article-number">106</span>
                     <div class="article-title-group">
@@ -1786,7 +1887,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ed Zitron's Where's Your Ed At">
                 <div class="article-header">
                     <span class="article-number">107</span>
                     <div class="article-title-group">
@@ -1801,7 +1902,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Derek Thompson | The Atlantic">
                 <div class="article-header">
                     <span class="article-number">108</span>
                     <div class="article-title-group">
@@ -1818,7 +1919,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Digital Antiquarian">
                 <div class="article-header">
                     <span class="article-number">109</span>
                     <div class="article-title-group">
@@ -1835,7 +1936,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Marcus on AI">
                 <div class="article-header">
                     <span class="article-number">110</span>
                     <div class="article-title-group">
@@ -1852,7 +1953,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tedium: The Dull Side of the Internet.">
                 <div class="article-header">
                     <span class="article-number">111</span>
                     <div class="article-title-group">
@@ -1869,7 +1970,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Maurycy's Blog">
                 <div class="article-header">
                     <span class="article-number">112</span>
                     <div class="article-title-group">
@@ -1886,7 +1987,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matklad">
                 <div class="article-header">
                     <span class="article-number">113</span>
                     <div class="article-title-group">
@@ -1903,7 +2004,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jim Nielsen’s Blog">
                 <div class="article-header">
                     <span class="article-number">114</span>
                     <div class="article-title-group">
@@ -1920,7 +2021,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terrible Software">
                 <div class="article-header">
                     <span class="article-number">115</span>
                     <div class="article-title-group">
@@ -1937,7 +2038,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Construction Physics">
                 <div class="article-header">
                     <span class="article-number">116</span>
                     <div class="article-title-group">
@@ -1954,7 +2055,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="DYNOMIGHT">
                 <div class="article-header">
                     <span class="article-number">117</span>
                     <div class="article-title-group">
@@ -1971,7 +2072,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the website of jyn">
                 <div class="article-header">
                     <span class="article-number">118</span>
                     <div class="article-title-group">
@@ -1988,7 +2089,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Bernstein's Blog">
                 <div class="article-header">
                     <span class="article-number">119</span>
                     <div class="article-title-group">
@@ -2005,7 +2106,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Bert Hubert's writings">
                 <div class="article-header">
                     <span class="article-number">120</span>
                     <div class="article-title-group">
@@ -2022,7 +2123,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jeff Geerling">
                 <div class="article-header">
                     <span class="article-number">121</span>
                     <div class="article-title-group">
@@ -2039,7 +2140,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mitchell Hashimoto">
                 <div class="article-header">
                     <span class="article-number">122</span>
                     <div class="article-title-group">
@@ -2054,7 +2155,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Experimental History">
                 <div class="article-header">
                     <span class="article-number">123</span>
                     <div class="article-title-group">
@@ -2071,7 +2172,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Krebs on Security">
                 <div class="article-header">
                     <span class="article-number">124</span>
                     <div class="article-title-group">
@@ -2088,7 +2189,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Computer Things">
                 <div class="article-header">
                     <span class="article-number">125</span>
                     <div class="article-title-group">
@@ -2105,7 +2206,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Herman's blog">
                 <div class="article-header">
                     <span class="article-number">126</span>
                     <div class="article-title-group">
@@ -2122,7 +2223,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Westenberg.">
                 <div class="article-header">
                     <span class="article-number">127</span>
                     <div class="article-title-group">
@@ -2139,7 +2240,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Bert Hubert's writings">
                 <div class="article-header">
                     <span class="article-number">128</span>
                     <div class="article-title-group">
@@ -2156,7 +2257,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="seangoedecke.com RSS feed">
                 <div class="article-header">
                     <span class="article-number">129</span>
                     <div class="article-title-group">
@@ -2171,7 +2272,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matklad">
                 <div class="article-header">
                     <span class="article-number">130</span>
                     <div class="article-title-group">
@@ -2188,7 +2289,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Susam Pal">
                 <div class="article-header">
                     <span class="article-number">131</span>
                     <div class="article-title-group">
@@ -2205,7 +2306,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Entropic Thoughts">
                 <div class="article-header">
                     <span class="article-number">132</span>
                     <div class="article-title-group">
@@ -2220,7 +2321,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tedium: The Dull Side of the Internet.">
                 <div class="article-header">
                     <span class="article-number">133</span>
                     <div class="article-title-group">
@@ -2237,7 +2338,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Susam Pal">
                 <div class="article-header">
                     <span class="article-number">134</span>
                     <div class="article-title-group">
@@ -2254,7 +2355,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Martin Alderson">
                 <div class="article-header">
                     <span class="article-number">135</span>
                     <div class="article-title-group">
@@ -2271,7 +2372,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="lcamtuf’s thing">
                 <div class="article-header">
                     <span class="article-number">136</span>
                     <div class="article-title-group">
@@ -2288,7 +2389,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Troy Hunt">
                 <div class="article-header">
                     <span class="article-number">137</span>
                     <div class="article-title-group">
@@ -2305,7 +2406,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eli Bendersky's website">
                 <div class="article-header">
                     <span class="article-number">138</span>
                     <div class="article-title-group">
@@ -2322,7 +2423,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eli Bendersky's website">
                 <div class="article-header">
                     <span class="article-number">139</span>
                     <div class="article-title-group">
@@ -2339,7 +2440,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Armin Ronacher's Thoughts and Writings">
                 <div class="article-header">
                     <span class="article-number">140</span>
                     <div class="article-title-group">
@@ -2354,7 +2455,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="overreacted — A blog by Dan Abramov">
                 <div class="article-header">
                     <span class="article-number">141</span>
                     <div class="article-title-group">
@@ -2371,7 +2472,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Westenberg.">
                 <div class="article-header">
                     <span class="article-number">142</span>
                     <div class="article-title-group">
@@ -2388,7 +2489,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the singularity is nearer">
                 <div class="article-header">
                     <span class="article-number">143</span>
                     <div class="article-title-group">
@@ -2405,7 +2506,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Construction Physics">
                 <div class="article-header">
                     <span class="article-number">144</span>
                     <div class="article-title-group">
@@ -2422,7 +2523,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="seangoedecke.com RSS feed">
                 <div class="article-header">
                     <span class="article-number">145</span>
                     <div class="article-title-group">
@@ -2437,7 +2538,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mahad Kalam">
                 <div class="article-header">
                     <span class="article-number">146</span>
                     <div class="article-title-group">
@@ -2454,7 +2555,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Evan Hahn (dot com)">
                 <div class="article-header">
                     <span class="article-number">147</span>
                     <div class="article-title-group">
@@ -2471,7 +2572,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="computers are bad">
                 <div class="article-header">
                     <span class="article-number">148</span>
                     <div class="article-title-group">
@@ -2488,7 +2589,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ed Zitron's Where's Your Ed At">
                 <div class="article-header">
                     <span class="article-number">149</span>
                     <div class="article-title-group">
@@ -2505,7 +2606,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the singularity is nearer">
                 <div class="article-header">
                     <span class="article-number">150</span>
                     <div class="article-title-group">
@@ -2522,7 +2623,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Troy Hunt">
                 <div class="article-header">
                     <span class="article-number">151</span>
                     <div class="article-title-group">
@@ -2539,7 +2640,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Maurycy's Blog">
                 <div class="article-header">
                     <span class="article-number">152</span>
                     <div class="article-title-group">
@@ -2556,7 +2657,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Evan Hahn (dot com)">
                 <div class="article-header">
                     <span class="article-number">153</span>
                     <div class="article-title-group">
@@ -2573,7 +2674,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fabien Sanglard">
                 <div class="article-header">
                     <span class="article-number">154</span>
                     <div class="article-title-group">
@@ -2588,7 +2689,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dwarkesh Podcast">
                 <div class="article-header">
                     <span class="article-number">155</span>
                     <div class="article-title-group">
@@ -2605,7 +2706,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jeff Geerling">
                 <div class="article-header">
                     <span class="article-number">156</span>
                     <div class="article-title-group">
@@ -2622,7 +2723,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Xe Iaso's blog">
                 <div class="article-header">
                     <span class="article-number">157</span>
                     <div class="article-title-group">
@@ -2639,7 +2740,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Susam Pal">
                 <div class="article-header">
                     <span class="article-number">158</span>
                     <div class="article-title-group">
@@ -2656,7 +2757,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Entropic Thoughts">
                 <div class="article-header">
                     <span class="article-number">159</span>
                     <div class="article-title-group">
@@ -2671,7 +2772,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Computer Things">
                 <div class="article-header">
                     <span class="article-number">160</span>
                     <div class="article-title-group">
@@ -2688,7 +2789,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Krebs on Security">
                 <div class="article-header">
                     <span class="article-number">161</span>
                     <div class="article-title-group">
@@ -2705,7 +2806,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Maurycy's Blog">
                 <div class="article-header">
                     <span class="article-number">162</span>
                     <div class="article-title-group">
@@ -2722,7 +2823,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Armin Ronacher's Thoughts and Writings">
                 <div class="article-header">
                     <span class="article-number">163</span>
                     <div class="article-title-group">
@@ -2737,7 +2838,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fabien Sanglard">
                 <div class="article-header">
                     <span class="article-number">164</span>
                     <div class="article-title-group">
@@ -2752,7 +2853,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Troy Hunt">
                 <div class="article-header">
                     <span class="article-number">165</span>
                     <div class="article-title-group">
@@ -2769,7 +2870,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fabien Sanglard">
                 <div class="article-header">
                     <span class="article-number">166</span>
                     <div class="article-title-group">
@@ -2784,7 +2885,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tom Renner on My place to put things">
                 <div class="article-header">
                     <span class="article-number">167</span>
                     <div class="article-title-group">
@@ -2801,7 +2902,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tedium: The Dull Side of the Internet.">
                 <div class="article-header">
                     <span class="article-number">168</span>
                     <div class="article-title-group">
@@ -2818,7 +2919,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jeff Geerling">
                 <div class="article-header">
                     <span class="article-number">169</span>
                     <div class="article-title-group">
@@ -2835,7 +2936,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Abort Retry Fail">
                 <div class="article-header">
                     <span class="article-number">170</span>
                     <div class="article-title-group">
@@ -2852,7 +2953,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Susam Pal">
                 <div class="article-header">
                     <span class="article-number">171</span>
                     <div class="article-title-group">
@@ -2869,7 +2970,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fernando Borretti">
                 <div class="article-header">
                     <span class="article-number">172</span>
                     <div class="article-title-group">
@@ -2886,7 +2987,7 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fabien Sanglard">
                 <div class="article-header">
                     <span class="article-number">173</span>
                     <div class="article-title-group">
@@ -2901,7 +3002,9 @@ http://antirez.com/news/159
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="
+<antirez>
+">
                 <div class="article-header">
                     <span class="article-number">174</span>
                     <div class="article-title-group">
@@ -2922,7 +3025,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Xe Iaso's blog">
                 <div class="article-header">
                     <span class="article-number">175</span>
                     <div class="article-title-group">
@@ -2939,7 +3042,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dwarkesh Podcast">
                 <div class="article-header">
                     <span class="article-number">176</span>
                     <div class="article-title-group">
@@ -2956,7 +3059,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Bert Hubert's writings">
                 <div class="article-header">
                     <span class="article-number">177</span>
                     <div class="article-title-group">
@@ -2973,7 +3076,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="lcamtuf’s thing">
                 <div class="article-header">
                     <span class="article-number">178</span>
                     <div class="article-title-group">
@@ -2990,7 +3093,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mitchell Hashimoto">
                 <div class="article-header">
                     <span class="article-number">179</span>
                     <div class="article-title-group">
@@ -3005,7 +3108,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Martin Alderson">
                 <div class="article-header">
                     <span class="article-number">180</span>
                     <div class="article-title-group">
@@ -3022,7 +3125,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Maurycy's Blog">
                 <div class="article-header">
                     <span class="article-number">181</span>
                     <div class="article-title-group">
@@ -3039,7 +3142,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Krebs on Security">
                 <div class="article-header">
                     <span class="article-number">182</span>
                     <div class="article-title-group">
@@ -3056,7 +3159,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terrible Software">
                 <div class="article-header">
                     <span class="article-number">183</span>
                     <div class="article-title-group">
@@ -3073,7 +3176,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fabien Sanglard">
                 <div class="article-header">
                     <span class="article-number">184</span>
                     <div class="article-title-group">
@@ -3088,7 +3191,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Martin Alderson">
                 <div class="article-header">
                     <span class="article-number">185</span>
                     <div class="article-title-group">
@@ -3105,7 +3208,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Giles' blog">
                 <div class="article-header">
                     <span class="article-number">186</span>
                     <div class="article-title-group">
@@ -3122,7 +3225,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Bert Hubert's writings">
                 <div class="article-header">
                     <span class="article-number">187</span>
                     <div class="article-title-group">
@@ -3139,7 +3242,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel Hooper">
                 <div class="article-header">
                     <span class="article-number">188</span>
                     <div class="article-title-group">
@@ -3156,7 +3259,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Computer Things">
                 <div class="article-header">
                     <span class="article-number">189</span>
                     <div class="article-title-group">
@@ -3173,7 +3276,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Experimental History">
                 <div class="article-header">
                     <span class="article-number">190</span>
                     <div class="article-title-group">
@@ -3190,7 +3293,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Anil Dash">
                 <div class="article-header">
                     <span class="article-number">191</span>
                     <div class="article-title-group">
@@ -3205,7 +3308,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matthew Garrett">
                 <div class="article-header">
                     <span class="article-number">192</span>
                     <div class="article-title-group">
@@ -3222,7 +3325,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Aresluna">
                 <div class="article-header">
                     <span class="article-number">193</span>
                     <div class="article-title-group">
@@ -3237,7 +3340,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jayden’s Blog">
                 <div class="article-header">
                     <span class="article-number">194</span>
                     <div class="article-title-group">
@@ -3254,7 +3357,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terrible Software">
                 <div class="article-header">
                     <span class="article-number">195</span>
                     <div class="article-title-group">
@@ -3271,7 +3374,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fernando Borretti">
                 <div class="article-header">
                     <span class="article-number">196</span>
                     <div class="article-title-group">
@@ -3288,7 +3391,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Anil Dash">
                 <div class="article-header">
                     <span class="article-number">197</span>
                     <div class="article-title-group">
@@ -3303,7 +3406,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Maurycy's Blog">
                 <div class="article-header">
                     <span class="article-number">198</span>
                     <div class="article-title-group">
@@ -3320,7 +3423,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Evan Hahn (dot com)">
                 <div class="article-header">
                     <span class="article-number">199</span>
                     <div class="article-title-group">
@@ -3337,7 +3440,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eli Bendersky's website">
                 <div class="article-header">
                     <span class="article-number">200</span>
                     <div class="article-title-group">
@@ -3354,7 +3457,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tedium: The Dull Side of the Internet.">
                 <div class="article-header">
                     <span class="article-number">201</span>
                     <div class="article-title-group">
@@ -3371,7 +3474,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Digital Antiquarian">
                 <div class="article-header">
                     <span class="article-number">202</span>
                     <div class="article-title-group">
@@ -3388,7 +3491,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Krebs on Security">
                 <div class="article-header">
                     <span class="article-number">203</span>
                     <div class="article-title-group">
@@ -3405,7 +3508,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eric Migicovsky's Blog RSS Feed">
                 <div class="article-header">
                     <span class="article-number">204</span>
                     <div class="article-title-group">
@@ -3422,7 +3525,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Xe Iaso's blog">
                 <div class="article-header">
                     <span class="article-number">205</span>
                     <div class="article-title-group">
@@ -3439,7 +3542,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Refactoring English">
                 <div class="article-header">
                     <span class="article-number">206</span>
                     <div class="article-title-group">
@@ -3456,7 +3559,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Miguel Grinberg's Blog">
                 <div class="article-header">
                     <span class="article-number">207</span>
                     <div class="article-title-group">
@@ -3473,7 +3576,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matt Godbolt’s blog">
                 <div class="article-header">
                     <span class="article-number">208</span>
                     <div class="article-title-group">
@@ -3490,7 +3593,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Old Vintage Computing Research">
                 <div class="article-header">
                     <span class="article-number">209</span>
                     <div class="article-title-group">
@@ -3505,7 +3608,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Works on My Machine">
                 <div class="article-header">
                     <span class="article-number">210</span>
                     <div class="article-title-group">
@@ -3522,7 +3625,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ed Zitron's Where's Your Ed At">
                 <div class="article-header">
                     <span class="article-number">211</span>
                     <div class="article-title-group">
@@ -3539,7 +3642,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ken Shirriff's blog">
                 <div class="article-header">
                     <span class="article-number">212</span>
                     <div class="article-title-group">
@@ -3554,7 +3657,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eric Migicovsky's Blog RSS Feed">
                 <div class="article-header">
                     <span class="article-number">213</span>
                     <div class="article-title-group">
@@ -3571,7 +3674,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dwarkesh Podcast">
                 <div class="article-header">
                     <span class="article-number">214</span>
                     <div class="article-title-group">
@@ -3588,7 +3691,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Herman's blog">
                 <div class="article-header">
                     <span class="article-number">215</span>
                     <div class="article-title-group">
@@ -3605,7 +3708,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Downtown Doug Brown">
                 <div class="article-header">
                     <span class="article-number">216</span>
                     <div class="article-title-group">
@@ -3622,7 +3725,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matklad">
                 <div class="article-header">
                     <span class="article-number">217</span>
                     <div class="article-title-group">
@@ -3639,7 +3742,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Bernstein's Blog">
                 <div class="article-header">
                     <span class="article-number">218</span>
                     <div class="article-title-group">
@@ -3656,7 +3759,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Krebs on Security">
                 <div class="article-header">
                     <span class="article-number">219</span>
                     <div class="article-title-group">
@@ -3673,7 +3776,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ed Zitron's Where's Your Ed At">
                 <div class="article-header">
                     <span class="article-number">220</span>
                     <div class="article-title-group">
@@ -3690,7 +3793,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Terrible Software">
                 <div class="article-header">
                     <span class="article-number">221</span>
                     <div class="article-title-group">
@@ -3707,7 +3810,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matduggan.com">
                 <div class="article-header">
                     <span class="article-number">222</span>
                     <div class="article-title-group">
@@ -3724,7 +3827,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Old Vintage Computing Research">
                 <div class="article-header">
                     <span class="article-number">223</span>
                     <div class="article-title-group">
@@ -3739,7 +3842,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matklad">
                 <div class="article-header">
                     <span class="article-number">224</span>
                     <div class="article-title-group">
@@ -3756,7 +3859,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fernando Borretti">
                 <div class="article-header">
                     <span class="article-number">225</span>
                     <div class="article-title-group">
@@ -3773,7 +3876,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Fernando Borretti">
                 <div class="article-header">
                     <span class="article-number">226</span>
                     <div class="article-title-group">
@@ -3790,7 +3893,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="lcamtuf’s thing">
                 <div class="article-header">
                     <span class="article-number">227</span>
                     <div class="article-title-group">
@@ -3807,7 +3910,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the website of jyn">
                 <div class="article-header">
                     <span class="article-number">228</span>
                     <div class="article-title-group">
@@ -3824,7 +3927,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="computers are bad">
                 <div class="article-header">
                     <span class="article-number">229</span>
                     <div class="article-title-group">
@@ -3841,7 +3944,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matt Godbolt’s blog">
                 <div class="article-header">
                     <span class="article-number">230</span>
                     <div class="article-title-group">
@@ -3858,7 +3961,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Old Vintage Computing Research">
                 <div class="article-header">
                     <span class="article-number">231</span>
                     <div class="article-title-group">
@@ -3873,7 +3976,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matt Godbolt’s blog">
                 <div class="article-header">
                     <span class="article-number">232</span>
                     <div class="article-title-group">
@@ -3890,7 +3993,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Bernstein's Blog">
                 <div class="article-header">
                     <span class="article-number">233</span>
                     <div class="article-title-group">
@@ -3907,7 +4010,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Bernstein's Blog">
                 <div class="article-header">
                     <span class="article-number">234</span>
                     <div class="article-title-group">
@@ -3924,7 +4027,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dwarkesh Podcast">
                 <div class="article-header">
                     <span class="article-number">235</span>
                     <div class="article-title-group">
@@ -3939,7 +4042,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matt Godbolt’s blog">
                 <div class="article-header">
                     <span class="article-number">236</span>
                     <div class="article-title-group">
@@ -3956,7 +4059,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Armin Ronacher's Thoughts and Writings">
                 <div class="article-header">
                     <span class="article-number">237</span>
                     <div class="article-title-group">
@@ -3971,7 +4074,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Woolf's Blog">
                 <div class="article-header">
                     <span class="article-number">238</span>
                     <div class="article-title-group">
@@ -3988,7 +4091,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matt Godbolt’s blog">
                 <div class="article-header">
                     <span class="article-number">239</span>
                     <div class="article-title-group">
@@ -4005,7 +4108,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="IT Notes">
                 <div class="article-header">
                     <span class="article-number">240</span>
                     <div class="article-title-group">
@@ -4022,7 +4125,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="lcamtuf’s thing">
                 <div class="article-header">
                     <span class="article-number">241</span>
                     <div class="article-title-group">
@@ -4039,7 +4142,7 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Miguel Grinberg's Blog">
                 <div class="article-header">
                     <span class="article-number">242</span>
                     <div class="article-title-group">
@@ -4056,7 +4159,9 @@ http://antirez.com/news/158
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="
+<antirez>
+">
                 <div class="article-header">
                     <span class="article-number">243</span>
                     <div class="article-title-group">
@@ -4077,7 +4182,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dwarkesh Podcast">
                 <div class="article-header">
                     <span class="article-number">244</span>
                     <div class="article-title-group">
@@ -4094,7 +4199,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Digital Antiquarian">
                 <div class="article-header">
                     <span class="article-number">245</span>
                     <div class="article-title-group">
@@ -4111,7 +4216,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="overreacted — A blog by Dan Abramov">
                 <div class="article-header">
                     <span class="article-number">246</span>
                     <div class="article-title-group">
@@ -4128,7 +4233,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eli Bendersky's website">
                 <div class="article-header">
                     <span class="article-number">247</span>
                     <div class="article-title-group">
@@ -4145,7 +4250,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="DYNOMIGHT">
                 <div class="article-header">
                     <span class="article-number">248</span>
                     <div class="article-title-group">
@@ -4162,7 +4267,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matthew Garrett">
                 <div class="article-header">
                     <span class="article-number">249</span>
                     <div class="article-title-group">
@@ -4179,7 +4284,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Steve Blank">
                 <div class="article-header">
                     <span class="article-number">250</span>
                     <div class="article-title-group">
@@ -4196,7 +4301,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the website of jyn">
                 <div class="article-header">
                     <span class="article-number">251</span>
                     <div class="article-title-group">
@@ -4213,7 +4318,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Miguel Grinberg's Blog">
                 <div class="article-header">
                     <span class="article-number">252</span>
                     <div class="article-title-group">
@@ -4230,7 +4335,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Aresluna">
                 <div class="article-header">
                     <span class="article-number">253</span>
                     <div class="article-title-group">
@@ -4245,7 +4350,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mahad Kalam">
                 <div class="article-header">
                     <span class="article-number">254</span>
                     <div class="article-title-group">
@@ -4262,7 +4367,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matduggan.com">
                 <div class="article-header">
                     <span class="article-number">255</span>
                     <div class="article-title-group">
@@ -4279,7 +4384,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the website of jyn">
                 <div class="article-header">
                     <span class="article-number">256</span>
                     <div class="article-title-group">
@@ -4296,7 +4401,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Computer Things">
                 <div class="article-header">
                     <span class="article-number">257</span>
                     <div class="article-title-group">
@@ -4313,7 +4418,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ken Shirriff's blog">
                 <div class="article-header">
                     <span class="article-number">258</span>
                     <div class="article-title-group">
@@ -4328,7 +4433,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Experimental History">
                 <div class="article-header">
                     <span class="article-number">259</span>
                     <div class="article-title-group">
@@ -4345,7 +4450,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eric Migicovsky's Blog RSS Feed">
                 <div class="article-header">
                     <span class="article-number">260</span>
                     <div class="article-title-group">
@@ -4362,7 +4467,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tom Renner on My place to put things">
                 <div class="article-header">
                     <span class="article-number">261</span>
                     <div class="article-title-group">
@@ -4379,7 +4484,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Abort Retry Fail">
                 <div class="article-header">
                     <span class="article-number">262</span>
                     <div class="article-title-group">
@@ -4396,7 +4501,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Anil Dash">
                 <div class="article-header">
                     <span class="article-number">263</span>
                     <div class="article-title-group">
@@ -4411,7 +4516,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="computers are bad">
                 <div class="article-header">
                     <span class="article-number">264</span>
                     <div class="article-title-group">
@@ -4428,7 +4533,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Old Vintage Computing Research">
                 <div class="article-header">
                     <span class="article-number">265</span>
                     <div class="article-title-group">
@@ -4443,7 +4548,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="The Digital Antiquarian">
                 <div class="article-header">
                     <span class="article-number">266</span>
                     <div class="article-title-group">
@@ -4460,7 +4565,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="the website of jyn">
                 <div class="article-header">
                     <span class="article-number">267</span>
                     <div class="article-title-group">
@@ -4477,7 +4582,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Anil Dash">
                 <div class="article-header">
                     <span class="article-number">268</span>
                     <div class="article-title-group">
@@ -4492,7 +4597,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="tim.sh">
                 <div class="article-header">
                     <span class="article-number">269</span>
                     <div class="article-title-group">
@@ -4509,7 +4614,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="DYNOMIGHT">
                 <div class="article-header">
                     <span class="article-number">270</span>
                     <div class="article-title-group">
@@ -4526,7 +4631,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Herman's blog">
                 <div class="article-header">
                     <span class="article-number">271</span>
                     <div class="article-title-group">
@@ -4543,7 +4648,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mitchell Hashimoto">
                 <div class="article-header">
                     <span class="article-number">272</span>
                     <div class="article-title-group">
@@ -4558,7 +4663,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Giles' blog">
                 <div class="article-header">
                     <span class="article-number">273</span>
                     <div class="article-title-group">
@@ -4575,7 +4680,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matduggan.com">
                 <div class="article-header">
                     <span class="article-number">274</span>
                     <div class="article-title-group">
@@ -4592,7 +4697,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel De Laney">
                 <div class="article-header">
                     <span class="article-number">275</span>
                     <div class="article-title-group">
@@ -4609,7 +4714,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Anil Dash">
                 <div class="article-header">
                     <span class="article-number">276</span>
                     <div class="article-title-group">
@@ -4624,7 +4729,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="micahflee">
                 <div class="article-header">
                     <span class="article-number">277</span>
                     <div class="article-title-group">
@@ -4641,7 +4746,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="DYNOMIGHT">
                 <div class="article-header">
                     <span class="article-number">278</span>
                     <div class="article-title-group">
@@ -4658,7 +4763,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eli Bendersky's website">
                 <div class="article-header">
                     <span class="article-number">279</span>
                     <div class="article-title-group">
@@ -4675,7 +4780,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="IT Notes">
                 <div class="article-header">
                     <span class="article-number">280</span>
                     <div class="article-title-group">
@@ -4692,7 +4797,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Eric Migicovsky's Blog RSS Feed">
                 <div class="article-header">
                     <span class="article-number">281</span>
                     <div class="article-title-group">
@@ -4709,7 +4814,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ken Shirriff's blog">
                 <div class="article-header">
                     <span class="article-number">282</span>
                     <div class="article-title-group">
@@ -4724,7 +4829,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="computers are bad">
                 <div class="article-header">
                     <span class="article-number">283</span>
                     <div class="article-title-group">
@@ -4741,7 +4846,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="DYNOMIGHT">
                 <div class="article-header">
                     <span class="article-number">284</span>
                     <div class="article-title-group">
@@ -4758,7 +4863,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="IT Notes">
                 <div class="article-header">
                     <span class="article-number">285</span>
                     <div class="article-title-group">
@@ -4775,7 +4880,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Refactoring English">
                 <div class="article-header">
                     <span class="article-number">286</span>
                     <div class="article-title-group">
@@ -4792,7 +4897,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Rakhim's blog">
                 <div class="article-header">
                     <span class="article-number">287</span>
                     <div class="article-title-group">
@@ -4809,7 +4914,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Abort Retry Fail">
                 <div class="article-header">
                     <span class="article-number">288</span>
                     <div class="article-title-group">
@@ -4826,7 +4931,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Works on My Machine">
                 <div class="article-header">
                     <span class="article-number">289</span>
                     <div class="article-title-group">
@@ -4843,7 +4948,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="micahflee">
                 <div class="article-header">
                     <span class="article-number">290</span>
                     <div class="article-title-group">
@@ -4860,7 +4965,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Herman's blog">
                 <div class="article-header">
                     <span class="article-number">291</span>
                     <div class="article-title-group">
@@ -4877,7 +4982,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Woolf's Blog">
                 <div class="article-header">
                     <span class="article-number">292</span>
                     <div class="article-title-group">
@@ -4894,7 +4999,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Giles' blog">
                 <div class="article-header">
                     <span class="article-number">293</span>
                     <div class="article-title-group">
@@ -4911,7 +5016,7 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Steve Blank">
                 <div class="article-header">
                     <span class="article-number">294</span>
                     <div class="article-title-group">
@@ -4928,7 +5033,9 @@ http://antirez.com/news/157
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="
+<antirez>
+">
                 <div class="article-header">
                     <span class="article-number">295</span>
                     <div class="article-title-group">
@@ -4949,7 +5056,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="overreacted — A blog by Dan Abramov">
                 <div class="article-header">
                     <span class="article-number">296</span>
                     <div class="article-title-group">
@@ -4966,7 +5073,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Derek Thompson | The Atlantic">
                 <div class="article-header">
                     <span class="article-number">297</span>
                     <div class="article-title-group">
@@ -4983,7 +5090,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jayden’s Blog">
                 <div class="article-header">
                     <span class="article-number">298</span>
                     <div class="article-title-group">
@@ -5000,7 +5107,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Downtown Doug Brown">
                 <div class="article-header">
                     <span class="article-number">299</span>
                     <div class="article-title-group">
@@ -5017,7 +5124,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="IT Notes">
                 <div class="article-header">
                     <span class="article-number">300</span>
                     <div class="article-title-group">
@@ -5034,7 +5141,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Giles' blog">
                 <div class="article-header">
                     <span class="article-number">301</span>
                     <div class="article-title-group">
@@ -5051,7 +5158,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Giles' blog">
                 <div class="article-header">
                     <span class="article-number">302</span>
                     <div class="article-title-group">
@@ -5068,7 +5175,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Refactoring English">
                 <div class="article-header">
                     <span class="article-number">303</span>
                     <div class="article-title-group">
@@ -5085,7 +5192,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Abort Retry Fail">
                 <div class="article-header">
                     <span class="article-number">304</span>
                     <div class="article-title-group">
@@ -5102,7 +5209,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Works on My Machine">
                 <div class="article-header">
                     <span class="article-number">305</span>
                     <div class="article-title-group">
@@ -5119,7 +5226,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Steve Blank">
                 <div class="article-header">
                     <span class="article-number">306</span>
                     <div class="article-title-group">
@@ -5136,7 +5243,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel De Laney">
                 <div class="article-header">
                     <span class="article-number">307</span>
                     <div class="article-title-group">
@@ -5153,7 +5260,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Herman's blog">
                 <div class="article-header">
                     <span class="article-number">308</span>
                     <div class="article-title-group">
@@ -5170,7 +5277,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jayden’s Blog">
                 <div class="article-header">
                     <span class="article-number">309</span>
                     <div class="article-title-group">
@@ -5187,7 +5294,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="micahflee">
                 <div class="article-header">
                     <span class="article-number">310</span>
                     <div class="article-title-group">
@@ -5204,7 +5311,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simone Salis">
                 <div class="article-header">
                     <span class="article-number">311</span>
                     <div class="article-title-group">
@@ -5221,7 +5328,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="micahflee">
                 <div class="article-header">
                     <span class="article-number">312</span>
                     <div class="article-title-group">
@@ -5238,7 +5345,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Hugo Tunius - Blog">
                 <div class="article-header">
                     <span class="article-number">313</span>
                     <div class="article-title-group">
@@ -5255,7 +5362,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Geoffrey Litt">
                 <div class="article-header">
                     <span class="article-number">314</span>
                     <div class="article-title-group">
@@ -5272,7 +5379,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Beej's Bit Bucket">
                 <div class="article-header">
                     <span class="article-number">315</span>
                     <div class="article-title-group">
@@ -5289,7 +5396,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mahad Kalam">
                 <div class="article-header">
                     <span class="article-number">316</span>
                     <div class="article-title-group">
@@ -5306,7 +5413,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="overreacted — A blog by Dan Abramov">
                 <div class="article-header">
                     <span class="article-number">317</span>
                     <div class="article-title-group">
@@ -5323,7 +5430,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matthew Garrett">
                 <div class="article-header">
                     <span class="article-number">318</span>
                     <div class="article-title-group">
@@ -5340,7 +5447,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="BogdanTheGeek's Blog">
                 <div class="article-header">
                     <span class="article-number">319</span>
                     <div class="article-title-group">
@@ -5357,7 +5464,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Ken Shirriff's blog">
                 <div class="article-header">
                     <span class="article-number">320</span>
                     <div class="article-title-group">
@@ -5372,7 +5479,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tom Renner on My place to put things">
                 <div class="article-header">
                     <span class="article-number">321</span>
                     <div class="article-title-group">
@@ -5389,7 +5496,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Woolf's Blog">
                 <div class="article-header">
                     <span class="article-number">322</span>
                     <div class="article-title-group">
@@ -5406,7 +5513,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Beej's Bit Bucket">
                 <div class="article-header">
                     <span class="article-number">323</span>
                     <div class="article-title-group">
@@ -5423,7 +5530,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matduggan.com">
                 <div class="article-header">
                     <span class="article-number">324</span>
                     <div class="article-title-group">
@@ -5440,7 +5547,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Steve Blank">
                 <div class="article-header">
                     <span class="article-number">325</span>
                     <div class="article-title-group">
@@ -5457,7 +5564,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel Hooper">
                 <div class="article-header">
                     <span class="article-number">326</span>
                     <div class="article-title-group">
@@ -5474,7 +5581,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mitchell Hashimoto">
                 <div class="article-header">
                     <span class="article-number">327</span>
                     <div class="article-title-group">
@@ -5489,7 +5596,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Beej's Bit Bucket">
                 <div class="article-header">
                     <span class="article-number">328</span>
                     <div class="article-title-group">
@@ -5506,7 +5613,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Beej's Bit Bucket">
                 <div class="article-header">
                     <span class="article-number">329</span>
                     <div class="article-title-group">
@@ -5523,7 +5630,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="tim.sh">
                 <div class="article-header">
                     <span class="article-number">330</span>
                     <div class="article-title-group">
@@ -5540,7 +5647,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mitchell Hashimoto">
                 <div class="article-header">
                     <span class="article-number">331</span>
                     <div class="article-title-group">
@@ -5555,7 +5662,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="overreacted — A blog by Dan Abramov">
                 <div class="article-header">
                     <span class="article-number">332</span>
                     <div class="article-title-group">
@@ -5572,7 +5679,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Refactoring English">
                 <div class="article-header">
                     <span class="article-number">333</span>
                     <div class="article-title-group">
@@ -5589,7 +5696,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Abort Retry Fail">
                 <div class="article-header">
                     <span class="article-number">334</span>
                     <div class="article-title-group">
@@ -5606,7 +5713,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="matduggan.com">
                 <div class="article-header">
                     <span class="article-number">335</span>
                     <div class="article-title-group">
@@ -5623,7 +5730,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Rakhim's blog">
                 <div class="article-header">
                     <span class="article-number">336</span>
                     <div class="article-title-group">
@@ -5640,7 +5747,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matthew Garrett">
                 <div class="article-header">
                     <span class="article-number">337</span>
                     <div class="article-title-group">
@@ -5657,7 +5764,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="BogdanTheGeek's Blog">
                 <div class="article-header">
                     <span class="article-number">338</span>
                     <div class="article-title-group">
@@ -5674,7 +5781,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Mahad Kalam">
                 <div class="article-header">
                     <span class="article-number">339</span>
                     <div class="article-title-group">
@@ -5691,7 +5798,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Derek Thompson | The Atlantic">
                 <div class="article-header">
                     <span class="article-number">340</span>
                     <div class="article-title-group">
@@ -5708,7 +5815,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Rakhim's blog">
                 <div class="article-header">
                     <span class="article-number">341</span>
                     <div class="article-title-group">
@@ -5725,7 +5832,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="BogdanTheGeek's Blog">
                 <div class="article-header">
                     <span class="article-number">342</span>
                     <div class="article-title-group">
@@ -5742,7 +5849,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simone Salis">
                 <div class="article-header">
                     <span class="article-number">343</span>
                     <div class="article-title-group">
@@ -5759,7 +5866,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Refactoring English">
                 <div class="article-header">
                     <span class="article-number">344</span>
                     <div class="article-title-group">
@@ -5776,7 +5883,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Geoffrey Litt">
                 <div class="article-header">
                     <span class="article-number">345</span>
                     <div class="article-title-group">
@@ -5793,7 +5900,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Rakhim's blog">
                 <div class="article-header">
                     <span class="article-number">346</span>
                     <div class="article-title-group">
@@ -5810,7 +5917,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Tatham's quasi-blog">
                 <div class="article-header">
                     <span class="article-number">347</span>
                     <div class="article-title-group">
@@ -5827,7 +5934,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tom Renner on My place to put things">
                 <div class="article-header">
                     <span class="article-number">348</span>
                     <div class="article-title-group">
@@ -5844,7 +5951,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Aresluna">
                 <div class="article-header">
                     <span class="article-number">349</span>
                     <div class="article-title-group">
@@ -5859,7 +5966,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Hugo Tunius - Blog">
                 <div class="article-header">
                     <span class="article-number">350</span>
                     <div class="article-title-group">
@@ -5876,7 +5983,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Downtown Doug Brown">
                 <div class="article-header">
                     <span class="article-number">351</span>
                     <div class="article-title-group">
@@ -5893,7 +6000,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Aresluna">
                 <div class="article-header">
                     <span class="article-number">352</span>
                     <div class="article-title-group">
@@ -5908,7 +6015,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Aresluna">
                 <div class="article-header">
                     <span class="article-number">353</span>
                     <div class="article-title-group">
@@ -5923,7 +6030,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Tom Renner on My place to put things">
                 <div class="article-header">
                     <span class="article-number">354</span>
                     <div class="article-title-group">
@@ -5940,7 +6047,7 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Rakhim's blog">
                 <div class="article-header">
                     <span class="article-number">355</span>
                     <div class="article-title-group">
@@ -5957,7 +6064,9 @@ http://antirez.com/news/156
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="
+<antirez>
+">
                 <div class="article-header">
                     <span class="article-number">356</span>
                     <div class="article-title-group">
@@ -5978,7 +6087,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel Hooper">
                 <div class="article-header">
                     <span class="article-number">357</span>
                     <div class="article-title-group">
@@ -5995,7 +6104,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Woolf's Blog">
                 <div class="article-header">
                     <span class="article-number">358</span>
                     <div class="article-title-group">
@@ -6012,7 +6121,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Matthew Garrett">
                 <div class="article-header">
                     <span class="article-number">359</span>
                     <div class="article-title-group">
@@ -6029,7 +6138,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel Hooper">
                 <div class="article-header">
                     <span class="article-number">360</span>
                     <div class="article-title-group">
@@ -6046,7 +6155,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Woolf's Blog">
                 <div class="article-header">
                     <span class="article-number">361</span>
                     <div class="article-title-group">
@@ -6063,7 +6172,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Geoffrey Litt">
                 <div class="article-header">
                     <span class="article-number">362</span>
                     <div class="article-title-group">
@@ -6080,7 +6189,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Tatham's quasi-blog">
                 <div class="article-header">
                     <span class="article-number">363</span>
                     <div class="article-title-group">
@@ -6097,7 +6206,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="tim.sh">
                 <div class="article-header">
                     <span class="article-number">364</span>
                     <div class="article-title-group">
@@ -6114,7 +6223,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Geoffrey Litt">
                 <div class="article-header">
                     <span class="article-number">365</span>
                     <div class="article-title-group">
@@ -6131,7 +6240,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel Hooper">
                 <div class="article-header">
                     <span class="article-number">366</span>
                     <div class="article-title-group">
@@ -6148,7 +6257,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Downtown Doug Brown">
                 <div class="article-header">
                     <span class="article-number">367</span>
                     <div class="article-title-group">
@@ -6165,7 +6274,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jayden’s Blog">
                 <div class="article-header">
                     <span class="article-number">368</span>
                     <div class="article-title-group">
@@ -6182,7 +6291,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Downtown Doug Brown">
                 <div class="article-header">
                     <span class="article-number">369</span>
                     <div class="article-title-group">
@@ -6199,7 +6308,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="BogdanTheGeek's Blog">
                 <div class="article-header">
                     <span class="article-number">370</span>
                     <div class="article-title-group">
@@ -6216,7 +6325,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="skull's blog">
                 <div class="article-header">
                     <span class="article-number">371</span>
                     <div class="article-title-group">
@@ -6233,7 +6342,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Tatham's quasi-blog">
                 <div class="article-header">
                     <span class="article-number">372</span>
                     <div class="article-title-group">
@@ -6250,7 +6359,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Derek Thompson | The Atlantic">
                 <div class="article-header">
                     <span class="article-number">373</span>
                     <div class="article-title-group">
@@ -6267,7 +6376,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="BogdanTheGeek's Blog">
                 <div class="article-header">
                     <span class="article-number">374</span>
                     <div class="article-title-group">
@@ -6284,7 +6393,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Jayden’s Blog">
                 <div class="article-header">
                     <span class="article-number">375</span>
                     <div class="article-title-group">
@@ -6301,7 +6410,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Grant Slatton's Blog">
                 <div class="article-header">
                     <span class="article-number">376</span>
                     <div class="article-title-group">
@@ -6318,7 +6427,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Grant Slatton's Blog">
                 <div class="article-header">
                     <span class="article-number">377</span>
                     <div class="article-title-group">
@@ -6335,7 +6444,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Tatham's quasi-blog">
                 <div class="article-header">
                     <span class="article-number">378</span>
                     <div class="article-title-group">
@@ -6352,7 +6461,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Derek Thompson | The Atlantic">
                 <div class="article-header">
                     <span class="article-number">379</span>
                     <div class="article-title-group">
@@ -6369,7 +6478,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simone Salis">
                 <div class="article-header">
                     <span class="article-number">380</span>
                     <div class="article-title-group">
@@ -6386,7 +6495,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Grant Slatton's Blog">
                 <div class="article-header">
                     <span class="article-number">381</span>
                     <div class="article-title-group">
@@ -6403,7 +6512,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Grant Slatton's Blog">
                 <div class="article-header">
                     <span class="article-number">382</span>
                     <div class="article-title-group">
@@ -6420,7 +6529,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Philip Laine">
                 <div class="article-header">
                     <span class="article-number">383</span>
                     <div class="article-title-group">
@@ -6437,7 +6546,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="tim.sh">
                 <div class="article-header">
                     <span class="article-number">384</span>
                     <div class="article-title-group">
@@ -6454,7 +6563,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Geoffrey Litt">
                 <div class="article-header">
                     <span class="article-number">385</span>
                     <div class="article-title-group">
@@ -6471,7 +6580,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simone Salis">
                 <div class="article-header">
                     <span class="article-number">386</span>
                     <div class="article-title-group">
@@ -6488,7 +6597,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel De Laney">
                 <div class="article-header">
                     <span class="article-number">387</span>
                     <div class="article-title-group">
@@ -6505,7 +6614,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="skull's blog">
                 <div class="article-header">
                     <span class="article-number">388</span>
                     <div class="article-title-group">
@@ -6522,7 +6631,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simon Tatham's quasi-blog">
                 <div class="article-header">
                     <span class="article-number">389</span>
                     <div class="article-title-group">
@@ -6539,7 +6648,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Simone Salis">
                 <div class="article-header">
                     <span class="article-number">390</span>
                     <div class="article-title-group">
@@ -6556,7 +6665,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="tim.sh">
                 <div class="article-header">
                     <span class="article-number">391</span>
                     <div class="article-title-group">
@@ -6573,7 +6682,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Beej's Bit Bucket">
                 <div class="article-header">
                     <span class="article-number">392</span>
                     <div class="article-title-group">
@@ -6590,7 +6699,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="skull's blog">
                 <div class="article-header">
                     <span class="article-number">393</span>
                     <div class="article-title-group">
@@ -6607,7 +6716,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel De Laney">
                 <div class="article-header">
                     <span class="article-number">394</span>
                     <div class="article-title-group">
@@ -6624,7 +6733,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="skull's blog">
                 <div class="article-header">
                     <span class="article-number">395</span>
                     <div class="article-title-group">
@@ -6641,7 +6750,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Hugo Tunius - Blog">
                 <div class="article-header">
                     <span class="article-number">396</span>
                     <div class="article-title-group">
@@ -6658,7 +6767,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Max Bernstein's Blog">
                 <div class="article-header">
                     <span class="article-number">397</span>
                     <div class="article-title-group">
@@ -6675,7 +6784,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Hugo Tunius - Blog">
                 <div class="article-header">
                     <span class="article-number">398</span>
                     <div class="article-title-group">
@@ -6692,7 +6801,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Hugo Tunius - Blog">
                 <div class="article-header">
                     <span class="article-number">399</span>
                     <div class="article-title-group">
@@ -6709,7 +6818,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Blog - Daniel Wirtz">
                 <div class="article-header">
                     <span class="article-number">400</span>
                     <div class="article-title-group">
@@ -6726,7 +6835,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Blog - Daniel Wirtz">
                 <div class="article-header">
                     <span class="article-number">401</span>
                     <div class="article-title-group">
@@ -6743,7 +6852,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Blog - Daniel Wirtz">
                 <div class="article-header">
                     <span class="article-number">402</span>
                     <div class="article-title-group">
@@ -6760,7 +6869,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Keygen Blog">
                 <div class="article-header">
                     <span class="article-number">403</span>
                     <div class="article-title-group">
@@ -6777,7 +6886,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Blog - Daniel Wirtz">
                 <div class="article-header">
                     <span class="article-number">404</span>
                     <div class="article-title-group">
@@ -6794,7 +6903,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Keygen Blog">
                 <div class="article-header">
                     <span class="article-number">405</span>
                     <div class="article-title-group">
@@ -6811,7 +6920,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Gwern.net Newsletter">
                 <div class="article-header">
                     <span class="article-number">406</span>
                     <div class="article-title-group">
@@ -6828,7 +6937,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Gwern.net Newsletter">
                 <div class="article-header">
                     <span class="article-number">407</span>
                     <div class="article-title-group">
@@ -6845,7 +6954,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Keygen Blog">
                 <div class="article-header">
                     <span class="article-number">408</span>
                     <div class="article-title-group">
@@ -6862,7 +6971,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Keygen Blog">
                 <div class="article-header">
                     <span class="article-number">409</span>
                     <div class="article-title-group">
@@ -6879,7 +6988,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Gwern.net Newsletter">
                 <div class="article-header">
                     <span class="article-number">410</span>
                     <div class="article-title-group">
@@ -6896,7 +7005,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Gwern.net Newsletter">
                 <div class="article-header">
                     <span class="article-number">411</span>
                     <div class="article-title-group">
@@ -6913,7 +7022,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Gwern.net Newsletter">
                 <div class="article-header">
                     <span class="article-number">412</span>
                     <div class="article-title-group">
@@ -6930,7 +7039,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Blog - Daniel Wirtz">
                 <div class="article-header">
                     <span class="article-number">413</span>
                     <div class="article-title-group">
@@ -6947,7 +7056,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Keygen Blog">
                 <div class="article-header">
                     <span class="article-number">414</span>
                     <div class="article-title-group">
@@ -6964,7 +7073,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Philip Laine">
                 <div class="article-header">
                     <span class="article-number">415</span>
                     <div class="article-title-group">
@@ -6981,7 +7090,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Philip Laine">
                 <div class="article-header">
                     <span class="article-number">416</span>
                     <div class="article-title-group">
@@ -6998,7 +7107,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Philip Laine">
                 <div class="article-header">
                     <span class="article-number">417</span>
                     <div class="article-title-group">
@@ -7015,7 +7124,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Philip Laine">
                 <div class="article-header">
                     <span class="article-number">418</span>
                     <div class="article-title-group">
@@ -7032,7 +7141,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Daniel De Laney">
                 <div class="article-header">
                     <span class="article-number">419</span>
                     <div class="article-title-group">
@@ -7049,7 +7158,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dr Paris Buttfield-Addison">
                 <div class="article-header">
                     <span class="article-number">420</span>
                     <div class="article-title-group">
@@ -7066,7 +7175,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dr Paris Buttfield-Addison">
                 <div class="article-header">
                     <span class="article-number">421</span>
                     <div class="article-title-group">
@@ -7083,7 +7192,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dr Paris Buttfield-Addison">
                 <div class="article-header">
                     <span class="article-number">422</span>
                     <div class="article-title-group">
@@ -7100,7 +7209,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dr Paris Buttfield-Addison">
                 <div class="article-header">
                     <span class="article-number">423</span>
                     <div class="article-title-group">
@@ -7117,7 +7226,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Dr Paris Buttfield-Addison">
                 <div class="article-header">
                     <span class="article-number">424</span>
                     <div class="article-title-group">
@@ -7132,7 +7241,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Paul Graham: Essays">
                 <div class="article-header">
                     <span class="article-number">425</span>
                     <div class="article-title-group">
@@ -7147,7 +7256,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Paul Graham: Essays">
                 <div class="article-header">
                     <span class="article-number">426</span>
                     <div class="article-title-group">
@@ -7162,7 +7271,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Paul Graham: Essays">
                 <div class="article-header">
                     <span class="article-number">427</span>
                     <div class="article-title-group">
@@ -7177,7 +7286,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Paul Graham: Essays">
                 <div class="article-header">
                     <span class="article-number">428</span>
                     <div class="article-title-group">
@@ -7192,7 +7301,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Paul Graham: Essays">
                 <div class="article-header">
                     <span class="article-number">429</span>
                     <div class="article-title-group">
@@ -7207,7 +7316,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chad Nauseam Home">
                 <div class="article-header">
                     <span class="article-number">430</span>
                     <div class="article-title-group">
@@ -7222,7 +7331,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chad Nauseam Home">
                 <div class="article-header">
                     <span class="article-number">431</span>
                     <div class="article-title-group">
@@ -7237,7 +7346,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chad Nauseam Home">
                 <div class="article-header">
                     <span class="article-number">432</span>
                     <div class="article-title-group">
@@ -7252,7 +7361,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chad Nauseam Home">
                 <div class="article-header">
                     <span class="article-number">433</span>
                     <div class="article-title-group">
@@ -7267,7 +7376,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Chad Nauseam Home">
                 <div class="article-header">
                     <span class="article-number">434</span>
                     <div class="article-title-group">
@@ -7282,7 +7391,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Michael Stapelbergs Website">
                 <div class="article-header">
                     <span class="article-number">435</span>
                     <div class="article-title-group">
@@ -7297,7 +7406,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Michael Stapelbergs Website">
                 <div class="article-header">
                     <span class="article-number">436</span>
                     <div class="article-title-group">
@@ -7312,7 +7421,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Michael Stapelbergs Website">
                 <div class="article-header">
                     <span class="article-number">437</span>
                     <div class="article-title-group">
@@ -7327,7 +7436,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Michael Stapelbergs Website">
                 <div class="article-header">
                     <span class="article-number">438</span>
                     <div class="article-title-group">
@@ -7342,7 +7451,7 @@ http://antirez.com/news/155
 
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-source="Michael Stapelbergs Website">
                 <div class="article-header">
                     <span class="article-number">439</span>
                     <div class="article-title-group">
@@ -7358,6 +7467,12 @@ http://antirez.com/news/155
             </article>
 
         </div>
+
+        <div class="pagination" id="pagination">
+            <button id="prev-page" class="page-btn">← 上一页</button>
+            <span id="page-info">第 1 页</span>
+            <button id="next-page" class="page-btn">下一页 →</button>
+        </div>
     </main>
 
     <footer>
@@ -7366,5 +7481,7 @@ http://antirez.com/news/155
             <p><a href="https://github.com/xxxxxthhh/SignalFeed" target="_blank">View on GitHub</a></p>
         </div>
     </footer>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
