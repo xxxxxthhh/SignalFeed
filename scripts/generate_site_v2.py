@@ -81,7 +81,7 @@ def generate_html(articles):
     # 收集所有标签（用于筛选）
     all_tags = set()
     for article in articles:
-        keywords = article.get('ai_enhanced', {}).get('keywords', [])
+        keywords = article.get('ai_enhanced', {}).get('tags', [])
         all_tags.update(keywords)
     tags = sorted(all_tags)
 
@@ -144,7 +144,7 @@ def generate_html(articles):
         
         # 检查是否有 AI 增强内容
         ai_enhanced = article.get('ai_enhanced', {})
-        keywords = ai_enhanced.get('keywords', [])
+        tags = ai_enhanced.get('tags', [])
         summary = ai_enhanced.get('summary', '')
         key_points = ai_enhanced.get('key_points', [])
 
@@ -163,11 +163,11 @@ def generate_html(articles):
         # 显示关键词
         if keywords:
             html += """
-                    <div class="keywords">
+                    <div class="tags">
 """
             for keyword in keywords:
                 html += f"""
-                        <span class="keyword">🏷️ {keyword}</span>
+                        <span class="tag">🏷️ {keyword}</span>
 """
             html += """
                     </div>

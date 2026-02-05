@@ -58,21 +58,30 @@ def enhance_article(article):
     title = article.get('title', '')
     description = article.get('description', '')
 
+    # 定义固定的标签分类
+    STANDARD_TAGS = [
+        "AI/机器学习", "编程语言", "Web开发", "移动开发", "DevOps",
+        "云计算", "数据库", "网络安全", "开源项目", "软件工程",
+        "系统架构", "性能优化", "测试", "工具", "硬件",
+        "产品设计", "职业发展", "技术趋势", "其他"
+    ]
+
     # 构建优化后的 prompt
-    prompt = f"""请分析以下技术文章，提供关键词和核心要点：
+    prompt = f"""请分析以下技术文章，提供标签和核心要点：
 
 标题：{title}
 描述：{description[:500]}
 
 请按以下 JSON 格式输出：
 {{
-  "keywords": ["关键词1", "关键词2", "关键词3"],
+  "tags": ["标签1", "标签2"],
   "summary": "用1-2句话总结文章核心内容（中文）",
   "key_points": ["要点1", "要点2", "要点3"]
 }}
 
 要求：
-1. keywords: 3-5个关键词，涵盖技术领域、工具、概念
+1. tags: 从以下标签中选择1-2个最相关的：
+   {', '.join(STANDARD_TAGS)}
 2. summary: 简洁明了，抓住核心
 3. key_points: 3个最重要的要点，每个不超过30字
 """
