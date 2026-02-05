@@ -1,10 +1,10 @@
 name: Fetch RSS Feeds and Deploy
 
 on:
-  schedule:
-    # 每天早上 8:00 和晚上 20:00 运行（UTC 时间）
-    - cron: '0 0 * * *'   # 8:00 AM CST
-    - cron: '0 12 * * *'  # 8:00 PM CST
+  # schedule:
+  #   # 每天早上 8:00 和晚上 20:00 运行（UTC 时间）
+  #   - cron: '0 0 * * *'   # 8:00 AM CST
+  #   - cron: '0 12 * * *'  # 8:00 PM CST
   workflow_dispatch:  # 允许手动触发
 
 jobs:
