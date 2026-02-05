@@ -173,3 +173,98 @@ footer a:hover {
         font-size: 1.1rem;
     }
 }
+
+/* AI Enhanced Content Styles */
+
+.article-title-group {
+    flex: 1;
+}
+
+.title-zh {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    background: var(--hover-bg);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* TL;DR */
+.tldr {
+    background: rgba(0, 102, 204, 0.1);
+    border-left: 3px solid var(--accent-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tldr strong {
+    color: var(--accent-color);
+}
+
+/* Takeaways */
+.takeaways {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 3px solid #4caf50;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.takeaways strong {
+    color: #4caf50;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.takeaways ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.takeaways li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .tldr {
+        background: rgba(77, 171, 247, 0.15);
+    }
+    
+    .takeaways {
+        background: rgba(76, 175, 80, 0.15);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title-zh {
+        font-size: 0.9rem;
+    }
+    
+    .tldr, .takeaways {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
