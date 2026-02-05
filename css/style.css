@@ -262,9 +262,110 @@ footer a:hover {
     .title-zh {
         font-size: 0.9rem;
     }
-    
+
     .tldr, .takeaways {
         padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Filters */
+.filters {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filters label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.filters select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filters select:hover {
+    border-color: var(--accent-color);
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.page-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #0052a3;
+    transform: translateY(-1px);
+}
+
+.page-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.page-btn:disabled {
+    background: var(--border-color);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#page-info {
+    font-weight: 500;
+    color: var(--text-primary);
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Responsive - Filters and Pagination */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+
+    .pagination {
+        gap: 1rem;
+    }
+
+    .page-btn {
+        padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
 }
