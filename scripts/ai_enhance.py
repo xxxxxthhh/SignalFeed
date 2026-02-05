@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 SignalFeed - AI 增强脚本
-使用 DeepSeek API 为文章添加中文翻译、TL;DR 和 Takeaways
+使用 DeepSeek API 为文章添加关键词和核心要点
+支持批量处理和断点续传
 """
 
 import json
@@ -9,6 +10,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 import time
+import sys
 
 # DeepSeek API 配置
 DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY', '')
@@ -56,38 +58,34 @@ def enhance_article(article):
     title = article.get('title', '')
     description = article.get('description', '')
 
-    # 构建 prompt
-    prompt = f"""请分析以下技术文章，提供：
+    # 构建优化后的 prompt
+    prompt = f"""请分析以下技术文章，提供关键词和核心要点：
 
 标题：{title}
-描述：{description}
+描述：{description[:500]}
 
-请按以下格式输出（使用 JSON 格式）：
+请按以下 JSON 格式输出：
 {{
-  "title_zh": "中文标题翻译",
-  "tldr": "用 2-3 句话总结文章核心内容（中文）",
-  "takeaways": ["要点1", "要点2", "要点3"],
-  "tags": ["标签1", "标签2"]
+  "keywords": ["关键词1", "关键词2", "关键词3"],
+  "summary": "用1-2句话总结文章核心内容（中文）",
+  "key_points": ["要点1", "要点2", "要点3"]
 }}
 
 要求：
-1. 标题翻译要准确、简洁
-2. TL;DR 要抓住核心要点
-3. Takeaways 提取 3 个关键要点
-4. Tags 从以下类别选择：AI、开发工具、安全、前端、后端、DevOps、数据库、云计算、其他
+1. keywords: 3-5个关键词，涵盖技术领域、工具、概念
+2. summary: 简洁明了，抓住核心
+3. key_points: 3个最重要的要点，每个不超过30字
 """
 
     print(f"Processing: {title[:50]}...")
-    result = call_deepseek_api(prompt, max_tokens=800)
+    result = call_deepseek_api(prompt, max_tokens=600)
 
     if result:
         try:
             # 清理 markdown 代码块
             cleaned = result.strip()
             if cleaned.startswith('```'):
-                # 移除 ```json 和 ```
                 lines = cleaned.split('\n')
-                # 找到第一个 { 和最后一个 }
                 json_start = -1
                 json_end = -1
                 for i, line in enumerate(lines):
@@ -99,9 +97,9 @@ def enhance_article(article):
                 if json_start != -1 and json_end != -1:
                     cleaned = '\n'.join(lines[json_start:json_end+1])
 
-            # 尝试解析 JSON
+            # 解析 JSON
             enhanced = json.loads(cleaned)
-            print(f"✓ Successfully parsed")
+            print(f"✓ Successfully enhanced")
             return enhanced
         except Exception as e:
             print(f"✗ Failed to parse: {e}")
@@ -124,6 +122,20 @@ def load_articles():
 
     return all_articles
 
+def load_processed_hashes():
+    """加载已处理的文章哈希列表（用于断点续传）"""
+    progress_file = Path(__file__).parent.parent / "data" / "ai_processed.txt"
+    if progress_file.exists():
+        with open(progress_file, 'r', encoding='utf-8') as f:
+            return set(line.strip() for line in f if line.strip())
+    return set()
+
+def save_processed_hash(url_hash):
+    """保存已处理的文章哈希"""
+    progress_file = Path(__file__).parent.parent / "data" / "ai_processed.txt"
+    with open(progress_file, 'a', encoding='utf-8') as f:
+        f.write(f"{url_hash}\n")
+
 def save_enhanced_articles(articles):
     """保存增强后的文章"""
     output_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
@@ -133,31 +145,81 @@ def save_enhanced_articles(articles):
 
 if __name__ == "__main__":
     print("🤖 SignalFeed AI Enhancement - Starting...")
-    
+
     if not DEEPSEEK_API_KEY:
         print("❌ Error: DEEPSEEK_API_KEY environment variable not set")
         print("Please set it with: export DEEPSEEK_API_KEY='your-api-key'")
         exit(1)
-    
+
+    # 解析命令行参数
+    batch_size = 20  # 每批处理的文章数
+    if len(sys.argv) > 1:
+        try:
+            batch_size = int(sys.argv[1])
+        except:
+            print(f"Invalid batch size, using default: {batch_size}")
+
     # 加载文章
     articles = load_articles()
     print(f"📊 Loaded {len(articles)} articles")
-    
-    # 处理前 10 篇文章（测试）
-    enhanced_articles = []
-    for i, article in enumerate(articles[:10], 1):
-        print(f"\n[{i}/10] Processing article...")
+
+    # 加载已处理的文章
+    processed_hashes = load_processed_hashes()
+    print(f"📝 Already processed: {len(processed_hashes)} articles")
+
+    # 筛选未处理的文章
+    unprocessed = [a for a in articles if a.get('url_hash') not in processed_hashes]
+    print(f"🔄 To process: {len(unprocessed)} articles")
+
+    if not unprocessed:
+        print("✅ All articles already processed!")
+        exit(0)
+
+    # 批量处理
+    total = len(unprocessed)
+    batch_to_process = unprocessed[:batch_size]
+    print(f"\n🔄 Processing batch: {len(batch_to_process)} articles")
+    print(f"   Remaining after this batch: {total - len(batch_to_process)}")
+
+    # 加载现有的增强文章（如果存在）
+    enhanced_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
+    if enhanced_file.exists():
+        with open(enhanced_file, 'r', encoding='utf-8') as f:
+            all_enhanced = json.load(f)
+        print(f"📂 Loaded {len(all_enhanced)} existing enhanced articles")
+    else:
+        all_enhanced = []
+
+    # 创建哈希到文章的映射
+    enhanced_map = {a.get('url_hash'): a for a in all_enhanced if a.get('url_hash')}
+
+    # 处理当前批次
+    success_count = 0
+    for i, article in enumerate(batch_to_process, 1):
+        print(f"\n[{i}/{len(batch_to_process)}] ", end='')
         enhanced = enhance_article(article)
-        
+
         if enhanced:
             article['ai_enhanced'] = enhanced
-            enhanced_articles.append(article)
+            enhanced_map[article['url_hash']] = article
+            save_processed_hash(article['url_hash'])
+            success_count += 1
         else:
-            enhanced_articles.append(article)
-        
+            # 即使失败也添加到映射中（避免重复处理）
+            enhanced_map[article['url_hash']] = article
+            save_processed_hash(article['url_hash'])
+
         # 避免 API 限流
-        time.sleep(1)
-    
-    # 保存增强后的文章
-    save_enhanced_articles(enhanced_articles)
-    print(f"\n✅ AI Enhancement complete! Processed {len(enhanced_articles)} articles")
+        time.sleep(1.5)
+
+    # 保存所有增强后的文章
+    all_enhanced = list(enhanced_map.values())
+    save_enhanced_articles(all_enhanced)
+
+    print(f"\n✅ Batch complete!")
+    print(f"   Successfully enhanced: {success_count}/{len(batch_to_process)}")
+    print(f"   Total enhanced articles: {len(all_enhanced)}")
+    print(f"   Remaining to process: {total - len(batch_to_process)}")
+
+    if total > len(batch_to_process):
+        print(f"\n💡 Run again to process the next batch")

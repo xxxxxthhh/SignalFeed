@@ -118,10 +118,9 @@ def generate_html(articles):
         
         # 检查是否有 AI 增强内容
         ai_enhanced = article.get('ai_enhanced', {})
-        title_zh = ai_enhanced.get('title_zh', '')
-        tldr = ai_enhanced.get('tldr', '')
-        takeaways = ai_enhanced.get('takeaways', [])
-        tags = ai_enhanced.get('tags', [])
+        keywords = ai_enhanced.get('keywords', [])
+        summary = ai_enhanced.get('summary', '')
+        key_points = ai_enhanced.get('key_points', [])
 
         html += f"""
             <article class="article-card" data-source="{source}">
@@ -129,27 +128,20 @@ def generate_html(articles):
                     <span class="article-number">{i}</span>
                     <div class="article-title-group">
                         <h2><a href="{link}" target="_blank" rel="noopener">{title}</a></h2>
-"""
-        
-        if title_zh:
-            html += f"""
-                        <p class="title-zh">{title_zh}</p>
-"""
-
-        html += f"""
                     </div>
                 </div>
                 <div class="article-meta">
                     <span class="source">📝 {source}</span>
 """
 
-        if tags:
+        # 显示关键词
+        if keywords:
             html += """
-                    <div class="tags">
+                    <div class="keywords">
 """
-            for tag in tags:
+            for keyword in keywords:
                 html += f"""
-                        <span class="tag">{tag}</span>
+                        <span class="keyword">🏷️ {keyword}</span>
 """
             html += """
                     </div>
@@ -159,29 +151,32 @@ def generate_html(articles):
                 </div>
 """
 
-        if tldr:
+        # 显示 AI 摘要
+        if summary:
             html += f"""
-                <div class="tldr">
-                    <strong>📌 TL;DR:</strong> {tldr}
+                <div class="ai-summary">
+                    <strong>📌 AI 摘要:</strong> {summary}
                 </div>
 """
 
-        if takeaways:
+        # 显示核心要点
+        if key_points:
             html += """
-                <div class="takeaways">
-                    <strong>💡 关键要点:</strong>
+                <div class="key-points">
+                    <strong>💡 核心要点:</strong>
                     <ul>
 """
-            for takeaway in takeaways:
+            for point in key_points:
                 html += f"""
-                        <li>{takeaway}</li>
+                        <li>{point}</li>
 """
             html += """
                     </ul>
                 </div>
 """
 
-        if not tldr and description:
+        # 如果没有 AI 增强内容，显示原始描述
+        if not summary and description:
             html += f"""
                 <p class="description">{description[:200]}...</p>
 """

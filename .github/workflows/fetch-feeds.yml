@@ -28,6 +28,13 @@ jobs:
         run: |
           python scripts/fetch_feeds.py
 
+      - name: AI Enhancement (process new articles)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          python scripts/ai_enhance.py 10
+        continue-on-error: true
+
       - name: Generate website
         run: |
           python scripts/generate_site_v2.py
@@ -52,7 +59,8 @@ jobs:
           # 复制新生成的文件（保留其他文件如 .nojekyll）
           cp /tmp/site-build/index.html index.html
           cp -r /tmp/site-build/css css/ 2>/dev/null || true
+          cp -r /tmp/site-build/js js/ 2>/dev/null || true
 
           # 提交更改
-          git add index.html css/
+          git add index.html css/ js/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M')" && git push origin gh-pages)
