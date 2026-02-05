@@ -37,8 +37,8 @@ def generate_html(articles):
     # 按时间倒序排列
     articles.sort(key=lambda x: x.get('fetched_at', ''), reverse=True)
 
-    # 限制显示最近 100 篇
-    articles = articles[:100]
+    # 显示所有文章（不限制数量）
+    # articles = articles[:100]
 
     html = """<!DOCTYPE html>
 <html lang="zh-CN">
