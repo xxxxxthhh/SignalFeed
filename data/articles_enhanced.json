@@ -19,5 +19,1705 @@
         "僵尸网络具备扫描本地网络并中转恶意流量的能力。"
       ]
     }
+  },
+  {
+    "title": "Spotlighting The World Factbook as We Bid a Fond Farewell",
+    "link": "https://simonwillison.net/2026/Feb/5/the-world-factbook/#atom-everything",
+    "description": "Spotlighting The World Factbook as We Bid a Fond Farewell Somewhat devastating news today from CIA: One of CIA’s oldest and most recognizable intelligence publications, The World Factbook, has sunset. There's not even a hint as to why they decided to stop maintaining this publication, which has been",
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-02-05T00:23:38+00:00",
+    "fetched_at": "2026-02-05T08:12:25.618486",
+    "url_hash": "7c08f2aa9f9d09574f66abf58ea6abd2",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "其他"
+      ],
+      "summary": "文章宣布并惋惜美国中央情报局（CIA）已停止维护其长期出版的知名开源情报资料《世界概况》。",
+      "key_points": [
+        "CIA已停止维护其标志性出版物《世界概况》。",
+        "该出版物历史悠久，是公开情报的重要来源。",
+        "官方未提供停止维护该出版物的具体原因。"
+      ]
+    }
+  },
+  {
+    "title": "Ode to the AA Battery",
+    "link": "https://www.jeffgeerling.com/blog/2026/ode-to-the-aa-battery/",
+    "description": "Recently this post from @Merocle caught my eye: I'm fixing my iFixit soldering station. I haven't used it for a long time and the battery has gone overdischarge. I hope it will come back to life. Unfortunately, there are no replacements available for sale at the moment. Devices with built-in recharg",
+    "source": "Jeff Geerling",
+    "pub_date": "Thu, 29 Jan 2026 11:00:00 -0600",
+    "fetched_at": "2026-02-05T08:12:25.972343",
+    "url_hash": "c77c93942226bb52d866887006375c30",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "工具"
+      ],
+      "summary": "文章讨论了内置可充电电池设备因电池过放或无法更换带来的维修困境，并赞扬了AA电池等标准化、可更换电池方案的可靠性。",
+      "key_points": [
+        "内置可充电电池过放或损坏后，若无替换件将导致设备无法使用。",
+        "标准化、可更换的电池（如AA电池）能延长设备寿命，避免电子垃圾。",
+        "作者倡导设备设计应优先考虑用户可维修性和标准化部件。"
+      ]
+    }
+  },
+  {
+    "title": "How does AI impact skill formation?",
+    "link": "https://seangoedecke.com/how-does-ai-impact-skill-formation/",
+    "description": "",
+    "source": "seangoedecke.com RSS feed",
+    "pub_date": "Sat, 31 Jan 2026 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:26.369936",
+    "url_hash": "f669538073e48ae8232ed0216b2c3edb",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "职业发展"
+      ],
+      "summary": "文章探讨了人工智能如何重塑技能形成过程，强调AI既是需要学习的新技能，也是改变传统技能学习方式的工具。",
+      "key_points": [
+        "AI本身成为一项关键技能，需要被学习和掌握。",
+        "AI工具正在改变传统技能（如编程、设计）的学习和实践方式。",
+        "AI时代要求从业者培养适应性强、与AI协作的复合型能力。"
+      ]
+    }
+  },
+  {
+    "title": "Please Don’t Feed the Scattered Lapsus ShinyHunters",
+    "link": "https://krebsonsecurity.com/2026/02/please-dont-feed-the-scattered-lapsus-shiny-hunters/",
+    "description": "A prolific data ransom gang that calls itself Scattered Lapsus ShinyHunters (SLSH) has a distinctive playbook when it seeks to extort payment from victim firms: Harassing, threatening and even swatting executives and their families, all while notifying journalists and regulators… Read More &#187;",
+    "source": "Krebs on Security",
+    "pub_date": "Mon, 02 Feb 2026 16:15:16 +0000",
+    "fetched_at": "2026-02-05T08:12:26.794761",
+    "url_hash": "aeb8206159a98203ef50863db1f0eb99",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "其他"
+      ],
+      "summary": "文章揭露了一个名为Scattered Lapsus ShinyHunters的数据勒索团伙，其作案手法不仅包括数据窃取和勒索，还涉及对受害者高管及其家人进行骚扰、威胁甚至“报假警”等极端手段。",
+      "key_points": [
+        "SLSH团伙采用独特的勒索策略，包括骚扰和威胁高管及其家人。",
+        "该团伙在勒索的同时会主动联系媒体和监管机构，向受害者施压。",
+        "其行为已超出传统网络犯罪范畴，包含“报假警”等线下暴力威胁手段。"
+      ]
+    }
+  },
+  {
+    "title": "OpenAI’s Codex",
+    "link": "https://simonwillison.net/2026/Feb/2/introducing-the-codex-app/",
+    "description": "",
+    "source": "Daring Fireball",
+    "pub_date": "2026-02-04T01:44:41Z",
+    "fetched_at": "2026-02-05T08:12:27.223985",
+    "url_hash": "52ada773361239ffe7573ec8f6be35cd",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "开源项目"
+      ],
+      "summary": "OpenAI Codex是一个基于GPT-3的强大AI系统，专门用于理解和生成代码，是GitHub Copilot等代码辅助工具的核心技术。",
+      "key_points": [
+        "基于GPT-3模型，专门针对代码生成和理解进行了优化。",
+        "能够将自然语言指令转换为多种编程语言的代码。",
+        "是GitHub Copilot等智能编程助手背后的核心技术。"
+      ]
+    }
+  },
+  {
+    "title": "On Being A Canadian In America In 2026",
+    "link": "https://ericmigi.com/blog/on-being-a-canadian-in-america-in-2026",
+    "description": "An Evening Out Colette Berends (I wrote a draft of post in early 2025. I picked it up and decided to publish it today, hence why it is more…",
+    "source": "Eric Migicovsky's Blog RSS Feed",
+    "pub_date": "Sun, 25 Jan 2026 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:27.668351",
+    "url_hash": "f89000414aa432a0378faed865aefee4",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "职业发展"
+      ],
+      "summary": "文章以虚构的2026年视角，探讨了在人工智能等新技术冲击下，身处美国的加拿大技术从业者所面临的身份认同、职业挑战与技术伦理思考。",
+      "key_points": [
+        "探讨AI技术普及对未来社会结构与职业身份的影响",
+        "反思技术全球化背景下，地域与文化身份在职业发展中的意义",
+        "通过个人叙事，引发对技术伦理与未来工作模式的思考"
+      ]
+    }
+  },
+  {
+    "title": "Automatic programming",
+    "link": "\nhttp://antirez.com/news/159\n",
+    "description": "In my YouTube channel, for some time now I started to refer to the process of writing software using AI assistance (soon to become just \"the process of writing software\", I believe) with the term \"Automatic Programming\". In case you didn't notice, automatic programming produces vastly different resu",
+    "source": "\n<antirez>\n",
+    "pub_date": "Sat, 31 Jan 2026 10:25:27 +0100",
+    "fetched_at": "2026-02-05T08:12:29.300888",
+    "url_hash": "409f2ebfadb153e02198bd634953ac03",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "软件工程"
+      ],
+      "summary": "作者提出“自动编程”这一术语，用以描述在AI辅助下编写软件的过程，并认为这将是未来软件开发的主流方式，且会带来截然不同的结果。",
+      "key_points": [
+        "作者将AI辅助编程的过程定义为“自动编程”。",
+        "认为“自动编程”很快将成为软件开发的标准方式。",
+        "指出这种新方式将产生与传统编程截然不同的结果。"
+      ]
+    }
+  },
+  {
+    "title": "We installed a single turnstile to feel secure",
+    "link": "https://idiallo.com/blog/installed-single-turnstile-for-security-theater?src=feed",
+    "description": "After the acquisition by a much larger company, security became a top priority. Our company occupied three tall buildings, each at least 13 stories high. Key card readers were installed next to every entrance, every elevator car, and even at the parking lot entrance, which itself was eight stories t",
+    "source": "iDiallo.com",
+    "pub_date": "Wed, 04 Feb 2026 12:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:29.925362",
+    "url_hash": "dca911392a1dc9f30697af9d2d627ee6",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "软件工程"
+      ],
+      "summary": "文章讲述了公司被收购后，为提升物理安全，在多个建筑入口、电梯和停车场广泛部署门禁系统，但最终仅通过安装一个旋转门就实现了真正的安全感。",
+      "key_points": [
+        "公司被大公司收购后，物理安全成为首要任务。",
+        "在多个建筑入口、电梯和停车场入口广泛部署了门禁读卡器。",
+        "核心解决方案是安装一个简单的旋转门，而非复杂的门禁系统。"
+      ]
+    }
+  },
+  {
+    "title": "Notes on blog future-proofing",
+    "link": "https://maurycyz.com/misc/futureproofing/",
+    "description": "One of the great things about web pages is that they are long-lived and mutable. There's no need to aim for perfection on the first draft: A page can continue to be improved for years after its original publication. However, this mutability comes at a cost: DO NOT POWER [IT] DOWN!! &mdash; The first",
+    "source": "Maurycy's Blog",
+    "pub_date": "Fri, 23 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:12:30.895750",
+    "url_hash": "fcc7ad2b923b002b70131a2c56657b26",
+    "ai_enhanced": {
+      "tags": [
+        "Web开发",
+        "软件工程"
+      ],
+      "summary": "文章探讨了网页因其长寿命和可修改性带来的优势与挑战，核心在于如何实现博客的“未来保障”，确保其长期可访问与维护。",
+      "key_points": [
+        "网页的优势在于可长期存在并持续改进，无需追求首次发布的完美。",
+        "网页的可变性也带来风险，核心挑战是确保其长期可访问性。",
+        "实现博客“未来保障”的关键在于避免内容因技术过时而失效。"
+      ]
+    }
+  },
+  {
+    "title": "Pluralistic: Justin Key's \"The Hospital at the End Of the World\" (04 Feb 2026)",
+    "link": "https://pluralistic.net/2026/02/04/slice-bees/",
+    "description": "Today's links Justin Key's \"The Hospital at the End Of the World\": A biopunk medical thriller from a major new talent. Hey look at this: Delights to delectate. Object permanence: Coconut volunteers; Astro Noise; Rich old men behind \"Millennials Rising\"; Stop the \"Stop the Steal\" steal; \"Chasing Shad",
+    "source": "Pluralistic: Daily links from Cory Doctorow",
+    "pub_date": "Wed, 04 Feb 2026 15:48:33 +0000",
+    "fetched_at": "2026-02-05T08:12:32.414148",
+    "url_hash": "2f11366ae819ec859242e6f0f2d158d4",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "技术趋势"
+      ],
+      "summary": "文章介绍了Justin Key的新作《世界尽头的医院》，这是一部生物朋克风格的医疗惊悚小说，并推荐了其他值得关注的内容。",
+      "key_points": [
+        "推荐Justin Key的生物朋克医疗惊悚新作《世界尽头的医院》。",
+        "介绍了其他值得一看的链接，如“椰子志愿者”和“Astro Noise”。",
+        "提及了关于“千禧一代崛起”背后推手及“阻止窃选”运动的讨论。"
+      ]
+    }
+  },
+  {
+    "title": "Book Review: The Examiner - Janice Hallett ★★★★⯪",
+    "link": "https://shkspr.mobi/blog/2026/02/book-review-the-examiner-janice-hallett/",
+    "description": "I&#039;ve thoroughly enjoyed all of Janice Hallett&#039;s previous crime books. The Examiner is, frankly, more of the same - and I&#039;m happy with that! You, the reader, are given a series of transcripts and have to work out what crime (if any) has been committed. You don&#039;t find out who the v",
+    "source": "Terence Eden’s Blog",
+    "pub_date": "Wed, 04 Feb 2026 12:34:22 +0000",
+    "fetched_at": "2026-02-05T08:12:33.572039",
+    "url_hash": "a12f9095bcbca641b56a54eece55485d",
+    "ai_enhanced": {
+      "tags": [
+        "其他"
+      ],
+      "summary": "这是一篇关于Janice Hallett犯罪小说《The Examiner》的书评，作者对这部延续其独特风格的互动式推理作品给予了四星好评。",
+      "key_points": [
+        "本书延续了作者Janice Hallett标志性的互动推理小说风格。",
+        "读者需要通过阅读一系列案件笔录，自行推断是否发生了犯罪以及真相。",
+        "书评者表示非常享受这种阅读体验，并乐于接受这种“熟悉的配方”。"
+      ]
+    }
+  },
+  {
+    "title": "Don't Trip[wire] Yourself: Testing Error Recovery in Zig",
+    "link": "https://mitchellh.com/writing/tripwire",
+    "description": "",
+    "source": "Mitchell Hashimoto",
+    "pub_date": "Wed, 21 Jan 2026 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:34.353177",
+    "url_hash": "6021fe649cc11c81482ec903281ee234",
+    "ai_enhanced": {
+      "tags": [
+        "编程语言",
+        "测试"
+      ],
+      "summary": "本文探讨了如何在Zig编程语言中有效测试错误恢复机制，特别是利用其内置的`Tripwire`功能来模拟和验证程序在遇到错误时的行为。",
+      "key_points": [
+        "Zig的`Tripwire`功能用于在测试中模拟错误，以验证错误恢复逻辑。",
+        "文章介绍了如何编写测试来确保程序在错误发生后能正确清理资源并维持稳定。",
+        "强调了在系统编程中，对错误路径进行充分测试与对成功路径测试同等重要。"
+      ]
+    }
+  },
+  {
+    "title": "Why read novels?",
+    "link": "https://dynomight.net/novels/",
+    "description": "best life in category of achievable lives",
+    "source": "DYNOMIGHT",
+    "pub_date": "2026-01-22T00:00:00+00:00",
+    "fetched_at": "2026-02-05T08:12:34.891518",
+    "url_hash": "52dac457f537685d356241cce7837829",
+    "ai_enhanced": {
+      "tags": [
+        "其他",
+        "职业发展"
+      ],
+      "summary": "文章探讨了阅读小说对个人生活的价值，认为在众多可实现的生活方式中，阅读小说能带来最佳的生活体验。",
+      "key_points": [
+        "小说阅读能提供独特且可实现的最佳生活体验。",
+        "阅读小说有助于个人成长、共情能力和思维拓展。",
+        "在可实现的多种生活方式中，小说阅读是优选之一。"
+      ]
+    }
+  },
+  {
+    "title": "Your feed reader is fetching from a limited network area",
+    "link": "https://utcc.utoronto.ca/~cks/cspace-gen-http429.html",
+    "description": "",
+    "source": " Wandering Thoughts: Your feed reader is fetching from a limited network area ",
+    "pub_date": "2025-11-22T03:54:10Z",
+    "fetched_at": "2026-02-05T08:12:35.613163",
+    "url_hash": "960d2a1ea217bebea0c74d6dbf57c811",
+    "ai_enhanced": {
+      "tags": [
+        "系统架构",
+        "性能优化"
+      ],
+      "summary": "文章指出传统的RSS阅读器因集中从单一网络区域获取内容，存在性能瓶颈和单点故障风险，并提出了分布式获取的优化思路。",
+      "key_points": [
+        "传统RSS阅读器架构存在集中式获取的局限性，影响速度和可靠性。",
+        "单一网络区域获取易受网络延迟和中断影响，导致用户体验下降。",
+        "建议采用分布式或边缘计算架构来优化内容获取，提升性能与韧性。"
+      ]
+    }
+  },
+  {
+    "title": "Did Zendesk get popped?",
+    "link": "https://xeiaso.net/notes/2026/zendesk-popped/",
+    "description": "I've got like 50 emails from Zendesk customers to activate an account.",
+    "source": "Xe Iaso's blog",
+    "pub_date": "Wed, 04 Feb 2026 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:36.263987",
+    "url_hash": "7a14f04c9c8d13391f59cda36d79445b",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "其他"
+      ],
+      "summary": "文章描述了作者收到大量冒充Zendesk的激活账户邮件，暗示Zendesk可能遭遇了数据泄露或钓鱼攻击。",
+      "key_points": [
+        "作者收到约50封冒充Zendesk的账户激活邮件。",
+        "邮件疑似针对Zendesk客户的钓鱼攻击或凭证泄露。",
+        "事件表明Zendesk或其客户可能面临安全风险。"
+      ]
+    }
+  },
+  {
+    "title": "Super Bowl LX creates an opportunity for symphonic friendly wagering",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20260204-01/?p=112039",
+    "description": "Betting classical music. The post Super Bowl LX creates an opportunity for symphonic friendly wagering appeared first on The Old New Thing.",
+    "source": "The Old New Thing",
+    "pub_date": "Wed, 04 Feb 2026 15:00:01 +0000",
+    "fetched_at": "2026-02-05T08:12:36.686014",
+    "url_hash": "02e84d074328cb37574fcf3cdf7496da",
+    "ai_enhanced": {
+      "tags": [
+        "其他",
+        "产品设计"
+      ],
+      "summary": "文章提出了一种新颖的、以古典音乐为主题的博彩概念，旨在为超级碗等大型赛事创造一种更文雅、更具文化气息的投注方式。",
+      "key_points": [
+        "将古典音乐元素与体育赛事博彩相结合，创造独特投注体验。",
+        "旨在吸引非传统博彩用户，提供更“友好”和文雅的娱乐形式。",
+        "概念源于超级碗LX，但可视为一种跨界产品设计的思路。"
+      ]
+    }
+  },
+  {
+    "title": "Notes on the Intel 8086 processor's arithmetic-logic unit",
+    "link": "http://www.righto.com/feeds/7538688365288775324/comments/default",
+    "description": "",
+    "source": "Ken Shirriff's blog",
+    "pub_date": "2026-01-24T21:15:37.950-08:00",
+    "fetched_at": "2026-02-05T08:12:37.139564",
+    "url_hash": "dbe0901c8643ebced7799e8412be616c",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "其他"
+      ],
+      "summary": "文章分析了英特尔8086处理器算术逻辑单元（ALU）的设计细节，重点探讨了其内部运算机制和实现原理。",
+      "key_points": [
+        "详细剖析了8086 ALU的电路结构与运算逻辑",
+        "解释了ALU如何执行加法、减法等基本算术运算",
+        "探讨了ALU在早期微处理器设计中的关键作用与实现挑战"
+      ]
+    }
+  },
+  {
+    "title": "Pi: The Minimal Agent Within OpenClaw",
+    "link": "https://lucumr.pocoo.org/2026/1/31/pi/",
+    "description": "",
+    "source": "Armin Ronacher's Thoughts and Writings",
+    "pub_date": "2026-01-31T00:00:00+00:00",
+    "fetched_at": "2026-02-05T08:12:37.491026",
+    "url_hash": "0eb410a75306b34835875b38c557866c",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "开源项目"
+      ],
+      "summary": "文章介绍了OpenClaw项目中的Pi，这是一个设计极简、专注于特定任务执行的智能体（Agent）。",
+      "key_points": [
+        "Pi是OpenClaw项目中的一个最小化智能体（Agent）组件。",
+        "其设计核心是极简主义，专注于高效执行特定任务。",
+        "作为更大系统的一部分，Pi体现了模块化与专一化的智能体设计思路。"
+      ]
+    }
+  },
+  {
+    "title": "A Social Filesystem",
+    "link": "https://overreacted.io/a-social-filesystem/",
+    "description": "Formats over apps.",
+    "source": "overreacted — A blog by Dan Abramov",
+    "pub_date": "Sun, 18 Jan 2026 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:49.113327",
+    "url_hash": "f8483a3b9cee1e309824525e5e1209b4",
+    "ai_enhanced": {
+      "tags": [
+        "系统架构",
+        "产品设计"
+      ],
+      "summary": "文章提出了一种“社交文件系统”的概念，其核心思想是优先考虑数据格式的互操作性和开放性，而非依赖特定的应用程序。",
+      "key_points": [
+        "核心理念是“格式优先于应用”，强调数据应独立于创建它的软件。",
+        "旨在通过开放、可互操作的文件格式，促进用户间的数据共享与协作。",
+        "挑战传统以应用为中心的模式，倡导更开放、用户自主控制的系统架构。"
+      ]
+    }
+  },
+  {
+    "title": "Scam Telegram: Uncovering a network of groups spreading crypto drainers",
+    "link": "https://timsh.org/scam-telegram-investigation/",
+    "description": "How I found a large network of fake support groups spreading crypto stealers and drainers.",
+    "source": "tim.sh",
+    "pub_date": "Thu, 04 Dec 2025 23:58:22 GMT",
+    "fetched_at": "2026-02-05T08:12:50.014870",
+    "url_hash": "d507827d97a325bb166ccd4471d0bd79",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "其他"
+      ],
+      "summary": "作者揭露了一个在Telegram上传播加密货币窃取器和抽空器的虚假客服群组网络。",
+      "key_points": [
+        "发现Telegram上存在大量传播加密货币窃取器的虚假客服群组。",
+        "这些群组构成一个相互关联的网络，协同进行诈骗活动。",
+        "文章旨在提高人们对这类新型加密货币诈骗手段的警惕性。"
+      ]
+    }
+  },
+  {
+    "title": "Γ(1/n)",
+    "link": "https://www.johndcook.com/blog/2026/02/04/gamma-reciprocal/",
+    "description": "If n is a positive integer, then rounding Γ(1/n) up to the nearest integer gives n. In symbols, We an illustrate this with the following Python code. &#62;&#62;&#62; from scipy.special import gamma &#62;&#62;&#62; from math import ceil &#62;&#62;&#62; for n in range(1, 101): ... assert(ceil(gamma(1/",
+    "source": "John D. Cook",
+    "pub_date": "Thu, 05 Feb 2026 03:42:12 +0000",
+    "fetched_at": "2026-02-05T08:12:50.438745",
+    "url_hash": "c2d7a5e56c58361525e84fa5473ae5f0",
+    "ai_enhanced": {
+      "tags": [
+        "编程语言",
+        "其他"
+      ],
+      "summary": "文章介绍了一个关于伽马函数Γ(1/n)的数学性质，即当n为正整数时，Γ(1/n)向上取整的结果等于n，并用Python代码进行了验证。",
+      "key_points": [
+        "伽马函数Γ(1/n)向上取整等于n的数学性质",
+        "使用Python的SciPy库中的gamma函数进行计算",
+        "通过循环和断言验证了n从1到100时该性质成立"
+      ]
+    }
+  },
+  {
+    "title": "Writing an LLM from scratch, part 26 -- evaluating the fine-tuned model",
+    "link": "https://www.gilesthomas.com/2025/11/llm-from-scratch-26-evaluating-the-fine-tuned-model",
+    "description": "This post is on the second half of chapter 7 of Sebastian Raschka's book \"Build a Large Language Model (from Scratch)\". In the last post I covered the part of the chapter that covers instruction fine-tuning; this time round, we evaluate our model -- particularly interestingly, we try using another, ",
+    "source": "Giles' blog",
+    "pub_date": "Mon, 03 Nov 2025 19:40:00 +0000",
+    "fetched_at": "2026-02-05T08:12:51.399620",
+    "url_hash": "401cc6012f5519a52ded9d6ad0fbd0f2",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "软件工程"
+      ],
+      "summary": "本文基于Sebastian Raschka的书籍，详细介绍了如何评估经过指令微调后的大型语言模型，并探讨了使用其他模型进行评估的有趣方法。",
+      "key_points": [
+        "文章是《从零开始构建大语言模型》一书第7章后半部分的实践与解读。",
+        "核心内容是评估经过指令微调后的大语言模型的性能表现。",
+        "特别探讨了使用另一个模型来评估微调后模型这一新颖方法。"
+      ]
+    }
+  },
+  {
+    "title": "make.ts",
+    "link": "https://matklad.github.io/2026/01/27/make-ts.html",
+    "description": "Up Enter Up Up Enter Up Up Up Enter",
+    "source": "matklad",
+    "pub_date": "2026-01-27T00:00:00+00:00",
+    "fetched_at": "2026-02-05T08:12:51.787631",
+    "url_hash": "c278a640eca25dc5be47f7686550599e",
+    "ai_enhanced": {
+      "tags": [
+        "工具",
+        "软件工程"
+      ],
+      "summary": "文章通过一个特定的键盘操作序列（Up, Enter, Up, Up, Enter...），展示了如何利用自动化工具（如 make.ts）来简化或执行重复性的开发任务，以提高效率。",
+      "key_points": [
+        "文章核心是一个预定义的键盘操作指令序列，用于触发自动化流程。",
+        "这暗示了使用脚本或工具（如 make.ts）来自动化常见或重复的开发操作。",
+        "其主要目的是提升开发效率，减少手动执行重复命令的繁琐过程。"
+      ]
+    }
+  },
+  {
+    "title": "The Affordability Curse",
+    "link": "https://www.theatlantic.com/ideas/2025/11/democrats-cost-of-living-affordability-platform/684847/?utm_source=feed",
+    "description": "Politics isn’t just about the words you put on your bumper stickers. It’s about what you do if the bumper stickers work.",
+    "source": "Derek Thompson | The Atlantic",
+    "pub_date": "2025-11-10T10:53:08-05:00",
+    "fetched_at": "2026-02-05T08:12:52.501237",
+    "url_hash": "e40f2360b40e32c7012256c54641228c",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "其他"
+      ],
+      "summary": "文章探讨了政治承诺与实际行动之间的鸿沟，指出当口号（如“可负担性”）成功获得支持后，真正的挑战在于如何兑现承诺并处理随之而来的复杂现实。",
+      "key_points": [
+        "政治的核心在于口号成功后的实际行动与责任。",
+        "“可负担性”等流行承诺在实现时会面临意想不到的复杂挑战。",
+        "文章暗示技术与政策类似，从概念到落地需要应对现实约束。"
+      ]
+    }
+  },
+  {
+    "title": "Notes from January 2026",
+    "link": "https://evanhahn.com/notes-from-january-2026/",
+    "description": "Happy new year! Here are some of my notes from the first month of 2026. New job at Ghost! I started a new job as a Staff Engineer at Ghost this month. According to our homepage, Ghost is &ldquo;for professional publishers to create, share, and grow a business around their content.&rdquo; I&rsquo;m l",
+    "source": "Evan Hahn (dot com)",
+    "pub_date": "Sat, 31 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:12:52.960362",
+    "url_hash": "217fffde8d84e98f5419d22600866779",
+    "ai_enhanced": {
+      "tags": [
+        "职业发展",
+        "软件工程"
+      ],
+      "summary": "作者于2026年1月加入Ghost公司担任Staff工程师，并分享了新工作的初步体验和感受。",
+      "key_points": [
+        "作者在2026年1月开始在Ghost担任Staff工程师的新职位。",
+        "Ghost是一个面向专业出版商的平台，帮助他们围绕内容创建和发展业务。",
+        "文章是作者在新年第一个月的工作笔记和个人分享。"
+      ]
+    }
+  },
+  {
+    "title": "Why Am I Doing the Thinking for You?",
+    "link": "https://terriblesoftware.org/2026/02/02/why-am-i-doing-the-thinking-for-you/",
+    "description": "'What do you think?' without a position isn't a question — it's a task assignment. State your opinion first. Let people react to something concrete.",
+    "source": "Terrible Software",
+    "pub_date": "Mon, 02 Feb 2026 13:49:00 +0000",
+    "fetched_at": "2026-02-05T08:12:53.464155",
+    "url_hash": "f3162734a340c20bc86d2c8c6c8a2be6",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "产品设计"
+      ],
+      "summary": "文章核心观点是：在协作中，提出“你怎么看？”这类开放式问题而不先表明自己的立场，实际上是在给他人布置任务。有效的做法是首先陈述自己的具体观点，让他人基于一个明确的靶子进行回应和讨论。",
+      "key_points": [
+        "开放式提问‘你怎么看’实则是任务指派，效率低下。",
+        "领导者或发起者应先明确陈述自己的立场和观点。",
+        "提供具体观点能激发更有针对性和建设性的反馈与讨论。"
+      ]
+    }
+  },
+  {
+    "title": "Alarm is sacred, must not fail, but iOS 26 is wicked",
+    "link": "https://rakhim.exotext.com/alarm-is-sacred-but-ios-26-is-wicked",
+    "description": "There are two smartphone features that I consider sacred and believe they must never fail: phone calling and the alarm. There is an unspoken contract between users and vendors. Sure, innovate away, change the UX at will, whatever. But you can&#39;t fail at making phone calls and sounding the alarm. ",
+    "source": "Rakhim's blog",
+    "pub_date": "Mon, 17 Nov 2025 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:12:54.111597",
+    "url_hash": "bf693eb6d65e3f7e9854b08eb662f3c7",
+    "ai_enhanced": {
+      "tags": [
+        "移动开发",
+        "产品设计"
+      ],
+      "summary": "作者认为智能手机的通话和闹钟功能是神圣不可侵犯的，厂商可以创新和改变用户体验，但必须确保这两个核心功能的绝对可靠性。",
+      "key_points": [
+        "通话和闹钟是智能手机最基础、必须100%可靠的核心功能。",
+        "厂商与用户之间存在默认契约，可以创新但不能牺牲基础功能的可靠性。",
+        "文章以iOS为例，批评了系统更新可能对闹钟等基础功能造成的负面影响。"
+      ]
+    }
+  },
+  {
+    "title": "The Coherence Premium",
+    "link": "https://www.joanwestenberg.com/the-coherence-premium/",
+    "description": "I don&apos;t necessarily believe in second brains. The notion (pun-intended) that you can offload your thinking to a perfectly organized system of notes and links has always struck me as a fantasy. The people I know who&apos;ve built elaborate Notion databases or Obsidian vaults mostly end",
+    "source": "Westenberg.",
+    "pub_date": "Mon, 02 Feb 2026 22:41:04 GMT",
+    "fetched_at": "2026-02-05T08:12:54.998207",
+    "url_hash": "6e887e3aff58073b7a5ac5bbbac6e233",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "工具"
+      ],
+      "summary": "文章批判了过度依赖“第二大脑”等笔记系统来组织思维的做法，认为真正的知识内化与思考无法被工具替代。",
+      "key_points": [
+        "过度复杂的笔记系统可能沦为幻想，无法替代深度思考。",
+        "作者观察到许多人精心构建的系统最终并未有效提升产出。",
+        "核心观点是工具应服务于思考，而非让思考服务于工具的组织。"
+      ]
+    }
+  },
+  {
+    "title": "2025 in Review",
+    "link": "http://xania.org/202512/2025-in-review?utm_source=feed&utm_medium=rss",
+    "description": "What has this year all been about, eh?",
+    "source": "Matt Godbolt’s blog",
+    "pub_date": "2025-12-31T21:30:00Z",
+    "fetched_at": "2026-02-05T08:12:55.602507",
+    "url_hash": "1e6a8d392c312e9e07f8ccac71117fee",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "AI/机器学习"
+      ],
+      "summary": "文章是对2025年技术领域的回顾与总结，重点探讨了该年度最具影响力的技术发展趋势与核心主题。",
+      "key_points": [
+        "回顾2025年整体技术发展脉络与焦点",
+        "分析年度关键技术进步与行业动态",
+        "总结对技术社区和从业者的主要影响"
+      ]
+    }
+  },
+  {
+    "title": "Is everyone in your Signal groups named something like \"E\" or \"🥑\"? Nicknames can help!",
+    "link": "https://micahflee.com/are-your-signal-groups-full-of-people-name-things-like-l-or-sinicknames/",
+    "description": "As ICE continues its invasion of American cities, kidnapping and murdering the people who live there, observers on the ground are increasingly relying on Signal groups to organize mutual aid and rapid response networks. In Minneapolis, people are using hyper-local Signal groups for their buildings, ",
+    "source": "micahflee",
+    "pub_date": "Fri, 30 Jan 2026 22:23:38 GMT",
+    "fetched_at": "2026-02-05T08:12:56.052413",
+    "url_hash": "2bb35cd8ff88234613cde076f872ea59",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "移动开发"
+      ],
+      "summary": "文章讨论了在特定社会活动背景下，Signal群组用户使用昵称（如“E”或“🥑”）的现象，并指出使用昵称有助于保护参与者的隐私和安全。",
+      "key_points": [
+        "Signal群组被用于组织互助和快速响应网络，以应对特定社会事件。",
+        "用户使用简单昵称或表情符号作为名称，是一种保护个人身份的隐私策略。",
+        "文章建议使用昵称来增强群组内参与者的安全性和匿名性。"
+      ]
+    }
+  },
+  {
+    "title": "Package Management at FOSDEM 2026",
+    "link": "https://nesbitt.io/2026/02/04/package-management-at-fosdem-2026.html",
+    "description": "Summary of package management talks from FOSDEM 2026, covering supply chain security, attestations, SBOMs, dependency resolution, and distribution packaging across multiple devrooms.",
+    "source": "Andrew Nesbitt",
+    "pub_date": "2026-02-04T00:00:00+00:00",
+    "fetched_at": "2026-02-05T08:12:56.414952",
+    "url_hash": "10dd6aca47cea42f1dbc035a78b12f00",
+    "ai_enhanced": {
+      "tags": [
+        "DevOps",
+        "软件工程"
+      ],
+      "summary": "文章总结了FOSDEM 2026大会上关于软件包管理的多个议题，核心聚焦于供应链安全、依赖管理和分发打包等现代软件工程的关键挑战。",
+      "key_points": [
+        "探讨软件供应链安全，包括SBOM（软件物料清单）和证明机制。",
+        "分析依赖解析的挑战与解决方案，提升软件构建的可靠性。",
+        "讨论跨不同开发环境的软件包分发与打包实践。"
+      ]
+    }
+  },
+  {
+    "title": "Reading List for 01/31/2026",
+    "link": "https://www.construction-physics.com/p/reading-list-for-01312026",
+    "description": "Welcome to the Reading List, a weekly roundup of news and links related to buildings, infrastructure, and industrial technology.",
+    "source": "Construction Physics",
+    "pub_date": "Sat, 31 Jan 2026 13:02:52 GMT",
+    "fetched_at": "2026-02-05T08:12:56.820297",
+    "url_hash": "f1411daeb549e23b624c3d80a3a65900",
+    "ai_enhanced": {
+      "tags": [
+        "系统架构",
+        "技术趋势"
+      ],
+      "summary": "这是一份关于建筑、基础设施和工业技术领域的每周新闻与链接汇总，旨在提供该领域的最新动态和信息集合。",
+      "key_points": [
+        "文章是每周发布的行业信息汇总，具有周期性。",
+        "内容聚焦于建筑、基础设施和工业技术三大核心领域。",
+        "形式为新闻与相关链接的合集，旨在为读者提供信息参考。"
+      ]
+    }
+  },
+  {
+    "title": "Slide Away",
+    "link": "https://feed.tedium.co/link/15204/17266116/niri-danklinux-scrolling-window-managers",
+    "description": "My favorite UX metaphor, the scrolling window manager, is having a moment—and it’s for pretty dank reasons.",
+    "source": "Tedium: The Dull Side of the Internet.",
+    "pub_date": "2026-01-29T15:33:55Z",
+    "fetched_at": "2026-02-05T08:12:57.801500",
+    "url_hash": "d079b41c19377755a46b5119bf0441a5",
+    "ai_enhanced": {
+      "tags": [
+        "产品设计",
+        "技术趋势"
+      ],
+      "summary": "文章探讨了“滚动窗口管理器”这一UX隐喻的复兴，并分析了其背后流行的深层原因。",
+      "key_points": [
+        "滚动窗口管理器作为一种经典的UX设计隐喻，正在重新获得关注。",
+        "其复兴与当前用户界面设计趋势和用户行为变化有关。",
+        "文章分析了这种设计模式再次流行的具体原因和优势。"
+      ]
+    }
+  },
+  {
+    "title": "QuickQWERTY 1.2.1",
+    "link": "https://susam.net/code/news/quickqwerty/1.2.1.html",
+    "description": "QuickQWERTY 1.2.1 is now available. QuickQWERTY is a web-based touch typing tutor for QWERTY keyboards that runs directly in the web browser. This release contains a minor bug fix in Unit 4.3. Unit 4.3 is a 'Control' unit that lets you practise typing partial words as well as full words. In one plac",
+    "source": "Susam Pal",
+    "pub_date": "Tue, 27 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:12:58.600158",
+    "url_hash": "954efc73169b14fc7885016febb28e3c",
+    "ai_enhanced": {
+      "tags": [
+        "Web开发",
+        "工具"
+      ],
+      "summary": "QuickQWERTY 1.2.1 是一个基于网页的 QWERTY 键盘打字练习工具，本次更新修复了 Unit 4.3 中的一个次要错误。",
+      "key_points": [
+        "QuickQWERTY 是一个基于浏览器的网页打字练习工具",
+        "最新版本 1.2.1 修复了 Unit 4.3 中的一个次要错误",
+        "Unit 4.3 是一个控制单元，用于练习部分单词和完整单词的输入"
+      ]
+    }
+  },
+  {
+    "title": "Laws of Succession",
+    "link": "https://entropicthoughts.com/laws-of-succession",
+    "description": "",
+    "source": "Entropic Thoughts",
+    "pub_date": "Tue, 03 Feb 2026 00:00:00 +0100",
+    "fetched_at": "2026-02-05T08:12:59.451129",
+    "url_hash": "b8dd4fcd79c2ff026cd7fde697f5bca1",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "系统架构"
+      ],
+      "summary": "本文探讨了在软件系统演进中，如何设计和管理新旧系统或组件的更替规则与策略。",
+      "key_points": [
+        "阐述了系统或服务迭代时，新旧版本共存与过渡的基本原则。",
+        "分析了常见的更替模式，如蓝绿部署、金丝雀发布等策略的适用场景。",
+        "提出了确保更替过程平滑、可控，并最小化对用户影响的关键设计考量。"
+      ]
+    }
+  },
+  {
+    "title": "Logic for Programmers New Release and Next Steps",
+    "link": "https://buttondown.com/hillelwayne/archive/logic-for-programmers-new-release-and-next-steps/",
+    "description": "It's taken four months, but the next release of Logic for Programmers is now available! v0.13 is over 50,000 words, making it both 20% larger than v0.12 and officially the longest thing I have ever written.1 Full release notes are here, but I'll talk a bit about the biggest changes. For one, every c",
+    "source": "Computer Things",
+    "pub_date": "Wed, 04 Feb 2026 14:00:00 +0000",
+    "fetched_at": "2026-02-05T08:12:59.881647",
+    "url_hash": "98e11c284550faab59cc429261d9dec3",
+    "ai_enhanced": {
+      "tags": [
+        "编程语言",
+        "开源项目"
+      ],
+      "summary": "文章宣布了《Logic for Programmers》新版本v0.13的发布，并介绍了其主要更新内容。",
+      "key_points": [
+        "新版本v0.13已发布，内容超过5万字，比上一版增加20%。",
+        "作者简要介绍了本次版本中最重要的几项变更。",
+        "这是作者迄今为止撰写过的最长的作品。"
+      ]
+    }
+  },
+  {
+    "title": "Some Data Should Be Code",
+    "link": "https://borretti.me/article/some-data-should-be-code",
+    "description": "On Make, CloudFormation, and GitHub Actions.",
+    "source": "Fernando Borretti",
+    "pub_date": "Sat, 31 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:00.761766",
+    "url_hash": "b91909ff686f75a236774aba79b1a4e0",
+    "ai_enhanced": {
+      "tags": [
+        "DevOps",
+        "云计算"
+      ],
+      "summary": "文章探讨了在基础设施即代码（IaC）和自动化流程中，如何将某些配置和数据视为代码进行管理，并比较了Make、CloudFormation和GitHub Actions等工具在此理念下的应用。",
+      "key_points": [
+        "倡导将配置和部署逻辑视为代码，以提高可维护性和版本控制。",
+        "比较了Make、AWS CloudFormation和GitHub Actions在实现“数据即代码”理念上的不同方式。",
+        "强调了自动化工具的选择应基于项目需求，以实现可靠且可重复的部署流程。"
+      ]
+    }
+  },
+  {
+    "title": "Premium: The Hater's Guide to Oracle",
+    "link": "https://www.wheresyoured.at/haters-guide-oracle/",
+    "description": "You can&#x2019;t avoid Oracle.No, really, you can&#x2019;t. Oracle is everywhere. It sells ERP software &#x2013; enterprise resource planning, which is a rat king of different services for giant companies for financial services, procurement (IE: sourcing and organizing the goods your company needs t",
+    "source": "Ed Zitron's Where's Your Ed At",
+    "pub_date": "Fri, 30 Jan 2026 17:23:06 GMT",
+    "fetched_at": "2026-02-05T08:13:01.210375",
+    "url_hash": "1891a1a0bcd43ec056b09f6158c34e12",
+    "ai_enhanced": {
+      "tags": [
+        "数据库",
+        "软件工程"
+      ],
+      "summary": "文章探讨了Oracle数据库在大型企业中的普遍存在和难以替代性，并对其产品生态和商业策略进行了批判性分析。",
+      "key_points": [
+        "Oracle数据库在企业核心系统（如ERP、财务）中根深蒂固，难以迁移。",
+        "文章以批判视角分析Oracle的产品捆绑策略和商业实践。",
+        "指出了企业因技术债务和锁定效应而无法摆脱Oracle的困境。"
+      ]
+    }
+  },
+  {
+    "title": "MORE ENTICING THAN EVER: THE HYPNOVERSE",
+    "link": "https://jayd.ml/2026/01/05/the-hypnoverse.html",
+    "description": "Dispatches From The Wormhole",
+    "source": "Jayden’s Blog",
+    "pub_date": "2026-01-05T18:50:00+00:00",
+    "fetched_at": "2026-02-05T08:13:01.635184",
+    "url_hash": "5fa035017fe15b60e7f3302ddfff76f9",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "AI/机器学习"
+      ],
+      "summary": "文章探讨了“催眠宇宙”这一新兴概念，它可能是一个融合了沉浸式体验、人工智能与意识交互的未来技术愿景。",
+      "key_points": [
+        "提出‘催眠宇宙’概念，描绘超越当前元宇宙的沉浸式未来数字空间。",
+        "暗示该愿景涉及AI、神经技术或意识层面的深度交互技术。",
+        "其标题和描述暗示这是一个极具吸引力和变革性的技术发展趋势。"
+      ]
+    }
+  },
+  {
+    "title": "Nano Banana Pro is the best AI image generator, with caveats",
+    "link": "https://minimaxir.com/2025/12/nano-banana-pro/",
+    "description": "The problem with Nano Banana Pro is that it&rsquo;s too good.",
+    "source": "Max Woolf's Blog",
+    "pub_date": "Mon, 22 Dec 2025 10:45:00 -0800",
+    "fetched_at": "2026-02-05T08:13:02.026167",
+    "url_hash": "322c3dbcd1125ff116509da277691d30",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "工具"
+      ],
+      "summary": "Nano Banana Pro是一款非常出色的AI图像生成器，但其“过于优秀”的特性也带来了一些潜在问题或使用上的注意事项。",
+      "key_points": [
+        "Nano Banana Pro在AI图像生成方面表现卓越，能力出众。",
+        "其“过于优秀”的特性是文章指出的核心问题或悖论。",
+        "使用该工具时存在需要注意的“注意事项”或限制条件。"
+      ]
+    }
+  },
+  {
+    "title": "The Importance of Diversity",
+    "link": "https://geohot.github.io//blog/jekyll/update/2026/01/27/the-importance-of-diversity.html",
+    "description": "I read Dario’s The Adolescence of Technology and it’s scary. It assumes the perspective of a top-down ruler, that someone can and will get to control AI. This is taken as a given. Machines of Loving Grace assumes basically the same tone, that there are some “adults” in the room, and they will use AI",
+    "source": "the singularity is nearer",
+    "pub_date": "2026-01-27T00:00:00+08:00",
+    "fetched_at": "2026-02-05T08:13:02.362607",
+    "url_hash": "263534305cfc6531306770f35e1d40d4",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "技术趋势"
+      ],
+      "summary": "文章批评了当前关于AI发展的主流论述，认为其隐含了一种危险的“自上而下”的精英控制视角，并强调了技术发展路径多样性的重要性。",
+      "key_points": [
+        "主流AI叙事隐含了由少数精英“自上而下”控制的危险假设。",
+        "文章对《技术的青春期》和《慈爱的机器》等作品中的“家长式”控制论调提出批评。",
+        "作者主张技术发展应避免单一控制模式，强调多样性和去中心化的必要性。"
+      ]
+    }
+  },
+  {
+    "title": "Superlinear Returns",
+    "link": "http://www.paulgraham.com/superlinear.html",
+    "description": "",
+    "source": "Paul Graham: Essays",
+    "pub_date": "",
+    "fetched_at": "2026-02-05T08:13:02.817961",
+    "url_hash": "f8b4832637ce6108f88ae0a06e91403f",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "职业发展"
+      ],
+      "summary": "文章探讨了在软件工程领域，个人或团队通过特定策略（如杠杆作用、知识复利、网络效应）实现超越线性增长的高回报现象。",
+      "key_points": [
+        "超级线性回报指投入产出比随时间或规模增长而加速提升的现象。",
+        "实现路径包括利用杠杆（如代码、资本）、积累可复用的知识以及构建网络效应。",
+        "个人应专注于高杠杆活动，建立系统化思维，并投资于能产生长期复利的知识与关系。"
+      ]
+    }
+  },
+  {
+    "title": "This Week on The Analog Antiquarian",
+    "link": "https://www.filfre.net/2026/01/this-week-on-the-analog-antiquarian/",
+    "description": "Chapter 12: The Harmony of the World",
+    "source": "The Digital Antiquarian",
+    "pub_date": "Fri, 30 Jan 2026 17:43:50 +0000",
+    "fetched_at": "2026-02-05T08:13:03.438012",
+    "url_hash": "14935d01df60f518c2767fd934c0e7ff",
+    "ai_enhanced": {
+      "tags": [
+        "其他",
+        "硬件"
+      ],
+      "summary": "文章回顾了早期计算机或模拟计算设备的历史，探讨了“世界的和谐”这一概念在技术发展中的体现。",
+      "key_points": [
+        "探讨早期计算技术或模拟设备的历史背景。",
+        "分析“世界的和谐”这一哲学或科学概念与技术设计的关联。",
+        "回顾特定历史时期的技术思想对现代计算的启示。"
+      ]
+    }
+  },
+  {
+    "title": "Saying “No” In an Age of Abundance",
+    "link": "https://blog.jim-nielsen.com/2026/saying-no/",
+    "description": "You’ve probably heard this famous quote from Steve Jobs about saying ‘no’: People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as prou",
+    "source": "Jim Nielsen’s Blog",
+    "pub_date": "Tue, 03 Feb 2026 19:00:00 GMT",
+    "fetched_at": "2026-02-05T08:13:03.833984",
+    "url_hash": "8563497abefaa8b7cc99acecd22081fd",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "职业发展"
+      ],
+      "summary": "文章通过引用史蒂夫·乔布斯的观点，阐述了在技术领域机会过剩的时代，专注的核心在于学会明智地拒绝众多看似不错的次要选项。",
+      "key_points": [
+        "专注的本质是拒绝，而非接受。",
+        "在众多好想法中，必须精挑细选。",
+        "战略性的“说不”是产品成功和职业发展的关键。"
+      ]
+    }
+  },
+  {
+    "title": "remotely unlocking an encrypted hard disk",
+    "link": "https://jyn.dev/remotely-unlocking-an-encrypted-hard-disk/",
+    "description": "what's a few systemd services in initramfs between friends?",
+    "source": "the website of jyn",
+    "pub_date": "2026-01-22T00:00:00+00:00",
+    "fetched_at": "2026-02-05T08:13:04.805695",
+    "url_hash": "c55c3f63b90f23a0fdfe06e5bc50c603",
+    "ai_enhanced": {
+      "tags": [
+        "DevOps",
+        "系统架构"
+      ],
+      "summary": "文章探讨了如何在系统启动的initramfs阶段，通过配置systemd服务来实现远程解锁加密硬盘，从而解决无物理接触服务器的管理难题。",
+      "key_points": [
+        "通过systemd服务在initramfs阶段启用网络，为远程解锁提供基础。",
+        "配置Dropbear等SSH服务器，允许授权用户远程连接并输入解密密码。",
+        "此方法适用于LUKS加密磁盘，提升了无头服务器或云服务器的可管理性。"
+      ]
+    }
+  },
+  {
+    "title": "Code like a surgeon",
+    "link": "https://geoffreylitt.com/2025/10/24/code-like-a-surgeon.html",
+    "description": "A lot of people say AI will make us all “managers” or “editors”…but I think this is a dangerously incomplete view! Personally, I’m trying to code like a surgeon. A surgeon isn’t a manager, they do the actual work! But their skills and time are highly...",
+    "source": "Geoffrey Litt",
+    "pub_date": "2025-10-24T14:59:00+00:00",
+    "fetched_at": "2026-02-05T08:13:05.243018",
+    "url_hash": "748710378d09456de7b2d9aca5c86dcb",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "职业发展"
+      ],
+      "summary": "文章认为AI不会让程序员变成纯粹的“管理者”或“编辑者”，而应像外科医生一样，在AI辅助下更精准、高效地完成核心工作。",
+      "key_points": [
+        "AI时代程序员应定位为“外科医生”，而非远离代码的管理者。",
+        "AI是增强工具，旨在提升程序员的核心技能与工作效率。",
+        "未来成功的关键在于人机协作，而非完全依赖或取代人类。"
+      ]
+    }
+  },
+  {
+    "title": "Finding a broken trace on my old Mac with the help of its ROM diagnostics",
+    "link": "https://www.downtowndougbrown.com/2025/12/finding-a-broken-trace-on-my-old-mac-with-the-help-of-its-rom-diagnostics/",
+    "description": "Yesterday, for the first time in about a year, I tried powering on the Macintosh Performa 450 (LC III) from my past writeup about Apple&#8217;s backwards capacitor. It didn&#8217;t work. The screen was black, it played the startup sound, and then immediately followed up with the &#8220;Chimes of Dea",
+    "source": "Downtown Doug Brown",
+    "pub_date": "Tue, 30 Dec 2025 01:52:17 +0000",
+    "fetched_at": "2026-02-05T08:13:06.145717",
+    "url_hash": "3853868a7607ede0a882d5965d199de1",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "工具"
+      ],
+      "summary": "作者通过使用ROM内置的诊断工具，成功定位并修复了一台老款Macintosh Performa 450（LC III）上的一条损坏电路走线。",
+      "key_points": [
+        "作者的老款Macintosh Performa 450开机黑屏并发出故障提示音。",
+        "利用机器ROM中的内置硬件诊断工具来排查问题。",
+        "诊断工具帮助定位到一条具体的损坏电路走线，并最终修复。"
+      ]
+    }
+  },
+  {
+    "title": "Leaking the phone number of any Google user",
+    "link": "https://brutecat.com/articles/leaking-google-phones",
+    "description": "From rate limits to no limits: How IPv6's massive address space and a crafty botguard bypass left every Google user's phone number vulnerable",
+    "source": "skull's blog",
+    "pub_date": "Mon, 09 Jun 2025 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:13:06.617792",
+    "url_hash": "04035f9f65351afa93534188617ca57f",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "其他"
+      ],
+      "summary": "攻击者通过利用IPv6的巨大地址空间和绕过Google的Botguard防护，成功设计了一种可以泄露任何Google用户手机号码的攻击方法。",
+      "key_points": [
+        "利用IPv6海量地址空间绕过基于IP的速率限制。",
+        "通过技术手段成功绕过Google的Botguard反机器人防护。",
+        "攻击者可枚举并关联Google账户与绑定的手机号码。"
+      ]
+    }
+  },
+  {
+    "title": "Rewriting pycparser with the help of an LLM",
+    "link": "https://eli.thegreenplace.net/2026/rewriting-pycparser-with-the-help-of-an-llm/",
+    "description": "pycparser is my most widely used open source project (with ~20M daily downloads from PyPI [1]). It's a pure-Python parser for the C programming language, producing ASTs inspired by Python's own. Until very recently, it's been using PLY: Python Lex-Yacc for the core parsing. In this post, I'll descri",
+    "source": "Eli Bendersky's website",
+    "pub_date": "2026-02-05T03:38:39-08:00",
+    "fetched_at": "2026-02-05T08:13:07.201849",
+    "url_hash": "1f9990b1a411ff6bdfde5c2d9c22a7db",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "AI/机器学习"
+      ],
+      "summary": "作者利用大型语言模型（LLM）辅助，成功重写了自己广受欢迎的开源C语言解析器项目pycparser的核心部分，替换了原有的PLY解析器。",
+      "key_points": [
+        "pycparser是一个纯Python的C语言解析器，拥有极高的使用量。",
+        "项目核心原本使用PLY进行解析，作者借助LLM技术对其进行了重写。",
+        "文章重点描述了利用LLM辅助完成此类复杂代码重构的过程与经验。"
+      ]
+    }
+  },
+  {
+    "title": "A Brief History of Sega Enterprises",
+    "link": "https://www.abortretry.fail/p/a-brief-history-of-sega-enterprises",
+    "description": "Sega does what Nintendon't",
+    "source": "Abort Retry Fail",
+    "pub_date": "Mon, 12 Jan 2026 04:02:27 GMT",
+    "fetched_at": "2026-02-05T08:13:08.078505",
+    "url_hash": "46cfb99b7940b9959ca43fe07e9b0228",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "其他"
+      ],
+      "summary": "文章概述了世嘉公司的发展历程，并引用了其与任天堂竞争时期的经典口号。",
+      "key_points": [
+        "回顾世嘉公司的历史发展轨迹。",
+        "提及世嘉与任天堂在游戏主机市场的竞争关系。",
+        "引用了标志性的宣传口号“Sega does what Nintendon't”。"
+      ]
+    }
+  },
+  {
+    "title": "Is QSpy still cool? Let's play QuakeWorld!",
+    "link": "https://fabiensanglard.net/quakeworld/index.html",
+    "description": "",
+    "source": "Fabien Sanglard",
+    "pub_date": "16 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:08.572631",
+    "url_hash": "a7eea6d072e10023b44b67904f9bcc58",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "软件工程"
+      ],
+      "summary": "文章探讨了QSpy这一开源工具在当今是否仍有价值，并以经典游戏QuakeWorld为例进行演示和分析。",
+      "key_points": [
+        "探讨QSpy开源工具在现代开发环境中的实用性与意义。",
+        "以QuakeWorld游戏为例，展示QSpy的具体应用场景和效果。",
+        "分析经典工具在新技术背景下如何保持其“酷”的价值。"
+      ]
+    }
+  },
+  {
+    "title": "Hands-on with two Apple Network Server prototype ROMs",
+    "link": "https://oldvcr.blogspot.com/feeds/7919295616194475009/comments/default",
+    "description": "",
+    "source": "Old Vintage Computing Research",
+    "pub_date": "2026-01-25T07:14:33.583-08:00",
+    "fetched_at": "2026-02-05T08:13:09.088804",
+    "url_hash": "5b6a5468db1681376f34e194f25b90d0",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "开源项目"
+      ],
+      "summary": "文章介绍了对两款苹果网络服务器原型机ROM的实践探索，揭示了苹果历史上鲜为人知的服务器硬件遗产。",
+      "key_points": [
+        "探索了苹果在90年代推出的Network Server原型机ROM。",
+        "分析了ROM内容，揭示了服务器硬件的技术细节与历史背景。",
+        "展示了如何获取并运行这些ROM，为技术考古提供了实践案例。"
+      ]
+    }
+  },
+  {
+    "title": "World's Cheapest ARM Debugger is Actually RISC-V",
+    "link": "https://bogdanthegeek.github.io/blog/projects/v003-dap/",
+    "description": "Background Continuing my work with arm debugging on free microcontrollers recovered from disposable vapes, I felt like using a $5 raspberry pi pico to program and debug these micros was a bit too extravagant, too bourgeoisie. A working man&rsquo;s microcontroller deserves a blue collar debugger to m",
+    "source": "BogdanTheGeek's Blog",
+    "pub_date": "Sun, 19 Oct 2025 15:07:31 +0100",
+    "fetched_at": "2026-02-05T08:13:09.450833",
+    "url_hash": "70b5ee4e23bbc5d2e42ca907070b5717",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "开源项目"
+      ],
+      "summary": "作者利用一个极其廉价（约0.5美元）的RISC-V微控制器，成功制作了一个可用于ARM芯片调试的调试器，旨在替代成本更高的方案。",
+      "key_points": [
+        "项目动机是寻找比树莓派Pico（5美元）更廉价的ARM调试方案。",
+        "核心方案是使用一款超低成本的RISC-V芯片（CH32V003）来制作调试器。",
+        "该项目体现了硬件黑客精神，用最低成本实现专业功能。"
+      ]
+    }
+  },
+  {
+    "title": "Claude, Teach Me Something",
+    "link": "https://hugotunius.se/2025/10/26/claude-teach-me-something.html",
+    "description": "I’ve been experimenting with a new Claude workflow as an alternative to doom scrolling. It leverages what LLMs do best: non-determinism and text. I call it “Teach me something”.",
+    "source": "Hugo Tunius - Blog",
+    "pub_date": "2025-10-26T00:00:00+01:00",
+    "fetched_at": "2026-02-05T08:13:09.952847",
+    "url_hash": "d11997e3da011d214ab2dab32a9c8eac",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "工具"
+      ],
+      "summary": "作者介绍了一种名为“Teach me something”的新型Claude使用流程，旨在替代无意义的刷屏行为，利用LLM的非确定性和文本生成能力来主动学习知识。",
+      "key_points": [
+        "提出利用Claude进行主动学习的替代性工作流程，对抗“doom scrolling”。",
+        "该流程的核心是发挥LLM的非确定性（生成多样性内容）和文本处理优势。",
+        "方法命名为“Teach me something”，旨在通过互动对话获取新知或启发。"
+      ]
+    }
+  },
+  {
+    "title": "Digitaal zoet en zuur in het coalitieakkoord",
+    "link": "https://berthub.eu/articles/posts/digitaal-zoet-zuur-coalitie-akkoord/",
+    "description": "Het coalitieakkoord heeft een boel woorden die raken aan digitalisering, digitale autonomie en cybersecurity. Veel van de plannen komen niet uit de lucht vallen, en zijn gebaseerd op bijeenkomsten, gesprekken en documenten van de afgelopen jaren. Het is goed te zien dat men gebruik heeft gemaakt van",
+    "source": "Bert Hubert's writings",
+    "pub_date": "Mon, 02 Feb 2026 12:00:00 +0100",
+    "fetched_at": "2026-02-05T08:13:11.706889",
+    "url_hash": "c58befdcf73be58e31bb973bf9d796c7",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "技术趋势"
+      ],
+      "summary": "文章分析了荷兰联合政府协议中关于数字化、数字自主权和网络安全的内容，指出这些计划并非凭空产生，而是基于过去几年的讨论和文件。",
+      "key_points": [
+        "政府协议强调数字化、数字自主权和网络安全等议题。",
+        "相关计划基于过去数年的会议、对话和文件积累而成。",
+        "文章对协议中数字化政策的延续性和背景进行了评述。"
+      ]
+    }
+  },
+  {
+    "title": "semaglutide-has-changed-the-world",
+    "link": "https://chadnauseam.com/random/semaglutide-has-changed-the-world",
+    "description": "",
+    "source": "Chad Nauseam Home",
+    "pub_date": "",
+    "fetched_at": "2026-02-05T08:13:12.360137",
+    "url_hash": "6a55a37f903d719e665b00ea3782ab1e",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "产品设计"
+      ],
+      "summary": "文章探讨了司美格鲁肽（semaglutide）作为一种革命性的药物，如何通过其卓越的疗效改变了肥胖症和糖尿病的治疗格局，并对全球健康领域产生了深远影响。",
+      "key_points": [
+        "司美格鲁肽是GLP-1受体激动剂，在减重和控糖方面效果显著。",
+        "其成功推动了相关药物研发热潮，重塑了代谢疾病治疗范式。",
+        "药物的广泛影响超出了医疗本身，涉及社会、经济等多个层面。"
+      ]
+    }
+  },
+  {
+    "title": "The Postcard and the Thing Itself (On Falling in Love with Ideas)",
+    "link": "https://simone.org/the-postcard-and-the-thing-itself-on-falling-in-love-with-ideas/",
+    "description": "My meditation teacher said something that stopped me cold: “We fall in love with the idea of a person, and then we fight so hard to keep it alive.”",
+    "source": "Simone Salis",
+    "pub_date": "Tue, 28 Oct 2025 15:26:41 GMT",
+    "fetched_at": "2026-02-05T08:13:12.900724",
+    "url_hash": "417310cdabaf9b1701f8e74c272e1f5d",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "产品设计"
+      ],
+      "summary": "文章通过一个比喻，探讨了人们容易迷恋上对事物（如软件、产品）的理想化构想，而非其真实本质，并为此付出巨大努力去维持这个幻象。",
+      "key_points": [
+        "人们常爱上对人或事物的理想化构想（明信片），而非其真实本身。",
+        "在软件和产品开发中，这种对“构想”的执着可能导致偏离实际需求。",
+        "核心挑战在于认清并拥抱现实，而非固执地维护一个不切实际的理想。"
+      ]
+    }
+  },
+  {
+    "title": "Time Machine inside a FreeBSD jail",
+    "link": "https://it-notes.dragas.net/2026/01/28/time-machine-freebsd-jail/",
+    "description": "A guide on how to set up Time Machine inside a FreeBSD jail.",
+    "source": "IT Notes",
+    "pub_date": "Wed, 28 Jan 2026 08:52:00 +0000",
+    "fetched_at": "2026-02-05T08:13:13.623432",
+    "url_hash": "e4982eedd821c70785377ac632a2bc4e",
+    "ai_enhanced": {
+      "tags": [
+        "DevOps",
+        "系统架构"
+      ],
+      "summary": "本文是一篇指南，详细介绍了如何在 FreeBSD 的 jail（一种轻量级虚拟化环境）中设置和配置 Time Machine 备份服务。",
+      "key_points": [
+        "介绍在 FreeBSD jail 中部署 Time Machine 备份服务的具体步骤。",
+        "说明如何配置 Netatalk 服务以支持 macOS 的 Time Machine 协议。",
+        "涉及 jail 的网络、存储配置以及服务权限管理等关键设置。"
+      ]
+    }
+  },
+  {
+    "title": "About Paris",
+    "link": "https://hey.paris/about/",
+    "description": "Dr Paris Buttfield-Addison is a technical product leader, author, and computer scientist based in Hobart, Tasmania. His work sits at the intersection of technology, policy, and human behaviour, drawing on a background in computer science, law, and medieval history. He&rsquo;s completing a law degree",
+    "source": "Dr Paris Buttfield-Addison",
+    "pub_date": "Mon, 01 Jan 0001 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:24.543394",
+    "url_hash": "51d71f466647066a2880403454f7e115",
+    "ai_enhanced": {
+      "tags": [
+        "职业发展",
+        "其他"
+      ],
+      "summary": "本文介绍了技术产品领导者Paris Buttfield-Addison的个人背景，其工作融合了技术、政策和人类行为等多个领域。",
+      "key_points": [
+        "Paris Buttfield-Addison是一位技术产品领导者、作者和计算机科学家。",
+        "他的工作结合了技术、政策和人类行为，背景涵盖计算机科学、法律和中世纪历史。",
+        "他目前正在完成法律学位，常驻澳大利亚塔斯马尼亚州霍巴特。"
+      ]
+    }
+  },
+  {
+    "title": "How to create a tool library in Airtable",
+    "link": "https://danielwirtz.com/blog/airtable-tool-library",
+    "description": "undefined",
+    "source": "Blog - Daniel Wirtz",
+    "pub_date": "Thu, 09 Dec 2021 19:35:00 GMT",
+    "fetched_at": "2026-02-05T08:13:24.949527",
+    "url_hash": "f625c684d5f818797f442a4dd961b925",
+    "ai_enhanced": {
+      "tags": [
+        "工具",
+        "数据库"
+      ],
+      "summary": "本文介绍了如何在Airtable中创建一个工具库，用于集中管理和跟踪团队使用的各类软件工具。",
+      "key_points": [
+        "阐述在Airtable中规划和设计工具库表格结构的基本步骤。",
+        "说明如何为每个工具记录关键信息，如用途、许可证、所属团队等。",
+        "介绍如何利用视图、筛选和协作功能，使工具库易于维护和查询。"
+      ]
+    }
+  },
+  {
+    "title": "The Year of the 3D Printed Miniature (And Other Lies We Tell Ourselves)",
+    "link": "https://matduggan.com/the-year-of-the-3d-printed-miniature-and-other-lies-we-tell-ourselves/",
+    "description": "3D printing and miniatures as a case study in how tech misses what users actually want",
+    "source": "matduggan.com",
+    "pub_date": "Mon, 29 Dec 2025 11:19:30 GMT",
+    "fetched_at": "2026-02-05T08:13:25.954396",
+    "url_hash": "9f42ad8359f95f1680a383a561ce9ef4",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "产品设计"
+      ],
+      "summary": "文章以3D打印和微缩模型为例，揭示了新技术在推广时常常误解用户真实需求，过度关注技术本身而非实际应用价值。",
+      "key_points": [
+        "技术炒作常忽视用户核心需求，如3D打印过度强调技术参数而非成品实用性。",
+        "成功的产品应解决用户实际问题，而非单纯追求技术新颖性或制造商的愿景。",
+        "案例研究表明，用户真正想要的是高质量、易用的成品，而非拥有或操作复杂技术本身。"
+      ]
+    }
+  },
+  {
+    "title": "The Most Popular Blogs of Hacker News in 2025",
+    "link": "https://refactoringenglish.com/blog/2025-hn-top-5/",
+    "description": "With 2025 wrapped up, I can finally answer a question I&rsquo;m curious about every year: who were the most popular bloggers of Hacker News? Who counts as a blogger? I explain more in my methodology page, but it&rsquo;s basically anyone who blogs as an individual rather than as part of a company or ",
+    "source": "Refactoring English",
+    "pub_date": "Fri, 02 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:26.383123",
+    "url_hash": "cec035dc988de0fcaa86249aaaa852f8",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "软件工程"
+      ],
+      "summary": "文章分析了2025年Hacker News社区中最受欢迎的个人技术博客作者，并介绍了其评选方法。",
+      "key_points": [
+        "评选2025年Hacker News上最受欢迎的个人技术博主。",
+        "定义了“博主”为以个人身份而非公司名义写作的作者。",
+        "提供了详细的方法论说明，解释了数据来源和评选标准。"
+      ]
+    }
+  },
+  {
+    "title": "Getting Forked by Microsoft",
+    "link": "https://philiplaine.com/posts/getting-forked-by-microsoft/",
+    "description": "Three years ago, I was part of a team responsible for developing and maintaining Kubernetes clusters for end user customers. A main source for downtime in customer environments occurred when image registries went down. The traditional way to solve this problem is to set up a stateful mirror, however",
+    "source": "Philip Laine",
+    "pub_date": "Mon, 21 Apr 2025 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:27.151139",
+    "url_hash": "70fd39087f9551a6e4cbf5deec2b7008",
+    "ai_enhanced": {
+      "tags": [
+        "DevOps",
+        "云计算"
+      ],
+      "summary": "文章作者分享了三年前在维护Kubernetes集群时，因镜像仓库宕机导致客户环境中断的经历，并探讨了传统解决方案的局限性。",
+      "key_points": [
+        "Kubernetes集群因镜像仓库宕机导致客户环境中断是主要故障源。",
+        "传统解决方案是建立有状态的镜像仓库镜像，但存在局限性。",
+        "文章暗示微软可能提出了新的解决方案或进行了项目分叉。"
+      ]
+    }
+  },
+  {
+    "title": "Making the Wrong Things Go Faster at The Department of War",
+    "link": "https://steveblank.com/2026/02/03/making-the-wrong-things-go-faster-at-the-department-of-war/",
+    "description": "This article previously appeared in Defense Scoop The Department of War (DoW) senior Acquisition leadership (the people who decide what and how the DoW buys equipment and services) now is headed by people from private capital (venture capital and private equity.) Deputy Secretary of War Steven Feinb",
+    "source": "Steve Blank",
+    "pub_date": "Tue, 03 Feb 2026 14:00:08 +0000",
+    "fetched_at": "2026-02-05T08:13:27.559648",
+    "url_hash": "334b1b225d415f7f8b46b87060eb48d9",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "其他"
+      ],
+      "summary": "文章讨论了美国国防部采购部门高层由风险投资和私募股权背景人士领导，可能对采购流程和重点产生的影响。",
+      "key_points": [
+        "国防部采购领导层现由私人资本背景人士主导。",
+        "这可能改变国防部采购装备和服务的决策方式与重点。",
+        "文章探讨了这种人事变动对国防采购效率与方向的潜在影响。"
+      ]
+    }
+  },
+  {
+    "title": "Sorry for marking all the posts as unread",
+    "link": "",
+    "description": "I noticed that the URLs were all a little off (had two slashes instead of one) and went in and fixed it. I did not think everyone's RSS software was going to freak out the way it did. PS: this is a special RSS-only post that is not visible on the site. Enjoy.",
+    "source": "Max Bernstein's Blog",
+    "pub_date": "Wed, 31 Jan 2024 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:27.975284",
+    "url_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "ai_enhanced": {
+      "tags": [
+        "Web开发",
+        "软件工程"
+      ],
+      "summary": "作者因修复网站URL中的双斜杠问题，意外导致所有RSS订阅条目被标记为未读，特此通过RSS专用渠道向用户致歉并说明情况。",
+      "key_points": [
+        "技术操作引发意外：修复URL格式（将双斜杠改为单斜杠）触发了RSS客户端的异常反应。",
+        "影响范围明确：所有订阅用户的RSS阅读器均将文章标记为未读状态。",
+        "沟通渠道特殊：此说明仅通过RSS推送发布，未在网站前台显示。"
+      ]
+    }
+  },
+  {
+    "title": "I built a timer I can’t fail to set",
+    "link": "http://danieldelaney.net/timer/",
+    "description": "Have you ever gotten to the end of a long work day and realized you’re no closer to your goals? I have. Sure, I was doing a lot of stuff. But I wasn’t pausing to ask whether I was doing the right stuff. Or whether my approach was working. Or if I was spending the right amount of time on it. My finge",
+    "source": "Daniel De Laney",
+    "pub_date": "Tue, 02 Dec 2025 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:28.350383",
+    "url_hash": "e7e0bbf97568ec40968f465b31d70e5b",
+    "ai_enhanced": {
+      "tags": [
+        "工具",
+        "产品设计"
+      ],
+      "summary": "作者为了解决工作中因缺乏反思而导致效率低下的问题，设计并开发了一款无法被忽略的定时器工具，旨在强制自己定期暂停并评估工作方向与效率。",
+      "key_points": [
+        "作者意识到自己常忙于工作却未反思方向是否正确或方法是否有效。",
+        "为解决此问题，作者设计了一个无法被轻易关闭或忽略的物理/软件定时器。",
+        "该工具的核心目的是强制定期中断，以进行目标回顾和工作方法调整。"
+      ]
+    }
+  },
+  {
+    "title": "Weekly Update 489",
+    "link": "https://www.troyhunt.com/weekly-update-489/",
+    "description": "This week I&apos;m in Hong Kong, and the day after recording, I gave the talk shown in the image above at INTERPOL&apos;s Cybercrime Expert Group. I posted a little about this on Facebook and LinkedIn, but thought I&apos;d expand on what really stuck with",
+    "source": "Troy Hunt",
+    "pub_date": "Wed, 04 Feb 2026 02:31:18 GMT",
+    "fetched_at": "2026-02-05T08:13:28.741618",
+    "url_hash": "74488b89a475e7f6923474783d2f6f1f",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "技术趋势"
+      ],
+      "summary": "作者在香港参加国际刑警组织网络犯罪专家组会议并发表演讲，计划在周报中分享会议的核心见解。",
+      "key_points": [
+        "作者本周行程位于香港，参加了国际刑警组织的活动。",
+        "在会议上就网络犯罪议题发表了演讲。",
+        "计划在周报中详细阐述会议中讨论的关键问题和深刻见解。"
+      ]
+    }
+  },
+  {
+    "title": "Things that work (for me)",
+    "link": "https://herman.bearblog.dev/things-that-work/",
+    "description": "A list of tools and items that JustWork (tm)",
+    "source": "Herman's blog",
+    "pub_date": "2026-01-20T08:27:41.661368+00:00",
+    "fetched_at": "2026-02-05T08:13:29.111446",
+    "url_hash": "a3ba35d63dbebc09b89e5fde54c68c49",
+    "ai_enhanced": {
+      "tags": [
+        "工具",
+        "软件工程"
+      ],
+      "summary": "作者分享了一份经过个人验证、能“开箱即用”且可靠的工具与物品清单，旨在提高工作效率和生活便利性。",
+      "key_points": [
+        "文章核心是推荐作者亲测有效、能无缝工作的工具和物品。",
+        "清单内容涵盖软件工具和实体物品，注重实用性和可靠性。",
+        "分享标准基于个人经验，旨在为读者提供可直接采纳的解决方案。"
+      ]
+    }
+  },
+  {
+    "title": "LLMs are a 400-year-long confidence trick",
+    "link": "https://tomrenner.com/posts/400-year-confidence-trick/",
+    "description": "In 1623 the German Wilhelm Schickard produced the first known designs for a mechanical calculator. Twenty years later Blaise Pascal produced a machine of an improved design, aiming to help with the large amount of tedious arithmetic required in his role as a tax collector. The interest in mechanical",
+    "source": "Tom Renner on My place to put things",
+    "pub_date": "Tue, 13 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:29.513127",
+    "url_hash": "254b79a6cb553fb19ba15a8c892889f6",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "技术趋势"
+      ],
+      "summary": "文章将当前大型语言模型的热潮与历史上机械计算器的发明进行类比，认为其本质上是一种延续了数百年的“信心游戏”，旨在揭示技术炒作与实用价值之间的鸿沟。",
+      "key_points": [
+        "将LLMs比作现代版的机械计算器，质疑其实际效用是否被夸大。",
+        "指出新技术常伴随过度宣传，其长期价值需时间检验。",
+        "暗示当前AI热潮可能重复历史模式，即初期期望远超实际落地能力。"
+      ]
+    }
+  },
+  {
+    "title": "Two kinds of AI users are emerging. The gap between them is astonishing.",
+    "link": "https://martinalderson.com/posts/two-kinds-of-ai-users-are-emerging/?utm_source=rss",
+    "description": "A bifurcation is happening in AI adoption - power users shipping products in days versus everyone else generating meeting agendas. Enterprise tool choices are accelerating the divide.",
+    "source": "Martin Alderson",
+    "pub_date": "Sun, 01 Feb 2026 00:00:00 GMT",
+    "fetched_at": "2026-02-05T08:13:30.388186",
+    "url_hash": "6a2381690766423ddac61cc58d4185df",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "技术趋势"
+      ],
+      "summary": "文章指出AI应用领域正在出现显著分化，少数“强力用户”能快速开发产品，而多数人仅用于基础任务，企业工具选择加剧了这种差距。",
+      "key_points": [
+        "AI应用出现两极分化：强力用户快速产出产品 vs 普通用户仅完成基础任务。",
+        "企业工具的选择和采用速度是加剧这种能力鸿沟的关键因素。",
+        "这种分化可能导致组织内部和市场上的竞争力差距进一步拉大。"
+      ]
+    }
+  },
+  {
+    "title": "Testing Opus 4.5 For C Programming",
+    "link": "https://danielchasehooper.com/posts/code-agents/",
+    "description": "A grumpy C programmer sees what all the fuss is about Read the whole article on danielchasehooper.com →",
+    "source": "Daniel Hooper",
+    "pub_date": "Wed, 07 Jan 2026 00:00:00 +0000",
+    "fetched_at": "2026-02-05T08:13:30.802831",
+    "url_hash": "8a7160c0d2f56bcec74dd44c824c946a",
+    "ai_enhanced": {
+      "tags": [
+        "编程语言",
+        "测试"
+      ],
+      "summary": "一位C语言程序员测试了Opus 4.5，并分享了他的使用体验和看法。",
+      "key_points": [
+        "作者以C程序员视角评估Opus 4.5",
+        "测试了该工具在C编程相关任务中的表现",
+        "分享了实际使用后的具体感受和结论"
+      ]
+    }
+  },
+  {
+    "title": "Aperiodic Tilings V: the Refinable Frontier",
+    "link": "https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/aperiodic-refine/",
+    "description": "A sequel to my previous posts on finite-state transducers for aperiodic tilings: if you have a tiling you can’t build a transducer for, here’s an algorithm to turn it into one you can.",
+    "source": "Simon Tatham's quasi-blog",
+    "pub_date": "2025-09-02T00:00:00+00:00",
+    "fetched_at": "2026-02-05T08:13:31.723505",
+    "url_hash": "e141342ca3fb262d893bbcff37939b87",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "其他"
+      ],
+      "summary": "本文是作者关于非周期性铺砌系列文章的续篇，针对无法用有限状态转换器构建的铺砌，提出了一种算法将其转换为可构建的铺砌。",
+      "key_points": [
+        "提出一种算法，将无法用有限状态转换器构建的铺砌转换为可构建的铺砌。",
+        "该算法是作者关于非周期性铺砌和有限状态转换器系列文章的延续。",
+        "核心在于处理那些超越传统有限状态转换器能力的复杂铺砌模式。"
+      ]
+    }
+  },
+  {
+    "title": "Manufacturing as Maintenance",
+    "link": "https://grantslatton.com/manufacturing-as-maintenance",
+    "description": "The cleansing fire of rebirth",
+    "source": "Grant Slatton's Blog",
+    "pub_date": "Sat, 31 Jan 2026 21:56:41 +0000",
+    "fetched_at": "2026-02-05T08:13:32.390636",
+    "url_hash": "8a72bf2c748855d13eb79c3b902dff7e",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "技术趋势"
+      ],
+      "summary": "文章将“制造”重新定义为一种持续维护和迭代重生的过程，强调通过不断重构和优化来实现系统的进化与净化。",
+      "key_points": [
+        "将软件制造视为持续的维护与重生循环，而非一次性构建。",
+        "强调通过“净化的火焰”般的重构来优化和更新现有系统。",
+        "倡导一种注重长期演进、而非短期交付的软件工程哲学。"
+      ]
+    }
+  },
+  {
+    "title": "Underrated ways to change the world, vol. II",
+    "link": "https://www.experimental-history.com/p/underrated-ways-to-change-the-world-b64",
+    "description": "OR: why you should sell onions on the internet",
+    "source": "Experimental History",
+    "pub_date": "Tue, 03 Feb 2026 16:28:19 GMT",
+    "fetched_at": "2026-02-05T08:13:32.840676",
+    "url_hash": "70209ebf933f0f74dc14d13eaa3858bf",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "产品设计"
+      ],
+      "summary": "文章通过“在网上卖洋葱”这一看似简单的比喻，阐述了通过解决微小但普遍存在的实际问题来创造巨大价值的核心理念。",
+      "key_points": [
+        "关注被忽视的日常问题，其解决方案可能产生巨大影响。",
+        "成功的产品往往始于解决一个具体、微小的痛点。",
+        "技术或商业模式的创新可以来自对传统事物的重新思考。"
+      ]
+    }
+  },
+  {
+    "title": "Vibe Coding: Empowering and Imprisoning",
+    "link": "https://anildash.com/2025/12/02/vibe-coding-empowering-and-imprisoning/",
+    "description": "",
+    "source": "Anil Dash",
+    "pub_date": "2025-12-02T00:00:00Z",
+    "fetched_at": "2026-02-05T08:13:33.275121",
+    "url_hash": "890d17d969fdcd8a00201294cfb7ce4a",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "软件工程"
+      ],
+      "summary": "文章探讨了Vibe Coding（一种依赖AI生成代码的编程方式）的双重性，它既能赋能开发者快速构建原型，也可能导致开发者技能退化和对AI的过度依赖。",
+      "key_points": [
+        "Vibe Coding利用AI快速生成代码，极大提升了原型开发效率。",
+        "过度依赖可能导致开发者基础编程能力和问题解决能力下降。",
+        "关键在于平衡AI辅助与主动学习，将其作为工具而非替代。"
+      ]
+    }
+  },
+  {
+    "title": "Fav tech museums",
+    "link": "https://aresluna.org/fav-tech-museums",
+    "description": "",
+    "source": "Aresluna",
+    "pub_date": "2026-01-05T19:52:00+0000",
+    "fetched_at": "2026-02-05T08:13:33.746048",
+    "url_hash": "0a53d67de63bcfadc9e2102b992c5e36",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "其他"
+      ],
+      "summary": "文章介绍了作者个人喜爱的科技博物馆，分享了这些博物馆的特色与参观体验。",
+      "key_points": [
+        "文章主题是推荐和分享全球值得参观的科技博物馆。",
+        "内容基于作者的个人偏好和参观经历，具有主观推荐性质。",
+        "旨在为科技爱好者提供参观灵感和目的地参考。"
+      ]
+    }
+  },
+  {
+    "title": "Coding Agent VMs on NixOS with microvm.nix",
+    "link": "https://michael.stapelberg.ch/posts/2026-02-01-coding-agent-microvm-nix/",
+    "description": "",
+    "source": "Michael Stapelbergs Website",
+    "pub_date": "",
+    "fetched_at": "2026-02-05T08:13:35.213612",
+    "url_hash": "1af8da314ff8f5eedb66436532f523c6",
+    "ai_enhanced": {
+      "tags": [
+        "DevOps",
+        "开源项目"
+      ],
+      "summary": "本文介绍了如何在NixOS上使用microvm.nix项目来创建和管理轻量级、隔离的编码代理虚拟机，以提升开发环境的安全性与可复现性。",
+      "key_points": [
+        "microvm.nix是一个用于在NixOS上声明式配置轻量级虚拟机的工具。",
+        "通过创建隔离的VM运行编码代理，可以增强安全性并控制资源访问。",
+        "利用NixOS的声明式配置和可复现性，能快速构建一致的开发环境。"
+      ]
+    }
+  },
+  {
+    "title": "Date Arithmetic in Bash",
+    "link": "https://blog.miguelgrinberg.com/post/date-arithmetic-in-bash",
+    "description": "Date and time management libraries in many programming languages are famously bad. Python's datetime module comes to mind as one of the best (worst?) examples, and so does JavaScript's Date class. It feels like these libraries could not have been made worse on purpose, or so I thought until today, w",
+    "source": "Miguel Grinberg's Blog",
+    "pub_date": "Wed, 04 Feb 2026 11:09:06 GMT",
+    "fetched_at": "2026-02-05T08:13:36.086727",
+    "url_hash": "71accd9660bac7f7430bd2ac4b69209f",
+    "ai_enhanced": {
+      "tags": [
+        "编程语言",
+        "工具"
+      ],
+      "summary": "文章作者吐槽了多种编程语言（如Python和JavaScript）中日期时间库的糟糕设计，并引出Bash中进行日期运算的主题。",
+      "key_points": [
+        "批评Python datetime和JavaScript Date等库的糟糕设计体验。",
+        "暗示Bash的日期运算可能同样或更加令人困扰。",
+        "文章核心是探讨在Bash环境中处理日期算术运算。"
+      ]
+    }
+  },
+  {
+    "title": "How I replaced Baremetrics and ChartMogul with Rake",
+    "link": "https://keygen.sh/blog/how-i-replaced-baremetrics-and-chartmogul-with-rake/",
+    "description": "How I used a Rake task to replace Baremetrics and ChartMogul for business analytics.",
+    "source": "Keygen Blog",
+    "pub_date": "Tue, 05 Jan 2021 06:00:00 GMT",
+    "fetched_at": "2026-02-05T08:13:36.658660",
+    "url_hash": "91a8fd1f3f1b2e36054bbd6273dc5dc3",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "工具"
+      ],
+      "summary": "作者介绍了如何通过编写一个Rake任务，替代Baremetrics和ChartMogul这类付费商业分析服务，实现自定义的业务数据分析。",
+      "key_points": [
+        "使用Ruby的Rake任务构建自定义分析方案，替代付费SaaS工具。",
+        "方案核心是直接从数据库（如Stripe）提取并处理原始交易数据。",
+        "通过自定义脚本生成关键业务指标（如MRR、客户流失率），满足特定需求。"
+      ]
+    }
+  },
+  {
+    "title": "Not here",
+    "link": "https://mjg59.dreamwidth.org/74084.html",
+    "description": "Hello! I am not posting here any more. You can find me here instead. Most Planets should be updated already (I've an MR open for Planet Gnome), but if you're subscribed to my feed directly please update it. comments",
+    "source": "Matthew Garrett",
+    "pub_date": "Mon, 05 Jan 2026 22:26:23 GMT",
+    "fetched_at": "2026-02-05T08:13:37.369943",
+    "url_hash": "4a7cec557872c5d902fdfdc8d2d7ecaa",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "其他"
+      ],
+      "summary": "作者宣布停止在此平台更新内容，并告知读者新的内容发布地址，同时提醒订阅者更新订阅源。",
+      "key_points": [
+        "作者已迁移至新的内容发布平台，不再在此更新。",
+        "大部分聚合站点（如Planet Gnome）已通过合并请求更新。",
+        "直接订阅其源（feed）的读者需要手动更新订阅地址。"
+      ]
+    }
+  },
+  {
+    "title": "the essence of frigidity",
+    "link": "https://computer.rip/2026-01-25-the-essence-of-frigidity.html",
+    "description": "The front of the American grocery store contains a strange, liminal space: the transitional area between parking lot and checkstand, along the front exterior and interior of the building, that fills with oddball commodities. Ice is a fixture at nearly every store, filtered water at most, firewood at",
+    "source": "computers are bad",
+    "pub_date": "25 Jan 2026 00:00:00 UT",
+    "fetched_at": "2026-02-05T08:13:38.360753",
+    "url_hash": "5dabdb24fc4baff1d36f9748fe481e39",
+    "ai_enhanced": {
+      "tags": [
+        "产品设计",
+        "其他"
+      ],
+      "summary": "文章探讨了美国杂货店前厅作为停车场与收银台之间过渡空间的独特设计，及其所承载的特定商品（如冰块、木柴）所反映的社会功能与文化意义。",
+      "key_points": [
+        "分析杂货店前厅作为过渡性空间的建筑与社会学意义。",
+        "指出冰块、木柴等商品在此空间的固定陈列，反映了特定的消费需求。",
+        "探讨此设计如何连接外部（停车场）与内部（商店），塑造购物体验。"
+      ]
+    }
   }
 ]
