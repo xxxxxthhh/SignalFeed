@@ -5,7 +5,7 @@ SignalFeed - 静态网站生成脚本（支持 AI 增强）
 """
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from email.utils import parsedate_to_datetime
 
@@ -95,7 +95,7 @@ def generate_html(articles):
     <main class="container">
         <div class="stats">
             <span id="article-count">📊 共 """ + str(len(articles)) + """ 篇文章</span>
-            <span>🕐 最后更新: """ + datetime.now().strftime('%Y-%m-%d %H:%M') + """</span>
+            <span>🕐 最后更新: """ + (datetime.now(timezone.utc) + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M') + """</span>
         </div>
 
         <div class="filters">
