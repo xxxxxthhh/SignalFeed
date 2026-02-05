@@ -32,7 +32,7 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
-          python scripts/ai_enhance.py 10
+          python scripts/ai_enhance.py 100
         continue-on-error: true
 
       - name: Generate website
