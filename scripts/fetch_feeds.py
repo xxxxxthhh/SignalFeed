@@ -47,7 +47,7 @@ def parse_rss_2_0(root, url):
     feed_title = feed_title.text if feed_title is not None else 'Unknown'
 
     items = []
-    for item in channel.findall('item')[:5]:  # 每个源最多 5 篇
+    for item in channel.findall('item')[:1]:  # 每个源只抓取最新 1 篇
         title = item.find('title')
         link = item.find('link')
         description = item.find('description')
@@ -80,7 +80,7 @@ def parse_atom(root, url):
     if not entries:
         entries = root.findall('entry')
 
-    for entry in entries[:5]:  # 每个源最多 5 篇
+    for entry in entries[:1]:  # 每个源只抓取最新 1 篇
         title = entry.find('atom:title', ns)
         if title is None:
             title = entry.find('title')
