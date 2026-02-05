@@ -1,10 +1,10 @@
 name: Fetch RSS Feeds and Deploy
 
 on:
-  # schedule:
-  #   # 每天早上 8:00 和晚上 20:00 运行（UTC 时间）
-  #   - cron: '0 0 * * *'   # 8:00 AM CST
-  #   - cron: '0 12 * * *'  # 8:00 PM CST
+  schedule:
+    # 每天早上 8:00 和晚上 20:00 运行（UTC 时间）
+    - cron: '0 0 * * *'   # 8:00 AM CST (UTC 0:00)
+    - cron: '0 12 * * *'  # 8:00 PM CST (UTC 12:00)
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -30,18 +30,29 @@ jobs:
 
       - name: Generate website
         run: |
-          python scripts/generate_site.py
+          python scripts/generate_site_v2.py
 
-      - name: Commit and push changes
+      - name: Commit and push changes to main
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/ site/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update feeds: $(date +'%Y-%m-%d %H:%M')" && git push)
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          publish_branch: gh-pages
+      - name: Deploy to GitHub Pages (incremental)
+        run: |
+          # 保存生成的文件到临时目录
+          mkdir -p /tmp/site-build
+          cp -r site/* /tmp/site-build/
+
+          # 切换到 gh-pages 分支
+          git fetch origin gh-pages:gh-pages || git checkout --orphan gh-pages
+          git checkout gh-pages
+
+          # 复制新生成的文件（保留其他文件如 .nojekyll）
+          cp /tmp/site-build/index.html index.html
+          cp -r /tmp/site-build/css css/ 2>/dev/null || true
+
+          # 提交更改
+          git add index.html css/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M')" && git push origin gh-pages)

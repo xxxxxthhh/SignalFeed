@@ -7,6 +7,7 @@ SignalFeed - 静态网站生成脚本（支持 AI 增强）
 import json
 from datetime import datetime
 from pathlib import Path
+from email.utils import parsedate_to_datetime
 
 def load_all_articles():
     """加载所有文章数据（优先加载增强版）"""
@@ -31,11 +32,41 @@ def load_all_articles():
 
     return all_articles
 
+def parse_pub_date(date_str):
+    """解析不同格式的发布时间"""
+    from datetime import timezone
+
+    if not date_str:
+        return datetime.min.replace(tzinfo=timezone.utc)
+
+    try:
+        # 尝试解析 ISO 格式 (2026-02-05T00:23:38+00:00)
+        dt = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+        # 确保有时区信息
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except:
+        pass
+
+    try:
+        # 尝试解析 RFC 格式 (Wed, 05 Feb 2026 00:23:38 GMT)
+        dt = parsedate_to_datetime(date_str)
+        # 确保有时区信息
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except:
+        pass
+
+    # 如果都失败，返回最小时间（带时区）
+    return datetime.min.replace(tzinfo=timezone.utc)
+
 def generate_html(articles):
     """生成 HTML 页面（支持 AI 增强内容）"""
 
-    # 按时间倒序排列
-    articles.sort(key=lambda x: x.get('fetched_at', ''), reverse=True)
+    # 按发布时间倒序排列（最新的在前）
+    articles.sort(key=lambda x: parse_pub_date(x.get('pub_date', '')), reverse=True)
 
     # 显示所有文章（不限制数量）
     # articles = articles[:100]
