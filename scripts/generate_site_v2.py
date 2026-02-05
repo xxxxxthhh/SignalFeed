@@ -10,8 +10,15 @@ from pathlib import Path
 from email.utils import parsedate_to_datetime
 
 def load_all_articles():
-    """加载所有文章数据（合并原始文章和 AI 增强数据）"""
-    # 加载原始文章
+    """加载所有文章数据（优先使用 AI 增强数据）"""
+    # 优先加载 AI 增强数据（包含完整的文章信息）
+    enhanced_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
+    if enhanced_file.exists():
+        print("📊 Loading AI-enhanced articles...")
+        with open(enhanced_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+
+    # 如果没有增强数据，则加载原始文章
     articles_dir = Path(__file__).parent.parent / "data" / "articles"
     all_articles = []
 
@@ -20,22 +27,6 @@ def load_all_articles():
             with open(json_file, 'r', encoding='utf-8') as f:
                 articles = json.load(f)
                 all_articles.extend(articles)
-
-    # 加载 AI 增强数据（如果存在）
-    enhanced_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
-    if enhanced_file.exists():
-        print("📊 Loading AI-enhanced articles...")
-        with open(enhanced_file, 'r', encoding='utf-8') as f:
-            enhanced_articles = json.load(f)
-
-        # 创建哈希到增强数据的映射
-        enhanced_map = {a.get('url_hash'): a.get('ai_enhanced', {}) for a in enhanced_articles if a.get('url_hash')}
-
-        # 合并 AI 增强数据到原始文章
-        for article in all_articles:
-            url_hash = article.get('url_hash')
-            if url_hash in enhanced_map:
-                article['ai_enhanced'] = enhanced_map[url_hash]
 
     return all_articles
 
