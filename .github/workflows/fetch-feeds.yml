@@ -58,8 +58,9 @@ jobs:
 
           # 复制新生成的文件（保留其他文件如 .nojekyll）
           cp /tmp/site-build/index.html index.html
-          cp -r /tmp/site-build/css css/ 2>/dev/null || true
-          cp -r /tmp/site-build/js js/ 2>/dev/null || true
+          rm -rf css/ js/
+          cp -r /tmp/site-build/css css/
+          cp -r /tmp/site-build/js js/
 
           # 提交更改
           git add index.html css/ js/
