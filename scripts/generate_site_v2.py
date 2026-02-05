@@ -10,25 +10,32 @@ from pathlib import Path
 from email.utils import parsedate_to_datetime
 
 def load_all_articles():
-    """加载所有文章数据（优先加载增强版）"""
-    # 先尝试加载 AI 增强版本
+    """加载所有文章数据（合并原始文章和 AI 增强数据）"""
+    # 加载原始文章
+    articles_dir = Path(__file__).parent.parent / "data" / "articles"
+    all_articles = []
+
+    if articles_dir.exists():
+        for json_file in sorted(articles_dir.glob("*.json"), reverse=True):
+            with open(json_file, 'r', encoding='utf-8') as f:
+                articles = json.load(f)
+                all_articles.extend(articles)
+
+    # 加载 AI 增强数据（如果存在）
     enhanced_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
     if enhanced_file.exists():
         print("📊 Loading AI-enhanced articles...")
         with open(enhanced_file, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            enhanced_articles = json.load(f)
 
-    # 否则加载原始文章
-    articles_dir = Path(__file__).parent.parent / "data" / "articles"
-    all_articles = []
+        # 创建哈希到增强数据的映射
+        enhanced_map = {a.get('url_hash'): a.get('ai_enhanced', {}) for a in enhanced_articles if a.get('url_hash')}
 
-    if not articles_dir.exists():
-        return []
-
-    for json_file in sorted(articles_dir.glob("*.json"), reverse=True):
-        with open(json_file, 'r', encoding='utf-8') as f:
-            articles = json.load(f)
-            all_articles.extend(articles)
+        # 合并 AI 增强数据到原始文章
+        for article in all_articles:
+            url_hash = article.get('url_hash')
+            if url_hash in enhanced_map:
+                article['ai_enhanced'] = enhanced_map[url_hash]
 
     return all_articles
 
@@ -71,6 +78,13 @@ def generate_html(articles):
     # 收集所有作者（用于筛选）
     sources = sorted(set(article.get('source', 'Unknown') for article in articles))
 
+    # 收集所有标签（用于筛选）
+    all_tags = set()
+    for article in articles:
+        keywords = article.get('ai_enhanced', {}).get('keywords', [])
+        all_tags.update(keywords)
+    tags = sorted(all_tags)
+
     html = """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -105,6 +119,18 @@ def generate_html(articles):
 """
 
     html += """            </select>
+
+            <label for="tag-filter">🏷️ 按标签筛选：</label>
+            <select id="tag-filter">
+                <option value="all">全部标签</option>
+"""
+
+    # 添加标签选项
+    for tag in tags:
+        html += f"""                <option value="{tag}">{tag}</option>
+"""
+
+    html += """            </select>
         </div>
 
         <div class="articles" id="articles-container">
@@ -123,7 +149,7 @@ def generate_html(articles):
         key_points = ai_enhanced.get('key_points', [])
 
         html += f"""
-            <article class="article-card" data-source="{source}">
+            <article class="article-card" data-source="{source}" data-tags="{','.join(keywords)}">
                 <div class="article-header">
                     <span class="article-number">{i}</span>
                     <div class="article-title-group">
