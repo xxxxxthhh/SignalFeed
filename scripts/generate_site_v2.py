@@ -149,7 +149,7 @@ def generate_html(articles):
         key_points = ai_enhanced.get('key_points', [])
 
         html += f"""
-            <article class="article-card" data-source="{source}" data-tags="{','.join(keywords)}">
+            <article class="article-card" data-source="{source}" data-tags="{','.join(tags)}">
                 <div class="article-header">
                     <span class="article-number">{i}</span>
                     <div class="article-title-group">
@@ -161,13 +161,13 @@ def generate_html(articles):
 """
 
         # 显示关键词
-        if keywords:
+        if tags:
             html += """
                     <div class="tags">
 """
-            for keyword in keywords:
+            for tag in tags:
                 html += f"""
-                        <span class="tag">🏷️ {keyword}</span>
+                        <span class="tag">🏷️ {tag}</span>
 """
             html += """
                     </div>
