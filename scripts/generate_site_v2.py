@@ -122,7 +122,7 @@ def generate_html(articles):
                         <p class="title-zh">{title_zh}</p>
 """
 
-        html += """
+        html += f"""
                     </div>
                 </div>
                 <div class="article-meta">
