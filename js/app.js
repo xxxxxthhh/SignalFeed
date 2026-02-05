@@ -2,7 +2,8 @@
 
 const ARTICLES_PER_PAGE = 10;
 let currentPage = 1;
-let currentFilter = 'all';
+let currentSourceFilter = 'all';
+let currentTagFilter = 'all';
 let allArticles = [];
 let filteredArticles = [];
 
@@ -25,7 +26,18 @@ function setupEventListeners() {
     const sourceFilter = document.getElementById('source-filter');
     if (sourceFilter) {
         sourceFilter.addEventListener('change', function() {
-            currentFilter = this.value;
+            currentSourceFilter = this.value;
+            filterArticles();
+            currentPage = 1;
+            showPage(1);
+        });
+    }
+
+    // 标签筛选
+    const tagFilter = document.getElementById('tag-filter');
+    if (tagFilter) {
+        tagFilter.addEventListener('change', function() {
+            currentTagFilter = this.value;
             filterArticles();
             currentPage = 1;
             showPage(1);
@@ -60,13 +72,16 @@ function setupEventListeners() {
 
 // 筛选文章
 function filterArticles() {
-    if (currentFilter === 'all') {
-        filteredArticles = allArticles;
-    } else {
-        filteredArticles = allArticles.filter(article => {
-            return article.dataset.source === currentFilter;
-        });
-    }
+    filteredArticles = allArticles.filter(article => {
+        // 按作者筛选
+        const sourceMatch = currentSourceFilter === 'all' || article.dataset.source === currentSourceFilter;
+
+        // 按标签筛选
+        const articleTags = article.dataset.tags ? article.dataset.tags.split(',') : [];
+        const tagMatch = currentTagFilter === 'all' || articleTags.includes(currentTagFilter);
+
+        return sourceMatch && tagMatch;
+    });
 
     // 更新文章计数
     updateArticleCount();
