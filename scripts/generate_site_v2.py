@@ -4,241 +4,379 @@ SignalFeed - 静态网站生成脚本（支持 AI 增强）
 读取文章数据，生成 HTML 页面
 """
 
+import html
 import json
+import re
+from collections import Counter
 from datetime import datetime, timezone, timedelta
-from pathlib import Path
 from email.utils import parsedate_to_datetime
+from pathlib import Path
+
+TAG_KEY_DELIMITER = "|||"
+
 
 def load_all_articles():
     """加载所有文章数据（优先使用 AI 增强数据）"""
-    # 优先加载 AI 增强数据（包含完整的文章信息）
     enhanced_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
     if enhanced_file.exists():
         print("📊 Loading AI-enhanced articles...")
-        with open(enhanced_file, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        with open(enhanced_file, "r", encoding="utf-8") as file:
+            return json.load(file)
 
-    # 如果没有增强数据，则加载原始文章
     articles_dir = Path(__file__).parent.parent / "data" / "articles"
     all_articles = []
 
     if articles_dir.exists():
         for json_file in sorted(articles_dir.glob("*.json"), reverse=True):
-            with open(json_file, 'r', encoding='utf-8') as f:
-                articles = json.load(f)
+            with open(json_file, "r", encoding="utf-8") as file:
+                articles = json.load(file)
                 all_articles.extend(articles)
 
     return all_articles
 
+
 def parse_pub_date(date_str):
     """解析不同格式的发布时间"""
-    from datetime import timezone
-
     if not date_str:
         return datetime.min.replace(tzinfo=timezone.utc)
 
     try:
-        # 尝试解析 ISO 格式 (2026-02-05T00:23:38+00:00)
-        dt = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
-        # 确保有时区信息
+        dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=timezone.utc)
         return dt
-    except:
+    except Exception:
         pass
 
     try:
-        # 尝试解析 RFC 格式 (Wed, 05 Feb 2026 00:23:38 GMT)
         dt = parsedate_to_datetime(date_str)
-        # 确保有时区信息
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=timezone.utc)
         return dt
-    except:
+    except Exception:
         pass
 
-    # 如果都失败，返回最小时间（带时区）
     return datetime.min.replace(tzinfo=timezone.utc)
+
+
+def normalize_text(value):
+    """规范化文本（去首尾空白 + 压缩空白字符）"""
+    if value is None:
+        return ""
+    text = re.sub(r"\s+", " ", str(value))
+    return text.strip()
+
+
+def normalize_key(value):
+    """生成用于筛选比较的 key"""
+    return normalize_text(value).casefold()
+
+
+def normalize_article(raw_article):
+    """清洗单条文章数据，避免脏值污染前端筛选和 HTML"""
+    source_label = normalize_text(raw_article.get("source")) or "Unknown"
+    source_key = normalize_key(source_label)
+
+    ai_enhanced = raw_article.get("ai_enhanced") or {}
+    raw_tags = ai_enhanced.get("tags")
+    raw_key_points = ai_enhanced.get("key_points")
+
+    normalized_tags = []
+    seen_tag_keys = set()
+    if isinstance(raw_tags, list):
+        for raw_tag in raw_tags:
+            tag_label = normalize_text(raw_tag)
+            if not tag_label:
+                continue
+            tag_key = normalize_key(tag_label)
+            if tag_key in seen_tag_keys:
+                continue
+            seen_tag_keys.add(tag_key)
+            normalized_tags.append({"label": tag_label, "key": tag_key})
+
+    key_points = []
+    if isinstance(raw_key_points, list):
+        for point in raw_key_points:
+            cleaned_point = normalize_text(point)
+            if cleaned_point:
+                key_points.append(cleaned_point)
+
+    return {
+        "title": normalize_text(raw_article.get("title")) or "No Title",
+        "link": normalize_text(raw_article.get("link")) or "#",
+        "description": normalize_text(raw_article.get("description")),
+        "source_label": source_label,
+        "source_key": source_key,
+        "tags": normalized_tags,
+        "summary": normalize_text(ai_enhanced.get("summary")),
+        "key_points": key_points,
+    }
+
 
 def generate_html(articles):
     """生成 HTML 页面（支持 AI 增强内容）"""
+    sorted_articles = sorted(
+        articles,
+        key=lambda article: parse_pub_date(article.get("pub_date", "")),
+        reverse=True,
+    )
 
-    # 按发布时间倒序排列（最新的在前）
-    articles.sort(key=lambda x: parse_pub_date(x.get('pub_date', '')), reverse=True)
+    normalized_articles = []
+    source_counts = Counter()
+    tag_counts = Counter()
+    source_labels = {}
+    tag_labels = {}
 
-    # 收集所有作者（用于筛选）
-    sources = sorted(set(article.get('source', 'Unknown') for article in articles))
+    for raw_article in sorted_articles:
+        article = normalize_article(raw_article)
+        normalized_articles.append(article)
 
-    # 收集所有标签（用于筛选）
-    all_tags = set()
-    for article in articles:
-        keywords = article.get('ai_enhanced', {}).get('tags', [])
-        all_tags.update(keywords)
-    tags = sorted(all_tags)
+        source_counts[article["source_key"]] += 1
+        source_labels.setdefault(article["source_key"], article["source_label"])
 
-    html = """<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignalFeed - 技术信息流</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>📡 SignalFeed</h1>
-            <p class="tagline">从噪音中提取信号 · 精选技术资讯</p>
-        </div>
-    </header>
+        for tag in article["tags"]:
+            tag_counts[tag["key"]] += 1
+            tag_labels.setdefault(tag["key"], tag["label"])
 
-    <main class="container">
-        <div class="stats">
-            <span id="article-count">📊 共 """ + str(len(articles)) + """ 篇文章</span>
-            <span>🕐 最后更新: """ + (datetime.now(timezone.utc) + timedelta(hours=8)).strftime('%Y-%m-%d %H:%M') + """</span>
-        </div>
+    sorted_sources = sorted(
+        source_labels.items(),
+        key=lambda item: (-source_counts[item[0]], item[1].casefold()),
+    )
+    sorted_tags = sorted(
+        tag_labels.items(),
+        key=lambda item: (-tag_counts[item[0]], item[1].casefold()),
+    )
 
-        <div class="filters">
-            <label for="source-filter">📝 按作者筛选：</label>
-            <select id="source-filter">
-                <option value="all">全部作者</option>
-"""
+    total_articles = len(normalized_articles)
+    last_updated = (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M")
 
-    # 添加作者选项
-    for source in sources:
-        html += f"""                <option value="{source}">{source}</option>
-"""
+    lines = [
+        "<!DOCTYPE html>",
+        '<html lang="zh-CN">',
+        "<head>",
+        '    <meta charset="UTF-8">',
+        '    <meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        "    <title>SignalFeed - 技术信息流</title>",
+        '    <link rel="stylesheet" href="css/style.css">',
+        "</head>",
+        "<body>",
+        "    <header>",
+        '        <div class="container">',
+        "            <h1>📡 SignalFeed</h1>",
+        '            <p class="tagline">从噪音中提取信号 · 精选技术资讯</p>',
+        "        </div>",
+        "    </header>",
+        "",
+        '    <main class="container">',
+        '        <div class="stats">',
+        f'            <span id="article-count">📊 显示 {total_articles} / {total_articles} 篇文章</span>',
+        f"            <span>🕐 最后更新: {last_updated}</span>",
+        "        </div>",
+        "",
+        '        <section class="filters is-collapsed" id="filters-panel">',
+        '            <div class="filters-toolbar">',
+        '                <button id="toggle-filters" class="filters-toggle" type="button" aria-expanded="false" aria-controls="filters-content">',
+        '                    <span class="filters-toggle-icon" aria-hidden="true">▸</span>',
+        '                    <strong class="filters-title">🔎 智能筛选</strong>',
+        '                    <span id="filters-active-badge" class="filters-active-badge" hidden>0</span>',
+        '                    <span class="filters-toggle-hint">点击展开</span>',
+        "                </button>",
+        '                <button id="clear-filters" class="clear-filters-btn" type="button">清空筛选</button>',
+        "            </div>",
+        '            <div id="active-filter-summary" class="active-filter-summary">当前筛选：全部来源 · 全部标签</div>',
+        "",
+        '            <div class="filters-content" id="filters-content" hidden>',
+        '            <div class="filter-grid">',
+        '                <label for="source-search">📝 来源搜索：</label>',
+        '                <input id="source-search" type="search" placeholder="输入来源关键词，快速定位来源" autocomplete="off">',
+        "",
+        '                <label for="source-filter">📚 来源选择：</label>',
+        '                <select id="source-filter">',
+        f'                    <option value="all" data-source-label="全部来源">全部来源 ({total_articles})</option>',
+    ]
 
-    html += """            </select>
+    for source_key, source_label in sorted_sources:
+        lines.append(
+            f'                    <option value="{html.escape(source_key, quote=True)}" '
+            f'data-source-label="{html.escape(source_label, quote=True)}">'
+            f"{html.escape(source_label)} ({source_counts[source_key]})</option>"
+        )
 
-            <label for="tag-filter">🏷️ 按标签筛选：</label>
-            <select id="tag-filter">
-                <option value="all">全部标签</option>
-"""
+    lines.extend(
+        [
+            "                </select>",
+            "",
+            '                <label for="tag-search">🏷️ 标签搜索：</label>',
+            '                <input id="tag-search" type="search" placeholder="输入标签关键词，快速筛选标签按钮" autocomplete="off">',
+            "            </div>",
+            "",
+            '            <div class="tag-mode">',
+            '                <span class="tag-mode-label">标签逻辑：</span>',
+            '                <label><input type="radio" name="tag-match-mode" value="or" checked> 匹配任一标签</label>',
+            '                <label><input type="radio" name="tag-match-mode" value="and"> 同时匹配全部</label>',
+            "            </div>",
+            "",
+            '            <div class="tag-filter-panel">',
+            '                <span class="tag-filter-label">🏷️ 标签多选：</span>',
+            '                <div class="tag-chip-list" id="tag-chip-list">',
+        ]
+    )
 
-    # 添加标签选项
-    for tag in tags:
-        html += f"""                <option value="{tag}">{tag}</option>
-"""
+    for tag_key, tag_label in sorted_tags:
+        lines.extend(
+            [
+                f'                    <button class="tag-chip-filter" type="button" data-tag-key="{html.escape(tag_key, quote=True)}" data-tag-label="{html.escape(tag_label, quote=True)}" aria-pressed="false">',
+                f'                        <span class="tag-chip-name">{html.escape(tag_label)}</span>',
+                f'                        <span class="tag-chip-count">{tag_counts[tag_key]}</span>',
+                "                    </button>",
+            ]
+        )
 
-    html += """            </select>
-        </div>
+    lines.extend(
+        [
+            "                </div>",
+            "            </div>",
+            "            </div>",
+            "        </section>",
+            "",
+            '        <div class="articles" id="articles-container">',
+            "",
+        ]
+    )
 
-        <div class="articles" id="articles-container">
-"""
+    for index, article in enumerate(normalized_articles, 1):
+        tag_labels_for_article = [tag["label"] for tag in article["tags"]]
+        tag_keys_for_article = [tag["key"] for tag in article["tags"]]
 
-    for i, article in enumerate(articles, 1):
-        title = article.get('title', 'No Title')
-        link = article.get('link', '#')
-        source = article.get('source', 'Unknown')
-        description = article.get('description', '')
-        
-        # 检查是否有 AI 增强内容
-        ai_enhanced = article.get('ai_enhanced', {})
-        tags = ai_enhanced.get('tags', [])
-        summary = ai_enhanced.get('summary', '')
-        key_points = ai_enhanced.get('key_points', [])
+        lines.extend(
+            [
+                f'            <article class="article-card" data-source="{html.escape(article["source_label"], quote=True)}" '
+                f'data-source-key="{html.escape(article["source_key"], quote=True)}" '
+                f'data-tags="{html.escape(",".join(tag_labels_for_article), quote=True)}" '
+                f'data-tag-keys="{html.escape(TAG_KEY_DELIMITER.join(tag_keys_for_article), quote=True)}">',
+                '                <div class="article-header">',
+                f'                    <span class="article-number">{index}</span>',
+                '                    <div class="article-title-group">',
+                f'                        <h2><a href="{html.escape(article["link"], quote=True)}" target="_blank" rel="noopener">{html.escape(article["title"])}</a></h2>',
+                "                    </div>",
+                "                </div>",
+                '                <div class="article-meta">',
+                f'                    <span class="source">📝 {html.escape(article["source_label"])}</span>',
+            ]
+        )
 
-        html += f"""
-            <article class="article-card" data-source="{source}" data-tags="{','.join(tags)}">
-                <div class="article-header">
-                    <span class="article-number">{i}</span>
-                    <div class="article-title-group">
-                        <h2><a href="{link}" target="_blank" rel="noopener">{title}</a></h2>
-                    </div>
-                </div>
-                <div class="article-meta">
-                    <span class="source">📝 {source}</span>
-"""
+        if article["tags"]:
+            lines.extend(
+                [
+                    "",
+                    '                    <div class="tags">',
+                    "",
+                ]
+            )
+            for tag in article["tags"]:
+                lines.append(f'                        <span class="tag">🏷️ {html.escape(tag["label"])}</span>')
+                lines.append("")
+            lines.extend(
+                [
+                    "                    </div>",
+                    "",
+                ]
+            )
 
-        # 显示关键词
-        if tags:
-            html += """
-                    <div class="tags">
-"""
-            for tag in tags:
-                html += f"""
-                        <span class="tag">🏷️ {tag}</span>
-"""
-            html += """
-                    </div>
-"""
+        lines.extend(
+            [
+                "                </div>",
+                "",
+            ]
+        )
 
-        html += """
-                </div>
-"""
+        if article["summary"]:
+            lines.extend(
+                [
+                    '                <div class="ai-summary">',
+                    f'                    <strong>📌 AI 摘要:</strong> {html.escape(article["summary"])}',
+                    "                </div>",
+                    "",
+                ]
+            )
 
-        # 显示 AI 摘要
-        if summary:
-            html += f"""
-                <div class="ai-summary">
-                    <strong>📌 AI 摘要:</strong> {summary}
-                </div>
-"""
+        if article["key_points"]:
+            lines.extend(
+                [
+                    '                <div class="key-points">',
+                    "                    <strong>💡 核心要点:</strong>",
+                    "                    <ul>",
+                    "",
+                ]
+            )
+            for point in article["key_points"]:
+                lines.append(f"                        <li>{html.escape(point)}</li>")
+                lines.append("")
+            lines.extend(
+                [
+                    "                    </ul>",
+                    "                </div>",
+                    "",
+                ]
+            )
 
-        # 显示核心要点
-        if key_points:
-            html += """
-                <div class="key-points">
-                    <strong>💡 核心要点:</strong>
-                    <ul>
-"""
-            for point in key_points:
-                html += f"""
-                        <li>{point}</li>
-"""
-            html += """
-                    </ul>
-                </div>
-"""
+        if not article["summary"] and article["description"]:
+            lines.extend(
+                [
+                    f'                <p class="description">{html.escape(article["description"][:200])}...</p>',
+                    "",
+                ]
+            )
 
-        # 如果没有 AI 增强内容，显示原始描述
-        if not summary and description:
-            html += f"""
-                <p class="description">{description[:200]}...</p>
-"""
+        lines.extend(
+            [
+                "            </article>",
+                "",
+            ]
+        )
 
-        html += """
-            </article>
-"""
+    lines.extend(
+        [
+            "        </div>",
+            "",
+            '        <div class="empty-state" id="empty-state" hidden>',
+            "            <p>没有匹配的文章，试试放宽来源或标签条件。</p>",
+            "        </div>",
+            "",
+            '        <div class="pagination" id="pagination">',
+            '            <button id="prev-page" class="page-btn">← 上一页</button>',
+            '            <span id="page-info">第 1 / 1 页</span>',
+            '            <button id="next-page" class="page-btn">下一页 →</button>',
+            "        </div>",
+            "    </main>",
+            "",
+            "    <footer>",
+            '        <div class="container">',
+            "            <p>SignalFeed - Powered by RSS & AI</p>",
+            '            <p><a href="https://github.com/xxxxxthhh/SignalFeed" target="_blank">View on GitHub</a></p>',
+            "        </div>",
+            "    </footer>",
+            "",
+            '    <script src="js/app.js"></script>',
+            "</body>",
+            "</html>",
+            "",
+        ]
+    )
 
-    html += """
-        </div>
+    return "\n".join(lines)
 
-        <div class="pagination" id="pagination">
-            <button id="prev-page" class="page-btn">← 上一页</button>
-            <span id="page-info">第 1 页</span>
-            <button id="next-page" class="page-btn">下一页 →</button>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>SignalFeed - Powered by RSS & AI</p>
-            <p><a href="https://github.com/xxxxxthhh/SignalFeed" target="_blank">View on GitHub</a></p>
-        </div>
-    </footer>
-
-    <script src="js/app.js"></script>
-</body>
-</html>
-"""
-
-    return html
 
 if __name__ == "__main__":
     print("🎨 Generating website (AI-enhanced version)...")
 
-    # 加载文章
     articles = load_all_articles()
     print(f"📊 Loaded {len(articles)} articles")
 
-    # 生成 HTML
-    html = generate_html(articles)
+    html_content = generate_html(articles)
 
-    # 保存到 site/index.html
     output_file = Path(__file__).parent.parent / "site" / "index.html"
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(html)
+    with open(output_file, "w", encoding="utf-8") as file:
+        file.write(html_content)
 
     print(f"✅ Website generated: {output_file}")
