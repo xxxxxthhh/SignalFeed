@@ -273,6 +273,17 @@ def save_enhanced_articles(articles):
         json.dump(articles, f, ensure_ascii=False, indent=2)
     print(f"✅ Saved enhanced articles to: {output_file}")
 
+def has_analysis(ai_enhanced):
+    """判断增强结果是否包含有效分析字段"""
+    if not isinstance(ai_enhanced, dict):
+        return False
+    analysis = ai_enhanced.get("analysis")
+    if isinstance(analysis, list):
+        return any(normalize_text(item) for item in analysis)
+    if isinstance(analysis, str):
+        return bool(normalize_text(analysis))
+    return False
+
 if __name__ == "__main__":
     print("🤖 SignalFeed AI Enhancement - Starting...")
 
@@ -293,24 +304,6 @@ if __name__ == "__main__":
     articles = load_articles()
     print(f"📊 Loaded {len(articles)} articles")
 
-    # 加载已处理的文章
-    processed_hashes = load_processed_hashes()
-    print(f"📝 Already processed: {len(processed_hashes)} articles")
-
-    # 筛选未处理的文章
-    unprocessed = [a for a in articles if a.get('url_hash') not in processed_hashes]
-    print(f"🔄 To process: {len(unprocessed)} articles")
-
-    if not unprocessed:
-        print("✅ All articles already processed!")
-        exit(0)
-
-    # 批量处理
-    total = len(unprocessed)
-    batch_to_process = unprocessed[:batch_size]
-    print(f"\n🔄 Processing batch: {len(batch_to_process)} articles")
-    print(f"   Remaining after this batch: {total - len(batch_to_process)}")
-
     # 加载现有的增强文章（如果存在）
     enhanced_file = Path(__file__).parent.parent / "data" / "articles_enhanced.json"
     if enhanced_file.exists():
@@ -323,21 +316,74 @@ if __name__ == "__main__":
     # 创建哈希到文章的映射
     enhanced_map = {a.get('url_hash'): a for a in all_enhanced if a.get('url_hash')}
 
+    # 加载已处理的文章（用于断点续传）；若缺少 analysis 则允许自动回填
+    processed_hashes = load_processed_hashes()
+    print(f"📝 Already processed: {len(processed_hashes)} articles")
+
+    candidate_map = {}
+
+    # 优先回填历史增强数据中缺少 analysis 的文章。
+    for url_hash, existing in enhanced_map.items():
+        if not url_hash:
+            continue
+        if has_analysis((existing or {}).get("ai_enhanced")):
+            continue
+        candidate_map[url_hash] = {"article": dict(existing), "reason": "backfill_analysis"}
+
+    # 再合并最新抓取文章：新文章优先级更高，避免被 backfill 规则覆盖。
+    for article in reversed(articles):
+        url_hash = article.get("url_hash")
+        if not url_hash:
+            continue
+
+        existing = enhanced_map.get(url_hash) or {}
+        is_new = url_hash not in processed_hashes
+        needs_backfill = not has_analysis(existing.get("ai_enhanced"))
+
+        if not is_new and not needs_backfill:
+            continue
+
+        merged_article = dict(existing)
+        merged_article.update(article)
+        reason = "new" if is_new else "backfill_analysis"
+        candidate_map[url_hash] = {"article": merged_article, "reason": reason}
+
+    candidates = list(candidate_map.values())
+    new_count = sum(1 for item in candidates if item["reason"] == "new")
+    backfill_count = sum(1 for item in candidates if item["reason"] == "backfill_analysis")
+    print(f"🔄 To process: {len(candidates)} articles (new: {new_count}, backfill_analysis: {backfill_count})")
+
+    if not candidates:
+        print("✅ No articles need enhancement/backfill")
+        exit(0)
+
+    # 批量处理
+    total = len(candidates)
+    batch_to_process = candidates[:batch_size]
+    print(f"\n🔄 Processing batch: {len(batch_to_process)} articles")
+    print(f"   Remaining after this batch: {total - len(batch_to_process)}")
+
     # 处理当前批次
     success_count = 0
-    for i, article in enumerate(batch_to_process, 1):
-        print(f"\n[{i}/{len(batch_to_process)}] ", end='')
+    for i, candidate in enumerate(batch_to_process, 1):
+        article = candidate["article"]
+        reason = candidate["reason"]
+        url_hash = article.get("url_hash")
+        print(f"\n[{i}/{len(batch_to_process)}] ({reason}) ", end='')
         enhanced = enhance_article(article)
 
         if enhanced:
             article['ai_enhanced'] = enhanced
-            enhanced_map[article['url_hash']] = article
-            save_processed_hash(article['url_hash'])
+            if url_hash:
+                enhanced_map[url_hash] = article
+                save_processed_hash(url_hash)
             success_count += 1
         else:
-            # 即使失败也添加到映射中（避免重复处理）
-            enhanced_map[article['url_hash']] = article
-            save_processed_hash(article['url_hash'])
+            # 失败时保留已有增强结果，避免覆盖旧数据。
+            if url_hash and url_hash not in enhanced_map:
+                enhanced_map[url_hash] = article
+            if url_hash:
+                save_processed_hash(url_hash)
 
         # 避免 API 限流
         time.sleep(1.5)
