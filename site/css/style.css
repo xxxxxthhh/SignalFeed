@@ -108,15 +108,27 @@ header h1 {
 .article-header h2 {
     font-size: 1.25rem;
     line-height: 1.4;
+    color: var(--text-primary);
 }
 
-.article-header h2 a {
-    color: var(--text-primary);
+.article-title-group {
+    flex: 1;
+}
+
+.open-original-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0.2rem 0 0.8rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
-.article-header h2 a:hover {
+.open-original-link:hover {
     color: var(--accent-color);
+    text-decoration: underline;
 }
 
 .article-meta {
@@ -133,6 +145,50 @@ header h1 {
     color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
+}
+
+.original-content {
+    margin-top: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-primary);
+}
+
+.original-content summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    color: var(--accent-color);
+    padding: 0.8rem 1rem;
+}
+
+.original-content summary::-webkit-details-marker {
+    display: none;
+}
+
+.original-content[open] summary {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.original-content-body {
+    padding: 0.9rem 1rem 1rem;
+}
+
+.original-content-body p {
+    margin: 0 0 0.85rem;
+    line-height: 1.75;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+}
+
+.original-content-body p:last-child {
+    margin-bottom: 0;
+}
+
+.original-content-note {
+    color: var(--text-secondary) !important;
+    font-size: 0.88rem;
+    font-style: italic;
 }
 
 /* Footer */
@@ -175,10 +231,6 @@ footer a:hover {
 }
 
 /* AI Enhanced Content Styles */
-
-.article-title-group {
-    flex: 1;
-}
 
 /* Keywords */
 .tags {
@@ -238,6 +290,31 @@ footer a:hover {
     line-height: 1.6;
 }
 
+.deep-analysis {
+    background: rgba(255, 176, 32, 0.12);
+    border-left: 3px solid #ffb020;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.deep-analysis strong {
+    color: #ad6d00;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.deep-analysis ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.deep-analysis li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
 /* Dark mode adjustments */
 @media (prefers-color-scheme: dark) {
     .ai-summary {
@@ -247,11 +324,19 @@ footer a:hover {
     .key-points {
         background: rgba(76, 175, 80, 0.15);
     }
+
+    .deep-analysis {
+        background: rgba(255, 176, 32, 0.2);
+    }
+
+    .deep-analysis strong {
+        color: #ffd28a;
+    }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .ai-summary, .key-points {
+    .ai-summary, .key-points, .deep-analysis {
         padding: 0.75rem;
         font-size: 0.9rem;
     }
@@ -590,74 +675,5 @@ footer a:hover {
     .filters-active-badge {
         background: #ff6b6b;
         color: #1f1f1f;
-    }
-}
-
-/* AI Enhanced Content - Keywords */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.tag {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* AI Summary */
-.ai-summary {
-    background: rgba(102, 126, 234, 0.1);
-    border-left: 3px solid #667eea;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.ai-summary strong {
-    color: #667eea;
-}
-
-/* Key Points */
-.key-points {
-    background: rgba(76, 175, 80, 0.1);
-    border-left: 3px solid #4caf50;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-    font-size: 0.95rem;
-}
-
-.key-points strong {
-    color: #4caf50;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.key-points ul {
-    margin: 0;
-    padding-left: 1.5rem;
-}
-
-.key-points li {
-    margin: 0.5rem 0;
-    line-height: 1.6;
-}
-
-/* Dark mode adjustments for AI content */
-@media (prefers-color-scheme: dark) {
-    .ai-summary {
-        background: rgba(102, 126, 234, 0.15);
-    }
-
-    .key-points {
-        background: rgba(76, 175, 80, 0.15);
     }
 }

@@ -11,10 +11,14 @@ from datetime import datetime
 from pathlib import Path
 import time
 import sys
+import re
+import html
 
 # DeepSeek API 配置
 DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY', '')
 DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions'
+MAX_ANALYSIS_INPUT_CHARS = 7000
+MIN_FULLTEXT_LENGTH = 900
 
 def call_deepseek_api(prompt, max_tokens=500):
     """调用 DeepSeek API"""
@@ -53,41 +57,149 @@ def call_deepseek_api(prompt, max_tokens=500):
         print(f"API Error: {e}")
         return None
 
-def enhance_article(article):
-    """为单篇文章添加 AI 增强内容"""
-    title = article.get('title', '')
-    description = article.get('description', '')
+def normalize_text(value):
+    """压缩空白并去除首尾空白"""
+    if value is None:
+        return ""
+    text = re.sub(r"\s+", " ", str(value))
+    return text.strip()
 
+def clean_content_text(value):
+    """将 HTML 内容转换为更易分析的纯文本"""
+    text = str(value or "")
+    if not text.strip():
+        return ""
+
+    text = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", text)
+    text = re.sub(r"(?i)<br\s*/?>", "\n", text)
+    text = re.sub(r"(?i)</(p|div|h[1-6]|li|blockquote|section|article|tr)>", "\n", text)
+    text = re.sub(r"(?i)<li[^>]*>", "\n- ", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html.unescape(text)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+def build_analysis_input(article):
+    """优先使用 RSS 原文作为分析输入，摘要作为回退"""
+    raw_content = article.get("content", "")
+    raw_description = article.get("description", "")
+
+    cleaned_content = clean_content_text(raw_content)
+    cleaned_description = clean_content_text(raw_description)
+
+    has_fulltext_signal = bool(article.get("is_fulltext")) or len(cleaned_content) >= MIN_FULLTEXT_LENGTH
+    use_content = len(cleaned_content) >= 120
+
+    selected = cleaned_content if use_content else cleaned_description
+    source_type = "fulltext" if has_fulltext_signal and use_content else "summary"
+
+    truncated = False
+    if len(selected) > MAX_ANALYSIS_INPUT_CHARS:
+        selected = selected[:MAX_ANALYSIS_INPUT_CHARS].rstrip()
+        truncated = True
+
+    if not selected:
+        selected = normalize_text(article.get("title", ""))
+        source_type = "summary"
+
+    return selected, source_type, truncated
+
+def build_prompt(title, source, analysis_input, source_type):
+    """构建更强调深度分析的提示词"""
     # 定义固定的标签分类
-    STANDARD_TAGS = [
+    standard_tags = [
         "AI/机器学习", "编程语言", "Web开发", "移动开发", "DevOps",
         "云计算", "数据库", "网络安全", "开源项目", "软件工程",
         "系统架构", "性能优化", "测试", "工具", "硬件",
         "产品设计", "职业发展", "技术趋势", "其他"
     ]
 
-    # 构建优化后的 prompt
-    prompt = f"""请分析以下技术文章，提供标签和核心要点：
+    source_hint = "RSS全文" if source_type == "fulltext" else "RSS摘要"
+    return f"""你是资深技术编辑。请基于下面的文章材料，输出结构化解读。
 
 标题：{title}
-描述：{description[:500]}
+来源：{source}
+材料类型：{source_hint}
 
-请按以下 JSON 格式输出：
+文章材料：
+{analysis_input}
+
+请严格输出 JSON（不要 markdown 代码块）：
 {{
   "tags": ["标签1", "标签2"],
-  "summary": "用1-2句话总结文章核心内容（中文）",
-  "key_points": ["要点1", "要点2", "要点3"]
+  "summary": "1-2句话总结核心结论（中文）",
+  "key_points": ["要点1", "要点2", "要点3"],
+  "analysis": ["分析1", "分析2", "分析3"]
 }}
 
 要求：
-1. tags: 从以下标签中选择1-2个最相关的：
-   {', '.join(STANDARD_TAGS)}
-2. summary: 简洁明了，抓住核心
-3. key_points: 3个最重要的要点，每个不超过30字
+1. tags：只能从以下标签中选择 1-2 个最相关标签：
+   {', '.join(standard_tags)}
+2. summary：回答“这篇文章最核心讲了什么”，不要写泛泛空话。
+3. key_points：给 3 条关键事实/观点；必须与 summary 明显不同，不能同义改写。
+4. analysis：给 2-3 条“为什么重要/潜在影响/实践建议”的分析，可合理推断但不得编造原文不存在的具体事实。
+5. 若材料较短或仅摘要，analysis 允许减少到 1-2 条，并明确使用谨慎表述。
+6. 每条要点尽量控制在 18-40 字。
 """
 
-    print(f"Processing: {title[:50]}...")
-    result = call_deepseek_api(prompt, max_tokens=600)
+def sanitize_list(items, max_items=3):
+    """清理模型输出列表，避免脏数据污染页面"""
+    if isinstance(items, str):
+        items = [items]
+    if not isinstance(items, list):
+        return []
+
+    cleaned = []
+    seen = set()
+    for item in items:
+        text = normalize_text(item)
+        if not text:
+            continue
+        # 清理常见项目符号，保持展示一致
+        text = re.sub(r"^[\-\*\d\.\)\s]+", "", text).strip()
+        key = text.casefold()
+        if not text or key in seen:
+            continue
+        seen.add(key)
+        cleaned.append(text[:120])
+        if len(cleaned) >= max_items:
+            break
+    return cleaned
+
+def sanitize_enhanced_result(parsed, source_type, input_chars, truncated):
+    """规范化 AI 输出结构"""
+    if not isinstance(parsed, dict):
+        return None
+
+    tags = sanitize_list(parsed.get("tags"), max_items=2)
+    summary = normalize_text(parsed.get("summary"))[:220]
+    key_points = sanitize_list(parsed.get("key_points"), max_items=3)
+    analysis = sanitize_list(parsed.get("analysis"), max_items=3)
+
+    if not summary:
+        return None
+
+    return {
+        "tags": tags,
+        "summary": summary,
+        "key_points": key_points,
+        "analysis": analysis,
+        "analysis_source": source_type,
+        "analysis_input_chars": input_chars,
+        "analysis_truncated": bool(truncated),
+    }
+
+def enhance_article(article):
+    """为单篇文章添加 AI 增强内容"""
+    title = article.get('title', '')
+    source = article.get('source', 'Unknown')
+    analysis_input, source_type, truncated = build_analysis_input(article)
+    prompt = build_prompt(title, source, analysis_input, source_type)
+
+    print(f"Processing: {title[:50]}... [{source_type}, {len(analysis_input)} chars]")
+    result = call_deepseek_api(prompt, max_tokens=900)
 
     if result:
         try:
@@ -106,10 +218,19 @@ def enhance_article(article):
                 if json_start != -1 and json_end != -1:
                     cleaned = '\n'.join(lines[json_start:json_end+1])
 
-            # 解析 JSON
-            enhanced = json.loads(cleaned)
-            print(f"✓ Successfully enhanced")
-            return enhanced
+            # 解析 JSON 并规范化结果
+            parsed = json.loads(cleaned)
+            enhanced = sanitize_enhanced_result(
+                parsed,
+                source_type=source_type,
+                input_chars=len(analysis_input),
+                truncated=truncated,
+            )
+            if enhanced:
+                print(f"✓ Successfully enhanced")
+                return enhanced
+            print("✗ Invalid structure after sanitize")
+            return None
         except Exception as e:
             print(f"✗ Failed to parse: {e}")
             return None

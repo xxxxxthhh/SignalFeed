@@ -13,6 +13,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 TAG_KEY_DELIMITER = "|||"
+INLINE_CONTENT_MAX_CHARS = 14000
 
 
 def load_all_articles():
@@ -72,6 +73,39 @@ def normalize_key(value):
     return normalize_text(value).casefold()
 
 
+def extract_readable_text(raw_content, max_chars=INLINE_CONTENT_MAX_CHARS):
+    """将 RSS 内容转换为可在站内阅读的纯文本"""
+    if raw_content is None:
+        return "", False
+
+    text = str(raw_content)
+    if not text.strip():
+        return "", False
+
+    # 先去掉脚本和样式，避免噪声内容进入页面。
+    text = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", text)
+    text = re.sub(r"(?i)<br\s*/?>", "\n", text)
+    text = re.sub(r"(?i)<li[^>]*>", "\n• ", text)
+    text = re.sub(r"(?i)</(p|div|h[1-6]|li|blockquote|section|article|tr)>", "\n", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+
+    text = html.unescape(text)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    text = text.strip()
+
+    if not text:
+        return "", False
+
+    truncated = False
+    if len(text) > max_chars:
+        text = text[:max_chars].rstrip()
+        truncated = True
+
+    return text, truncated
+
+
 def normalize_article(raw_article):
     """清洗单条文章数据，避免脏值污染前端筛选和 HTML"""
     source_label = normalize_text(raw_article.get("source")) or "Unknown"
@@ -80,6 +114,7 @@ def normalize_article(raw_article):
     ai_enhanced = raw_article.get("ai_enhanced") or {}
     raw_tags = ai_enhanced.get("tags")
     raw_key_points = ai_enhanced.get("key_points")
+    raw_analysis = ai_enhanced.get("analysis")
 
     normalized_tags = []
     seen_tag_keys = set()
@@ -101,6 +136,22 @@ def normalize_article(raw_article):
             if cleaned_point:
                 key_points.append(cleaned_point)
 
+    analysis_points = []
+    if isinstance(raw_analysis, list):
+        for point in raw_analysis:
+            cleaned_point = normalize_text(point)
+            if cleaned_point:
+                analysis_points.append(cleaned_point)
+    elif isinstance(raw_analysis, str):
+        cleaned_point = normalize_text(raw_analysis)
+        if cleaned_point:
+            analysis_points.append(cleaned_point)
+
+    inline_content, inline_content_truncated = extract_readable_text(raw_article.get("content"))
+    if not inline_content:
+        inline_content = normalize_text(raw_article.get("description"))
+        inline_content_truncated = False
+
     return {
         "title": normalize_text(raw_article.get("title")) or "No Title",
         "link": normalize_text(raw_article.get("link")) or "#",
@@ -110,6 +161,10 @@ def normalize_article(raw_article):
         "tags": normalized_tags,
         "summary": normalize_text(ai_enhanced.get("summary")),
         "key_points": key_points,
+        "analysis_points": analysis_points,
+        "inline_content": inline_content,
+        "inline_content_truncated": inline_content_truncated,
+        "is_fulltext": bool(raw_article.get("is_fulltext", False)),
     }
 
 
@@ -247,6 +302,7 @@ def generate_html(articles):
     for index, article in enumerate(normalized_articles, 1):
         tag_labels_for_article = [tag["label"] for tag in article["tags"]]
         tag_keys_for_article = [tag["key"] for tag in article["tags"]]
+        inline_paragraphs = [paragraph.strip() for paragraph in article["inline_content"].split("\n\n") if paragraph.strip()]
 
         lines.extend(
             [
@@ -257,7 +313,7 @@ def generate_html(articles):
                 '                <div class="article-header">',
                 f'                    <span class="article-number">{index}</span>',
                 '                    <div class="article-title-group">',
-                f'                        <h2><a href="{html.escape(article["link"], quote=True)}" target="_blank" rel="noopener">{html.escape(article["title"])}</a></h2>',
+                f'                        <h2>{html.escape(article["title"])}</h2>',
                 "                    </div>",
                 "                </div>",
                 '                <div class="article-meta">',
@@ -290,6 +346,14 @@ def generate_html(articles):
             ]
         )
 
+        if article["link"] and article["link"] != "#":
+            lines.extend(
+                [
+                    f'                <a class="open-original-link" href="{html.escape(article["link"], quote=True)}" target="_blank" rel="noopener">↗ 打开原文</a>',
+                    "",
+                ]
+            )
+
         if article["summary"]:
             lines.extend(
                 [
@@ -320,10 +384,51 @@ def generate_html(articles):
                 ]
             )
 
+        if article["analysis_points"]:
+            lines.extend(
+                [
+                    '                <div class="deep-analysis">',
+                    "                    <strong>🧠 深度分析:</strong>",
+                    "                    <ul>",
+                    "",
+                ]
+            )
+            for point in article["analysis_points"]:
+                lines.append(f"                        <li>{html.escape(point)}</li>")
+                lines.append("")
+            lines.extend(
+                [
+                    "                    </ul>",
+                    "                </div>",
+                    "",
+                ]
+            )
+
         if not article["summary"] and article["description"]:
             lines.extend(
                 [
                     f'                <p class="description">{html.escape(article["description"][:200])}...</p>',
+                    "",
+                ]
+            )
+
+        if inline_paragraphs:
+            content_kind = "RSS全文" if article["is_fulltext"] else "RSS摘要"
+            lines.extend(
+                [
+                    '                <details class="original-content">',
+                    f'                    <summary>📖 站内阅读原文（{content_kind}）</summary>',
+                    '                    <div class="original-content-body">',
+                ]
+            )
+            for paragraph in inline_paragraphs:
+                lines.append(f'                        <p>{html.escape(paragraph)}</p>')
+            if article["inline_content_truncated"]:
+                lines.append('                        <p class="original-content-note">内容较长，当前仅展示前 14000 字。可点击“打开原文”查看完整内容。</p>')
+            lines.extend(
+                [
+                    "                    </div>",
+                    "                </details>",
                     "",
                 ]
             )
