@@ -14,6 +14,8 @@ from pathlib import Path
 
 TAG_KEY_DELIMITER = "|||"
 INLINE_CONTENT_MAX_CHARS = 14000
+UTC8 = timezone(timedelta(hours=8))
+UNKNOWN_DATETIME = datetime.min.replace(tzinfo=timezone.utc)
 
 
 def load_all_articles():
@@ -71,6 +73,14 @@ def normalize_text(value):
 def normalize_key(value):
     """生成用于筛选比较的 key"""
     return normalize_text(value).casefold()
+
+
+def resolve_article_datetime(raw_article):
+    """解析文章时间：pub_date -> fetched_at -> UNKNOWN_DATETIME"""
+    dt = parse_pub_date(normalize_text(raw_article.get("pub_date")))
+    if dt == UNKNOWN_DATETIME:
+        dt = parse_pub_date(normalize_text(raw_article.get("fetched_at")))
+    return dt
 
 
 def extract_readable_text(raw_content, max_chars=INLINE_CONTENT_MAX_CHARS):
@@ -152,12 +162,19 @@ def normalize_article(raw_article):
         inline_content = normalize_text(raw_article.get("description"))
         inline_content_truncated = False
 
+    pub_datetime = resolve_article_datetime(raw_article)
+    if pub_datetime == UNKNOWN_DATETIME:
+        date_key = "unknown"
+    else:
+        date_key = pub_datetime.astimezone(UTC8).strftime("%Y-%m-%d")
+
     return {
         "title": normalize_text(raw_article.get("title")) or "No Title",
         "link": normalize_text(raw_article.get("link")) or "#",
         "description": normalize_text(raw_article.get("description")),
         "source_label": source_label,
         "source_key": source_key,
+        "date_key": date_key,
         "tags": normalized_tags,
         "summary": normalize_text(ai_enhanced.get("summary")),
         "key_points": key_points,
@@ -168,11 +185,32 @@ def normalize_article(raw_article):
     }
 
 
+def format_date_label(date_key, today):
+    """将 date_key 格式化为可读标签"""
+    if not date_key or date_key == "unknown":
+        return "未知日期"
+
+    try:
+        date_value = datetime.strptime(date_key, "%Y-%m-%d").date()
+    except Exception:
+        return "未知日期"
+
+    delta = (today - date_value).days
+    if delta == 0:
+        return f"{date_key} · 今天"
+    if delta == 1:
+        return f"{date_key} · 昨天"
+    if 0 <= delta < 7:
+        weekday_labels = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+        return f"{date_key} · {weekday_labels[date_value.weekday()]}"
+    return date_key
+
+
 def generate_html(articles):
     """生成 HTML 页面（支持 AI 增强内容）"""
     sorted_articles = sorted(
         articles,
-        key=lambda article: parse_pub_date(article.get("pub_date", "")),
+        key=resolve_article_datetime,
         reverse=True,
     )
 
@@ -203,7 +241,9 @@ def generate_html(articles):
     )
 
     total_articles = len(normalized_articles)
-    last_updated = (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M")
+    site_now = datetime.now(timezone.utc).astimezone(UTC8)
+    last_updated = site_now.strftime("%Y-%m-%d %H:%M")
+    today = site_now.date()
 
     lines = [
         "<!DOCTYPE html>",
@@ -299,7 +339,20 @@ def generate_html(articles):
         ]
     )
 
+    current_date_key = None
     for index, article in enumerate(normalized_articles, 1):
+        if article["date_key"] != current_date_key:
+            current_date_key = article["date_key"]
+            date_label = format_date_label(current_date_key, today)
+            lines.extend(
+                [
+                    f'            <div class="date-group-header" role="separator" data-date-key="{html.escape(current_date_key, quote=True)}">',
+                    f'                <span class="date-group-label">{html.escape(date_label)}</span>',
+                    "            </div>",
+                    "",
+                ]
+            )
+
         tag_labels_for_article = [tag["label"] for tag in article["tags"]]
         tag_keys_for_article = [tag["key"] for tag in article["tags"]]
         inline_paragraphs = [paragraph.strip() for paragraph in article["inline_content"].split("\n\n") if paragraph.strip()]
@@ -309,7 +362,8 @@ def generate_html(articles):
                 f'            <article class="article-card" data-source="{html.escape(article["source_label"], quote=True)}" '
                 f'data-source-key="{html.escape(article["source_key"], quote=True)}" '
                 f'data-tags="{html.escape(",".join(tag_labels_for_article), quote=True)}" '
-                f'data-tag-keys="{html.escape(TAG_KEY_DELIMITER.join(tag_keys_for_article), quote=True)}">',
+                f'data-tag-keys="{html.escape(TAG_KEY_DELIMITER.join(tag_keys_for_article), quote=True)}" '
+                f'data-date-key="{html.escape(article["date_key"], quote=True)}">',
                 '                <div class="article-header">',
                 f'                    <span class="article-number">{index}</span>',
                 '                    <div class="article-title-group">',

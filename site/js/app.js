@@ -24,6 +24,8 @@ let filtersActiveBadgeElement = null;
 let allSourceOptionElement = null;
 let sourceOptionElements = [];
 let tagChipElements = [];
+let dateHeaderElements = [];
+let dateHeaderMap = new Map();
 
 const sourceLabelMap = new Map();
 const tagLabelMap = new Map();
@@ -31,6 +33,7 @@ const tagLabelMap = new Map();
 document.addEventListener("DOMContentLoaded", () => {
     initializeArticleData();
     cacheFilterElements();
+    cacheDateHeaders();
     hydrateStateFromUrl();
     setupEventListeners();
     refreshFilterControls();
@@ -44,6 +47,7 @@ function initializeArticleData() {
         const sourceLabel = normalizeText(element.dataset.source || "Unknown");
         const sourceKey = normalizeKey(element.dataset.sourceKey || sourceLabel);
         const tagKeys = parseTagKeys(element.dataset.tagKeys || "");
+        const dateKey = element.dataset.dateKey || "unknown";
 
         sourceLabelMap.set(sourceKey, sourceLabel);
 
@@ -52,6 +56,7 @@ function initializeArticleData() {
             sourceLabel,
             sourceKey,
             tagKeys,
+            dateKey,
         };
     });
 
@@ -98,6 +103,13 @@ function cacheFilterElements() {
         chip.dataset.tagKey = tagKey;
         chip.dataset.baseLabel = baseLabel;
         tagLabelMap.set(tagKey, baseLabel);
+    });
+}
+
+function cacheDateHeaders() {
+    dateHeaderElements = Array.from(document.querySelectorAll(".date-group-header"));
+    dateHeaderElements.forEach((el) => {
+        dateHeaderMap.set(el.dataset.dateKey, el);
     });
 }
 
@@ -407,6 +419,10 @@ function showPage(page) {
         article.element.style.display = "none";
     });
 
+    dateHeaderElements.forEach((header) => {
+        header.style.display = "none";
+    });
+
     if (filteredArticles.length === 0) {
         updatePagination(0, 0);
         toggleEmptyState(true);
@@ -418,9 +434,20 @@ function showPage(page) {
 
     const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
     const endIndex = startIndex + ARTICLES_PER_PAGE;
+    const pageArticles = filteredArticles.slice(startIndex, endIndex);
 
-    filteredArticles.slice(startIndex, endIndex).forEach((article) => {
+    const visibleDateKeys = new Set();
+
+    pageArticles.forEach((article) => {
         article.element.style.display = "block";
+        visibleDateKeys.add(article.dateKey);
+    });
+
+    visibleDateKeys.forEach((dateKey) => {
+        const header = dateHeaderMap.get(dateKey);
+        if (header) {
+            header.style.display = "flex";
+        }
     });
 
     updatePagination(currentPage, totalPages);
