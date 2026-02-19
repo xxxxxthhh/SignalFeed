@@ -8259,5 +8259,98 @@
       "analysis_input_chars": 525,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "AI is the Best Thing to Happen to Art",
+    "link": "https://geohot.github.io//blog/jekyll/update/2026/02/19/ai-art.html",
+    "content": "<p>I <a href=\"https://www.youtube.com/watch?v=QtZDkgzjmQI\">watched this video</a> about how AI has already ruined music. Her mom sent her a song and she told her mom it was AI. She played the song and it sounded like slop. It had <em>inspired</em> lyrics like:</p>\n\n<blockquote>\n  <p>From quiet roots, a garden grows<br />\nShe’s got that light, and now it shows<br />\nYes, she rises, and she glows<br />\nOh, she rises, now she knows</p>\n</blockquote>\n\n<p>Pure slop. Compare it to:</p>\n\n<blockquote>\n  <p>I’m in the cut acting crazy<br />\nI’m in the whip doing eighty<br />\nOnly God can judge me<br />\nAnd only she can save me</p>\n</blockquote>\n\n<p>Note that “cut” and “whip” are not exactly words, but products of a <em>culture</em>. Ulysses is particularly hard to read because you don’t know 1910’s Irish pop culture.</p>\n\n<hr />\n<p><br /></p>\n\n<p>I can’t believe Marvel movies were popular. The first Iron Man was good, but by the time we got to <a href=\"https://www.imdb.com/title/tt10872600/\">Spider-Man: No Way Home</a> it was practically a clip show with triple inside references and cringy fourth wall breaking humor. How it got a 8.1 on IMDB is beyond me, and just reduced my trust for IMDB.</p>\n\n<p>Marvel movies are also the easiest things to make with AI. Little story and long term coherence, no “progression of the genre”, tons of eye candy special effects. It’s shocking with how large the budgets for them were that they couldn’t pay a story guy a little.</p>\n\n<p>I felt similarly about Avatar 2, so much so that I <a href=\"/blog/jekyll/update/2022/12/27/avatar-2-was-bad.html\">rewrote the plot</a> and didn’t care enough to see Avatar 3.</p>\n\n<hr />\n<p><br /></p>\n\n<p>For many people, all they want is slop. I’m sure I’ve written about it before, but I see a world where 95% of people end up basically wireheaded. The people who don’t care about <em>progression</em>. The people who want to exist in their loops. They will find their loop and exist in it forever.</p>\n\n<p>AI can play an amazing game of chess. Someday AI will produce good code when the RLVR environments get set up correctly. But I don’t see a path with current tech to not produce garbage art.</p>\n\n<p>Art is defined as what pushes the boundaries of civilization. AI tools will be used to help produce all the audio/visual art in the future (as computers have helped for a long time), but as long as civilization is human, the loci of control of good art will remain human.</p>\n\n<hr />\n<p><br /></p>\n\n<p>So yea. Bad art will be cheap to make. If you want 100 more Marvel movies and uninspired deriviative pop music, there has never been a better time to be alive – unless you wanted to make money producing that trash. That was never made by real artists anyway, just algorithmically driven sell outs. Does the focus group say they like giant spiders? I’m so glad AI will make that obsolete.</p>\n\n<p>Art is defined by what is expensive. What is rare. What is expectation breaking. What is embedded in a complex and thriving culture. Not slop produced by a parrot like Marvel movies.</p>",
+    "description": "I watched this video about how AI has already ruined music. Her mom sent her a song and she told her mom it was AI. She played the song and it sounded like slop. It had inspired lyrics like:",
+    "is_fulltext": true,
+    "source": "the singularity is nearer",
+    "pub_date": "2026-02-19T00:00:00+08:00",
+    "fetched_at": "2026-02-19T12:22:48.631758",
+    "url_hash": "4e719e0c0b2767c8fd5109beb99bc823",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "产品设计"
+      ],
+      "summary": "文章认为AI将淘汰大量低质、同质化的商业艺术（如爆米花电影和口水歌），从而凸显并解放真正由人类文化驱动的、突破边界的艺术创作。",
+      "key_points": [
+        "作者以AI生成的歌词和漫威电影为例，批评其内容空洞、缺乏文化深度，是‘文化糟粕’。",
+        "预测未来95%的人可能满足于AI生产的‘精神饲料’，沉浸于重复的娱乐循环中。",
+        "断言艺术的核心在于突破文明边界、根植于复杂文化，其控制权将始终属于人类。"
+      ],
+      "analysis": [
+        "AI将极大降低低质内容的制作门槛与成本，可能加剧娱乐内容的同质化与‘信息茧房’现象。",
+        "这迫使真正的艺术家和创作者必须更专注于文化深度与创新，AI将成为辅助工具而非灵魂。",
+        "对于产品设计（如娱乐产品）的启示是：依赖算法和焦点小组的‘安全’设计将被AI轻易复制，独特文化价值成为关键壁垒。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 2654,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "One More Spitball Idea for Apple’s March 4 Media Event ‘Experience’: Immersive F1 on Vision Pro?",
+    "link": "https://www.formula1.com/en/latest/article/official-grand-prix-start-times-for-2026-f1-season-confirmed.2UgPfArqH76tzlOYh21jSG",
+    "content": "\n<p>A reader pointed out that <a href=\"https://www.formula1.com/en/latest/article/official-grand-prix-start-times-for-2026-f1-season-confirmed.2UgPfArqH76tzlOYh21jSG\">the 2026 Formula 1 season</a> starts in Australia on March 8. You will recall from October <a href=\"https://daringfireball.net/linked/2025/10/17/apple-formula-1\">that Apple TV is now the exclusive broadcast partner for F1 in the U.S.</a> Apple is already dabbling with live immersive sports broadcasting for VisionOS <a href=\"https://daringfireball.net/linked/2025/10/17/apple-formula-1\">with a limited slate of Lakers games this season</a>. If they have something planned for streaming F1 races live on Vision Pro, with some level of immersion, March 4 would be a pretty good date to demo that experience to the media. </p>\n\n<p>Could just be a total coincidence that the Formula 1 season is starting the weekend after this event. But it seems worth noting.</p>\n\n<div>\n<a  title=\"Permanent link to ‘One More Spitball Idea for Apple’s March 4 Media Event ‘Experience’: Immersive F1 on Vision Pro?’\"  href=\"https://daringfireball.net/linked/2026/02/18/immersive-f1-vision-pro-spitball\">&nbsp;★&nbsp;</a>\n</div>\n\n\t",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-02-19T04:41:38Z",
+    "fetched_at": "2026-02-19T12:22:11.314486",
+    "url_hash": "f93dd1a3e6c3b6e8454cf5dcd5bb0ef6",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "技术趋势"
+      ],
+      "summary": "文章推测苹果可能在3月4日的媒体活动上，为Vision Pro头显展示沉浸式F1赛事直播体验。",
+      "key_points": [
+        "年F1赛季将于3月8日在澳大利亚揭幕，恰在苹果活动之后。",
+        "Apple TV是美国F1赛事的独家转播合作伙伴。",
+        "苹果已在VisionOS上为湖人队比赛试水沉浸式体育直播。"
+      ],
+      "analysis": [
+        "若推测属实，将展示Vision Pro在体育直播领域的独特应用潜力，提升其作为沉浸式内容平台的价值。",
+        "此举可能加速体育直播从传统2D向空间计算体验的转型，为行业树立新标杆。",
+        "鉴于材料仅为推测，需谨慎看待，但时间点的巧合确实为苹果的发布提供了合理的叙事背景。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 631,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Experimenting with sponsorship for my blog and newsletter",
+    "link": "https://simonwillison.net/2026/Feb/19/sponsorship/#atom-everything",
+    "content": "\n    <p>I've long been resistant to the idea of accepting sponsorship for my blog. I value my credibility as an independent voice, and I don't want to risk compromising that reputation.</p>\n<p>Then I learned about Troy Hunt's <a href=\"https://www.troyhunt.com/sponsorship/\">approach to sponsorship</a>, which he first wrote about <a href=\"https://www.troyhunt.com/im-now-offering-sponsorship-of-this-blog/\">in 2016</a>. Troy runs with a simple text row in the page banner - no JavaScript, no cookies, unobtrusive while providing value to the sponsor. I can live with that!</p>\n<p>Accepting sponsorship in this way helps me maintain my independence while offsetting the opportunity cost of not taking a full-time job.</p>\n<p>To start with I'm selling sponsorship by the week. Sponsors get that unobtrusive banner across my blog and also their sponsored message at the top of <a href=\"https://simonw.substack.com/\">my newsletter</a>.</p>\n<p><img alt=\"Screenshot of my blog's homepage. Below the Simon Willison's Weblog heading and list of tags is a new blue page-wide banner reading &quot;Sponsored by: Teleport - Secure, Govern, and Operate Al at Engineering Scale. Learn more&quot;.\" src=\"https://static.simonwillison.net/static/2026/sponsor-banner.jpg\" /></p>\n<p>I <strong>will not write content in exchange for sponsorship</strong>. I hope the sponsors I work with understand that my credibility as an independent voice is a key reason I have an audience, and compromising that trust would be bad for everyone.</p>\n<p><a href=\"https://www.freemanandforrest.com/\">Freeman &amp; Forrest</a> helped me set up and sell my first slots. Thanks also to <a href=\"https://t3.gg/\">Theo Browne</a> for helping me think through my approach.</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/newsletter\">newsletter</a>, <a href=\"https://simonwillison.net/tags/blogging\">blogging</a>, <a href=\"https://simonwillison.net/tags/troy-hunt\">troy-hunt</a></p>\n\n\n\n",
+    "description": "I've long been resistant to the idea of accepting sponsorship for my blog. I value my credibility as an independent voice, and I don't want to risk compromising that reputation. Then I learned about Troy Hunt's approach to sponsorship, which he first wrote about in 2016. Troy runs with a simple text row in the page banner - no JavaScript, no cookies, unobtrusive while providing value to the sponsor. I can live with that! Accepting sponsorship in this way helps me maintain my independence while o",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-02-19T05:44:29+00:00",
+    "fetched_at": "2026-02-19T12:22:09.318724",
+    "url_hash": "be0c66c8d18c56b629615488318daa68",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "职业发展"
+      ],
+      "summary": "作者Simon Willison决定在博客和通讯中尝试接受赞助，但采用了一种极简、非侵入式的横幅形式，以在保持独立性和获得收入之间取得平衡。",
+      "key_points": [
+        "作者长期拒绝赞助，担忧影响其作为独立声音的可信度。",
+        "受到Troy Hunt 2016年极简文本横幅赞助模式的启发。",
+        "赞助以周为单位出售，包含博客横幅和通讯顶部位置，但明确不为赞助商撰写内容。"
+      ],
+      "analysis": [
+        "这种模式为独立创作者提供了一种可行的收入模式参考，在维护内容独立性的同时，能部分抵消全职工作的机会成本。",
+        "明确划定“不写赞助内容”的底线，是维护长期信任和受众价值的关键，这对内容创作者具有普遍借鉴意义。",
+        "选择简单、无追踪的文本形式，体现了对用户体验和隐私的尊重，可能成为未来内容赞助的一种趋势。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1146,
+      "analysis_truncated": false
+    }
   }
 ]
