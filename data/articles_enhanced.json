@@ -8968,5 +8968,97 @@
       "analysis_input_chars": 3205,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "Whale Fall",
+    "link": "https://nesbitt.io/2026/02/21/whale-fall.html",
+    "content": "<p>When a whale dies in the open ocean, its carcass sinks to the abyssal floor and becomes an ecosystem. Marine biologists call this a <a href=\"https://en.wikipedia.org/wiki/Whale_fall\">whale fall</a>, and the body sustains life in three overlapping stages: mobile scavengers strip the soft tissue over months, enrichment opportunists colonise the bones and surrounding sediment for years, and chemosynthetic bacteria feed on the skeleton itself for decades, converting the lipids stored in bone into energy that supports entire communities of specialised organisms. A single whale fall can sustain life on an otherwise barren ocean floor for fifty years.</p>\n\n<p><a href=\"https://www.linkedin.com/in/michaelw\">Michael Winser</a> mentioned whale fall offhand while we were talking about what happens to the dependency graphs of abandoned projects, and it won’t leave my head.</p>\n\n<p>A large open source project goes unmaintained. Maybe the maintainer burns out, maybe the company behind it pivots. The project stops getting updates but doesn’t disappear. It sits on GitHub accumulating issues, its last commit receding further into the past, and somebody forks it to start merging the most urgent patches. If the project was popular enough, multiple forks appear, competing for users the way hagfish compete for blubber, though most die quickly and one or two survive on the strength of someone with enough time or institutional support to keep going. OpenOffice became LibreOffice this way, MySQL became MariaDB, Hudson became Jenkins, each a scavenger fork that grew into the canonical replacement through a familiar sequence of fork announcement, migration guide, and “why you should switch” blog posts.</p>\n\n<p>Smaller projects then start extracting specific modules or building tools that target the dead project’s data formats. Google Reader wasn’t open source, but the same thing happened when it shut down: Feedly, Miniflux, FreshRSS, Tiny Tiny RSS, and a dozen others rushed to fill the vacuum, several of them implementing the Google Reader API or the Fever API not because those were good APIs but because years of RSS clients had been built to speak them. The licence didn’t matter. The interfaces were public, other software depended on them, and that was enough.</p>\n\n<p>And then the structural skeleton, the protocols and file formats and API contracts, goes on supporting specialised communities that may not even know where the bones came from. OpenDocument Format has outlasted the OpenOffice community that created it, sustained by document format libraries across dozens of language ecosystems. Docker donated its container runtime and image format to the Open Container Initiative in 2015. The OCI spec now defines how containers work regardless of runtime. Docker’s own dominance faded; the spec didn’t. Tree-sitter was built for Atom, and after GitHub archived Atom it became the syntax engine inside Zed, Neovim, Helix, and most editors shipped in the last few years.</p>\n\n<h3 id=\"succession\">Succession</h3>\n\n<p>The pattern I keep noticing with unmaintained libraries is successive recolonisation. A project goes quiet, someone forks it, other projects start depending on the fork, and then that fork maintainer burns out too and the whole cycle repeats at a smaller scale. Each generation of fork is typically smaller than the last, with fewer contributors and a narrower user base, until eventually the idea itself migrates rather than the code. Someone in another language ecosystem looks at the accumulated wreckage and decides to rewrite the concept from scratch, carrying the design forward but leaving the implementation behind.</p>\n\n<p>Sass went through this. The original reference implementation was a Ruby gem. When Ruby’s performance became a bottleneck, LibSass rewrote it in C++, and the <code class=\"language-plaintext highlighter-rouge\">sassc</code> gem wrapped that for Ruby users. Then LibSass itself was deprecated in favour of Dart Sass, which is now the canonical implementation. The concept migrated from Ruby to C++ to Dart across a decade, each rewrite benefiting from the accumulated bug reports and design arguments of its predecessors, and at each stage there were wrapper libraries in other ecosystems feeding on the structural skeleton of the Sass language spec. Most people writing Sass today have no idea it started as a Ruby gem.</p>\n\n<p>Successive recolonisation has a nasty failure mode. Edera discovered a <a href=\"https://opensourcesecurity.io/2025/2025-12-tarmageddon-alex/\">differential parsing bug in Rust’s tar-rs library</a> that affected every fork downstream: tar-rs itself, async-tar, tokio-tar, and multiple internal forks maintained by companies like Astral (whose fork ships inside the uv package manager). Coordinated disclosure meant contacting around twenty entities across a fragmented fork graph where three of the four library versions were unmaintained and several maintainers were unreachable. The vulnerability existed because the code had been copied forward through successive forks without anyone re-auditing the PAX header parsing that all of them inherited from the original. The bug had been sitting in the bones the whole time, inherited by every fork. Discovering which forks of a package are affected by an advisory is a problem I’m working on separately, because right now nobody has good tooling for it.</p>\n\n<p>CentOS after the Stream pivot is the same pattern at operating system scale: Rocky Linux and AlmaLinux forked, smaller RHEL-compatible rebuilds appeared in the enrichment layer around them, and the structural skeleton underneath, RPM packaging, systemd conventions, filesystem hierarchy, persisted unchanged regardless of which particular distribution is alive or dead at any given moment.</p>\n\n<h3 id=\"licence-changes\">Licence changes</h3>\n\n<p>When a project switches from an open source licence to a source-available one, the scavenger stage triggers almost immediately, often before the change even takes effect. Redis to <a href=\"https://github.com/valkey-io/valkey\">Valkey</a>, Elasticsearch to <a href=\"https://opensearch.org/\">OpenSearch</a>, Terraform to <a href=\"https://opentofu.org/\">OpenTofu</a>, the pattern by now is familiar enough that the community has it down to a routine: rush to fork the last open commit, compete briefly, and consolidate around one or two survivors. The organism isn’t exactly dead in these cases. Redis the product still has revenue and a roadmap. But from the perspective of the open source ecosystem the body of code has stopped accepting outside contributions, and the forks start drifting from the original the way MariaDB drifted from MySQL.</p>\n\n<p>The abstraction layers are the part that lasts. Every project that integrated with the open version faces a choice between following the proprietary version or switching to the fork, and plenty of them just build a compatibility shim instead. Those shims tend to outlast the controversy that created them, feeding quietly on the skeleton of the original API years after the licence debate has cooled off.</p>\n\n<h3 id=\"sun-microsystems\">Sun Microsystems</h3>\n\n<p>Oracle’s acquisition of Sun in 2010 was less a single whale fall than an entire pod dying at sea simultaneously. Java, Solaris, ZFS, DTrace, VirtualBox, NetBeans, GlassFish, Hudson, MySQL, each sank to a separate ocean floor and spawned its own succession. Some produced single dominant forks (Hudson to Jenkins, ZFS to OpenZFS), others scattered into competing lineages (MySQL alone fed MariaDB, Percona, and briefly Drizzle, which itself became a smaller whale fall when it was abandoned), and some bounced between foundations before settling (NetBeans to Apache, GlassFish to Payara and the broader Jakarta EE ecosystem). The structural skeletons underneath all of it, the JVM bytecode format, the ZFS on-disk format, the MySQL wire protocol, are still load-bearing in projects whose developers have never heard of Sun.</p>\n\n<h3 id=\"shallow-water\">Shallow water</h3>\n\n<p>Some projects die in shallow water where the carcass gets recycled quickly. Acqui-hires work this way: the company gets absorbed, the code goes proprietary or gets archived, and the knowledge disperses with the people rather than accumulating in a public carcass that others can feed on. Corporate consolidation has a similar effect, because when a large independent project gets folded into a platform company’s proprietary service, the nutrients get recycled in the water column rather than sinking deep enough for succession to happen.</p>\n\n<p>I think the current trend of consolidation under cloud providers is reducing the whale fall rate in open source, and that this has second-order effects on ecosystem diversity that nobody is tracking. You could measure it: look at the fork and dependency graphs of dead projects over time, count how many new projects cite a dead dependency, compare the half-life of a whale fall in npm versus crates versus rubygems. Do some ecosystems have deeper ocean floors, slower decomposition, longer-lasting structural influence? The data exists in package registries and forge APIs, but I haven’t seen anyone ask the question.</p>\n\n<p>An open source ecosystem where every large project is owned by a platform company, maintained indefinitely or quietly absorbed on death, is one where those enrichment and chemosynthetic stages rarely get a chance to develop, and the small specialised organisms that depend on whale falls for food never get a chance to evolve. The healthiest ecosystems have a steady supply of whale falls, which is an odd thing to root for since it means wishing for the death of large projects, except that the deep ocean floor has no other food source.</p>",
+    "description": "What happens when a large open source project dies.",
+    "is_fulltext": true,
+    "source": "Andrew Nesbitt",
+    "pub_date": "2026-02-21T00:00:00+00:00",
+    "fetched_at": "2026-02-21T12:14:53.086182",
+    "url_hash": "543e16e185e0a22f79c830a64c96b416",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "软件工程"
+      ],
+      "summary": "文章借用“鲸落”生态现象，类比开源项目停止维护后，其代码、协议和生态如何经历“清道夫”、“机会主义者”和“化学合成”三个阶段，持续滋养和演进出新的技术生命。",
+      "key_points": [
+        "大型开源项目停止维护后，常出现多个竞争性复刻，最终少数存活并成为新标准。",
+        "项目的核心接口、协议和格式（结构骨架）比具体实现更持久，能支撑起独立的生态。",
+        "项目概念会通过跨语言重写实现迁移，每一代都继承前代的经验，但代码被抛弃。"
+      ],
+      "analysis": [
+        "这一模式揭示了开源生态强大的韧性与演替能力，但也带来了安全隐患，如漏洞在复刻链中遗传且难以追溯和修复。",
+        "对于依赖方，应更关注稳定、标准的接口而非具体实现；对于维护者，清晰的协议和架构设计能极大延长项目的“死后”价值。",
+        "当项目变更许可证时，社区会迅速启动“清道夫”流程，这已成为一种标准应对机制，但长期看，抽象层和兼容性垫片往往比争议本身更持久。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 7000,
+      "analysis_truncated": true
+    }
+  },
+  {
+    "title": "Wrapping Code Comments",
+    "link": "https://matklad.github.io/2026/02/21/wrapping-code-comments.html",
+    "content": "\n<header>\n  <h1>Wrapping Code Comments</h1>\n  <time class=\"meta\" datetime=\"2026-02-21\">Feb 21, 2026</time>\n</header>\n<p>I was today years old when I realized that:</p>\n<ul>\n<li>\nCode and code comments ideally should be wrapped to a different column.\n</li>\n<li>\nFor comments, the width should be relative to the start of the comment.\n</li>\n</ul>\n<p>It’s a good idea to limit line length to about 100 columns. This is a physical limit, the width at\nwhich you can still comfortably fit two editors side by side (see\n<a href=\"https://matklad.github.io/2025/11/28/size-matters.html\"><em>Size Matters</em></a>). Note an apparent\ncontradiction: the optimal width for readable prose is usually taken to be narrower, 60–70 columns.\nThe contradiction is resolved by noticing that, for code, indentation eats into usable space.\nTypically, code is much less typographically dense than prose.</p>\n<p>Still, I find comment blocks easier to read when they are  wrapped narrower than the surrounding\ncode. I want lines to be wrapped at 100, and <em>content</em> of comments to be wrapped at 70 (unless that\npushes overall line to be longer than 100). That is, I want layout like this (using 20/30 rulers\ninstead of 70/100, for illustrative purposes):</p>\n\n<figure class=\"code-block\">\n\n\n<pre><code><span class=\"line\"><span class=\"hl-comment\">// Top level comments</span></span>\n<span class=\"line\"><span class=\"hl-comment\">// can be this wide.</span></span>\n<span class=\"line\"><span class=\"hl-keyword\">const</span> S = <span class=\"hl-keyword\">struct</span> {</span>\n<span class=\"line\">    <span class=\"hl-comment\">// Nested comments are</span></span>\n<span class=\"line\">    <span class=\"hl-comment\">// also this wide, but</span></span>\n<span class=\"line\">    <span class=\"hl-comment\">// are shifted right.</span></span>\n<span class=\"line\">    <span class=\"hl-keyword\">fn</span><span class=\"hl-function\"> f</span>() <span class=\"hl-type\">void</span> {</span>\n<span class=\"line\">        <span class=\"hl-keyword\">switch</span> (value) {</span>\n<span class=\"line\">            <span class=\"hl-numbers\">0</span> =&gt; {</span>\n<span class=\"line\">                <span class=\"hl-comment\">// But there is</span></span>\n<span class=\"line\">                <span class=\"hl-comment\">// a hard limit.</span></span>\n<span class=\"line\">            }</span>\n<span class=\"line\">        }</span>\n<span class=\"line\">    }</span>\n<span class=\"line\">}</span></code></pre>\n\n</figure>\n<p>This feels obvious in retrospect, but notably isn’t be well-supported by the tools? The\n<a href=\"https://marketplace.visualstudio.com/items?itemName=stkb.rewrap\">VS Code extension</a> I use allows\nconfiguring dedicated fill column for comments, but doesn’t make it <em>relative</em>, so indented comment\nblocks are always narrower than top-level ones. Emacs <code>M-q</code> also doesn’t do relative wrapping out of\nthe box!</p>\n<hr>\n<p>Aside on hard-wrapping: should we bother with wrapping comments at all? Can’t we rely on our editor\nto implement soft-wrapping? The problem with soft-wrapping is that you can’t soft-wrap text\ncorrectly without understanding its meaning. Consider a markdown list:</p>\n\n<figure class=\"code-block\">\n\n\n<pre><code><span class=\"line\">A list:</span>\n<span class=\"line\">  * item one,</span>\n<span class=\"line\">  * item two.</span></code></pre>\n\n</figure>\n<p>If the first item is long enough to necessitate wrapping, the wrapped line should also be indented,\nwhich requires parsing the text as markdown first:</p>\n\n<figure class=\"code-block\">\n\n\n<pre><code><span class=\"line\">A list:</span>\n<span class=\"line\">  * item one which is long enough</span>\n<span class=\"line\">    necessitate wrapping,</span>\n<span class=\"line\">  * item two.</span></code></pre>\n\n</figure>\n",
+    "description": "I was today years old when I realized that:",
+    "is_fulltext": true,
+    "source": "matklad",
+    "pub_date": "2026-02-21T00:00:00+00:00",
+    "fetched_at": "2026-02-21T12:14:48.849130",
+    "url_hash": "eb9b6dcbcb5b3becc4118f81dba66186",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "工具"
+      ],
+      "summary": "文章核心观点是代码注释的理想排版方式：注释应与代码分开设置行宽，且注释的换行宽度应相对于其起始位置计算。",
+      "key_points": [
+        "代码与注释的理想换行列宽应不同，通常代码行宽约100列，注释内容约70列。",
+        "注释换行宽度应相对于注释起始位置计算，以保持嵌套注释的视觉一致性。",
+        "当前主流编辑器（如VS Code、Emacs）对此功能的原生支持不足。"
+      ],
+      "analysis": [
+        "此规则能提升代码注释的可读性，尤其在深度嵌套的代码块中，避免注释行过长或参差不齐。",
+        "工具支持的缺失揭示了代码格式化工具在语义感知（如识别注释、Markdown列表）方面的普遍短板。",
+        "开发者可手动遵循此规范或寻求/开发插件，以在团队协作中建立更清晰的代码文档风格。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 2164,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Quoting Thibault Sottiaux",
+    "link": "https://simonwillison.net/2026/Feb/21/thibault-sottiaux/#atom-everything",
+    "content": "\n    <blockquote cite=\"https://twitter.com/thsottiaux/status/2024947946849186064\"><p>We’ve made GPT-5.3-Codex-Spark about 30% faster. It is now serving at over 1200 tokens per second.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://twitter.com/thsottiaux/status/2024947946849186064\">Thibault Sottiaux</a>, OpenAI</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/openai\">openai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llm-performance\">llm-performance</a></p>\n\n\n\n",
+    "description": "We’ve made GPT-5.3-Codex-Spark about 30% faster. It is now serving at over 1200 tokens per second. &mdash; Thibault Sottiaux, OpenAI Tags: openai, llms, ai, generative-ai, llm-performance",
+    "is_fulltext": false,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-02-21T01:30:21+00:00",
+    "fetched_at": "2026-02-21T12:14:21.400255",
+    "url_hash": "3fbb1c0944dcad7e0581ac817ffb6d3d",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "性能优化"
+      ],
+      "summary": "OpenAI宣布其GPT-5.3-Codex-Spark模型性能提升约30%，推理速度超过每秒1200个token。",
+      "key_points": [
+        "模型名称为GPT-5.3-Codex-Spark，由OpenAI发布。",
+        "模型推理速度提升约30%。",
+        "当前服务速度已超过每秒1200个token。"
+      ],
+      "analysis": [
+        "模型推理速度的大幅提升直接降低了AI服务的单位计算成本与延迟。",
+        "这为需要高吞吐、低延迟响应的代码生成等实时应用场景提供了更好的支持。"
+      ],
+      "analysis_source": "summary",
+      "analysis_input_chars": 190,
+      "analysis_truncated": false
+    }
   }
 ]
