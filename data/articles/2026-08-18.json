@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+    "link": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
+    "content": "\n    \n<p><strong><a href=\"https://artificialanalysis.ai/models/qwen3-8-27b\">Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index</a></strong></p>\nThat's the same score as GPT-5.6 Luna (max), and just one point behind GLM-5.2 (max) and DeepSeek V4 Pro 0813 (max) - that GLM is 753B and that DeepSeek is 1.6B parameters, and Luna is size unknown but presumably a whole lot bigger than 27B.</p>\n<p>Qwen 3.8 27B is <a href=\"https://simonwillison.net/2026/Aug/16/qwen-38-27b/\">a truly astonishing model</a>.\n\n    <p><small></small>Via <a href=\"https://news.ycombinator.com/item?id=49334544\">Hacker News</a></small></p>\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/qwen\">qwen</a>, <a href=\"https://simonwillison.net/tags/ai-in-china\">ai-in-china</a>, <a href=\"https://simonwillison.net/tags/artificial-analysis\">artificial-analysis</a></p>\n\n\n\n",
+    "description": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index That's the same score as GPT-5.6 Luna (max), and just one point behind GLM-5.2 (max) and DeepSeek V4 Pro 0813 (max) - that GLM is 753B and that DeepSeek is 1.6B parameters, and Luna is size unknown but presumably a whole lot bigger than 27B. Qwen 3.8 27B is a truly astonishing model. Via Hacker News Tags: ai, generative-ai, llms, qwen, ai-in-china, artificial-analysis",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-08-17T23:58:14+00:00",
+    "fetched_at": "2026-08-18T00:17:36.391702",
+    "url_hash": "898a805a4f838b2442b8e113759343b3"
+  },
+  {
+    "title": "Apple TV Still Has No Start Date for ‘The Savant’",
+    "link": "https://daringfireball.net/linked/2026/04/19/chastain-says-the-savant-will-be-released",
+    "content": "\n<p><em><a href=\"https://tv.apple.com/us/show/the-savant/umc.cmc.aar44keiny3h54xvaakg260q\">The Savant</a></em> is a political thriller series starring Jessica Chastain <a href=\"https://daringfireball.net/search/chastain+savant\">that was supposed to debut a year ago</a>. Apple “postponed” it, apparently out of fear of upsetting extremist right-wing nut jobs because the show is about an undercover investigator (Chastain) hunting down extremist right-wing nut jobs. <a href=\"https://www.instagram.com/p/DO_V2EyEZmj/\">Chastain was not happy</a> about the show being delayed.</p>\n\n<p>Last we heard about the show was back in April, <a href=\"https://variety.com/2026/tv/columns/jessica-chastain-apple-tv-finally-release-the-savant-after-postponement-charlie-kirk-assassination-1236725384/\">when Marc Malkin reported this for Variety</a>:</p>\n\n<blockquote>\n  <p>“Before it was like, ‘I don’t know if we’re going to see it,’ but\nnow I can say, ‘We’re going to see it,’” Chastain told me\nexclusively on Saturday at the Breakthrough Prize ceremony in\nSanta Monica.</p>\n\n<p>As for when, sources tell me that Apple is planning for a July\nrelease.</p>\n</blockquote>\n\n<p>Given that it’s now the middle of August, I think that a July release is looking less and less likely by the day.</p>\n\n<div>\n<a  title=\"Permanent link to ‘Apple TV Still Has No Start Date for ‘The Savant’’\"  href=\"https://daringfireball.net/linked/2026/08/17/the-savant-still-has-no-start-date\">&nbsp;★&nbsp;</a>\n</div>\n\n\t",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-08-17T21:55:54Z",
+    "fetched_at": "2026-08-18T00:17:38.371801",
+    "url_hash": "779edbb6888f15fa497dbd6219026f26"
+  },
+  {
+    "title": "How do functions like alloca allocate memory from the stack?",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20260817-40/?p=112617",
+    "content": "<p>A little while ago, I talked about <a title=\"How do compilers ensure that large stack allocations do not skip over the guard page?\" href=\"https://devblogs.microsoft.com/oldnewthing/20260311-00/?p=112134\"> how compilers ensure that large stack allocations do not skip over the guard page</a>. Shawn Van Ness was curious <a href=\"https://devblogs.microsoft.com/oldnewthing/20260311-00/?p=112134&amp;commentid=143923#comment-143923\"> how this works with <code>_alloca</code></a>. &#8220;Does it do the necessary <code>_chkstk()</code> probing?&#8221;</p>\n<p>Yes, the <code>_alloca()</code> function calls the same <code>_chkstk()</code> function to probe the stack before adjusting the stack pointer for the allocated memory.</p>\n<p>Here&#8217;s an artificial example:</p>\n<pre>#include &lt;malloc.h&gt;\n\nvoid consume(void*,void*);\n\nvoid f(int n)\n{\n    char buffer[16384];\n    consume(alloca(n), buffer);\n}\n</pre>\n<p>On x86-64, this results in</p>\n<pre>        push    rbp\n        mov     eax, 16416          ; probe for local frame\n        call    __chkstk\n        sub     rsp, rax            ; create local frame\n\n        lea     rbp, [rsp+32]\n\n        movsxd  rax, ecx            ; n\n        lea     rcx, [rax+15]       ; round up to multiple of 16\n        and     rcx, -16\n\n        mov     rax, rcx            ; special __chkstk calling convention\n        call    __chkstk\n        sub     rsp, rcx            ; allocate n bytes\n\n        lea     rdx, [rbp]          ; rdx -&gt; buffer\n        lea     rcx, [rsp+32]       ; rcx -&gt; alloca'd memory\n        call    consume\n\n        lea     rsp, [rbp+16384]    ; clean up local frame\n        pop     rbp\n        ret     0\n</pre>\n<p>Observe that the same <code>__chkstk</code> function is used both for performing the initial stack probe when creating the local frame as well as for the <code>alloca()</code>.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20260817-40/?p=112617\">How do functions like &lt;CODE&gt;alloca&lt;/CODE&gt; allocate memory from the stack?</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>\n",
+    "description": "The usual probing. The post How do functions like &lt;CODE&gt;alloca&lt;/CODE&gt; allocate memory from the stack? appeared first on The Old New Thing.",
+    "is_fulltext": true,
+    "source": "The Old New Thing",
+    "pub_date": "Mon, 17 Aug 2026 15:54:40 +0000",
+    "fetched_at": "2026-08-18T00:17:50.703777",
+    "url_hash": "ac6b7dc67c6ce333d5b4220f8bed9420"
+  },
+  {
+    "title": "Quake Shareware, a CD-ROM just a little too full",
+    "link": "https://fabiensanglard.net/quake_shareware_cd/index.html",
+    "content": "",
+    "description": "",
+    "is_fulltext": false,
+    "source": "Fabien Sanglard",
+    "pub_date": "17 Aug 2026 00:00:00 +0000",
+    "fetched_at": "2026-08-18T00:18:28.906915",
+    "url_hash": "3ec31d3613f31d956aecdf72c4a3b0da"
+  }
+]
