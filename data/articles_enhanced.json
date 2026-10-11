@@ -91191,5 +91191,98 @@
       "analysis_input_chars": 481,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "I paid people to try and follow my README",
+    "link": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
+    "content": "<p>Developers suck at writing documentation. We like to say RTFM but often there ain't no FM to R. At best we have a half-arsed collection of notes, some obsolete tips, and a link to a desolate forum full of people asking the same questions again and again. That's no way to treat our users.</p>\n\n<p>I naïvely believe there's a better way. As I've written before, you should sit down and <a href=\"https://shkspr.mobi/blog/2025/10/how-to-actually-test-your-readme/\"><em>actually</em> test your readme</a>. Spin up a fresh Virtual Machine, go through what you've written, and see if it makes sense.</p>\n\n<p>But it is <em>really</em> hard to ignore your own biases. Of course you know that certain commands require <code>sudo</code> and obviously when you wrote <code>-foo</code> you meant <code>--foo</code> and everyone knows that you have to reboot afterwards.</p>\n\n<p>How do you get rid of those biases? I paid people!</p>\n\n<p>As part of my <a href=\"https://shkspr.mobi/blog/2026/08/activitybot-is-the-recipient-of-an-nlnet-grant/\">NLnet grant application for ActivityBot</a>, I said I wanted to test the install experience with real users and I was prepared to pay them €25 for an hour of their time. I stuck out the call on Mastodon, gathered a few people, and had a video call with them.</p>\n\n<p>The format was simple. I explained that I was looking for feedback on the first-run experience. I knew that it wasn't perfect and actively wanted constructive criticism. I asked the volunteer to share their screen and, crucially, to speak aloud. Tell me what they were doing. What they didn't understand, what confused them, what delighted them, what frustrated them, etc.</p>\n\n<p>I took notes by hand (fuck feeding the machine) and spent several hours being told what incorrect assumptions I'd made.</p>\n\n<p>Amongst the highlights I discovered were:</p>\n\n<ul>\n<li>The link to the demo tool was wrong.</li>\n<li>Some people read a README in the terminal.</li>\n<li>What does it actually mean to rename a file?</li>\n<li>How do you rename a hidden file?</li>\n<li>Should a demo tool be available on the web or just the user's local machine?</li>\n<li>Why does some text explicitly need to be quoted and some not?</li>\n<li>My jokes aren't funny and are actively confusing.</li>\n<li>Some of the technical terminology needed explaining.</li>\n<li>The ordering of the different sections was confusing.</li>\n<li>I hadn't actually explained what the software would do.</li>\n<li>A whole section which was technically interesting to me was utterly confusing to everyone else.</li>\n<li>Not all web servers use permissions in the same way.</li>\n</ul>\n\n<p>And on it went!</p>\n\n<p>After each session I updated the README based on what people found difficult, then I re-tested it with the next person.</p>\n\n<p>In total, I paid out around €150 to have a bunch of people criticise me to my face. Hey, cheaper than therapy, right?</p>\n\n<p>I know someone is going to say \"why not just ask an LLM to simulate a range of users?\" The answer is very simple - I want to speak to real people. People are brilliant! They can make you laugh, you can see their cat when it wanders on to the call, they bring a unique perspective to the problem, and they're really happy when you give them a €25 voucher. Some will gladly do it for free and make <em>you</em> happy!</p>\n\n<!--👋👋👋👋👋👋👋 Welcome to Comment Club! Shhhh! Only cool people can read this bit of the post.\n\nI did have a serious think about using an LLM for this. Ethics aside (and you can never really put ethics aside) I just didn't feel like I could trust their judgement. I get the argument that it is not much different from using a spellcheck - but I fundamentally don't want to feed the beast.\n\nAnyway, the three rules of Comment Club are…\n\n1. You must not tell anyone about Comment Club - let them find out about it themselves.\n2. You *must* add some Comment Club Content to at least one of your blog posts. Doesn't have to be much, just a little note will do.\n3. You should drop an email to anyone whose comments you've read. Start by sending me a friendly message at comment.club@shkspr.mobi\n\nKeep your eyes peeled for more comments in future blog posts 😃\n\nBe seeing you 👌👁\n-->\n\n<p>When I was doing technical writing for GOV.UK, all my beautiful prose was given a second-eye by another human. They eviscerated all my flowery phrases and turned the document into something more readable. They were the ones who caught the mistakes that no spell chequer could. They were able to have a proper conversation with me. More importantly, I could <em>hear</em> the frustration in their voice - that's the thing which lets you know a mistake needs to be corrected.</p>\n\n<p>I don't claim that <a href=\"https://gitlab.com/edent/activity-bot/-/blob/main/README.md?ref_type=heads\">ActivityBot's README</a> is now perfect - far from it - but it is now demonstrably easier to follow. Developers need to talk to <em>real</em> people. You don't have to pay them if you can't afford it - but find a few people who will talk aloud while they try to follow your instructions. I guarantee you that your README will become much better for it.</p>\n<img src=\"https://shkspr.mobi/blog/wp-content/themes/edent-wordpress-theme/info/okgo.php?ID=76333&amp;HTTP_REFERER=RSS\" alt=\"\" width=\"1\" height=\"1\" loading=\"eager\">",
+    "description": "Developers suck at writing documentation. We like to say RTFM but often there ain&#039;t no FM to R. At best we have a half-arsed collection of notes, some obsolete tips, and a link to a desolate forum full of people asking the same questions again and again. That&#039;s no way to treat our users. I naïvely believe there&#039;s a better way. As I&#039;ve written before, you should sit down and actually test your …",
+    "is_fulltext": true,
+    "source": "Terence Eden’s Blog",
+    "pub_date": "Sun, 11 Oct 2026 11:34:39 +0000",
+    "fetched_at": "2026-10-11T12:26:15.603008",
+    "url_hash": "22f82f6bf2fabeab4a3fba0c09ebb431",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "软件工程"
+      ],
+      "summary": "作者通过付费邀请真实用户按README操作并出声思考，发现文档中大量隐性假设与表述问题，证明人工可用性测试能显著改善文档质量。",
+      "key_points": [
+        "作者支付约150欧元，让多名用户通过视频共享屏幕、边操作边说出困惑点来测试README。",
+        "测试暴露了链接错误、术语未解释、章节顺序混乱、玩笑误导、未说明软件用途等问题。",
+        "每轮测试后作者立即修订README，再用下一位用户复测，形成迭代改进流程。"
+      ],
+      "analysis": [
+        "真实用户的出声思考能暴露开发者因知识诅咒而忽视的假设，这是LLM模拟难以替代的。",
+        "付费测试成本低、反馈直接，对开源项目维护者而言是一种高性价比的文档质量改进手段。",
+        "该方法可推广到安装指南、API文档等场景，关键不是付费，而是找到愿意边操作边说出真实感受的人。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 3775,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Don't diagnose your opponents",
+    "link": "https://seangoedecke.com/dont-diagnose-your-opponents/",
+    "content": "<p>When you disagree with someone, there are two paths forward. The first is to try to engage with what they’re saying: what their reasons are, whether their position is true, what evidence could be brought to bear, and so on. The second is to <em>diagnose</em> them: to engage with the second-order question of why they’re saying it. For instance, if you’re arguing with somebody about <a href=\"https://www.reddit.com/r/softwarearchitecture/comments/1eflqzl/monolith_vs_microservices_whats_your_take/\">microservices</a><sup id=\"fnref-1\"><a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fn-1\" class=\"footnote-ref\">1</a></sup>, you could say “well, you only like microservices because you want to polish your resume”, or “you only like monoliths because you’re scared of distributed systems”.</p>\n<p>This happens a lot in online arguments. On the question “are AI models improving”, some anti-AI people will argue that people only think so because AI psychosis is <a href=\"https://www.reddit.com/r/ExperiencedDevs/comments/1x2mxgn/comment/pf3qei7/\">rotting their brain</a>, and the dumber they get, the smarter AI models seem in comparison. Likewise, many pro-AI people argue that people only disagree because they’re Luddites, or scared of change, and so on. None of these arguments are about the quality of AI models.</p>\n<p>It feels so good to diagnose your opponents because there’s no possible response. If you say “I think AI models are improving because these benchmark scores are rising”, somebody might point out that the AI labs are training on those benchmarks, or argue that they represent isolated skills that don’t transfer, and so on, making you feel stupid. If you say “you only disagree with me because you want to roleplay as a revolutionary”, how could you be proven wrong? The more someone protests a diagnosis, the more it sounds like it must be right. Otherwise why would they be so upset?</p>\n<p>Of course, they’re so upset precisely because there is no possible response. By moving to diagnosis, you’re no longer having an argument about the facts, you’re purely in the area of rhetoric. But when you’re in the middle of an argument, diagnosing always feels like you’re being piercingly analytical. It feels like you’re cutting right to the heart of the matter: these complicated arguments are just <a href=\"https://en.wikipedia.org/wiki/Chaff_(countermeasure)\">chaff</a>, intended to distract you from the fundamental psychological reason why your opponent is being so foolish. This is just ordinary spite and anger<sup id=\"fnref-2\"><a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fn-2\" class=\"footnote-ref\">2</a></sup>, whatever it feels like at the time.</p>\n<p>There’s nothing inherently wrong with the second-order question of why someone person believes what they believe. It’s totally fine to think about it or form theories about it, like any other factual question. Just remember that it doesn’t bear on the question of whether they’re <em>right</em><sup id=\"fnref-3\"><a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fn-3\" class=\"footnote-ref\">3</a></sup>. Every human being forms their beliefs on top of a cocktail of base urges, animal instincts, and barely-suppressed evolutionary drives. If they’re rational, they also have evidence for those beliefs. It’s the quality of that evidence that helps you determine whether the beliefs are true, not the existence of the base urges.</p>\n<p>As a general rule, you should only diagnose your opponents when you also have a strong, <em>unrelated</em> argument about why they’re wrong. For instance, I think <a href=\"https://www.wheresyoured.at/\">Ed Zitron</a> has been thoroughly audience-captured by AI skeptics, whose demand for news about AI failures far exceeds supply. But I have written <a href=\"/ai-inference-is-obviously-profitable/\">many</a> <a href=\"/ai-gpus-live-longer-than-three-years/\">long-form</a> <a href=\"/tags/papers/\">posts</a> <a href=\"/water-impact-of-ai/\">about</a> why I think Zitron’s specific claims about the sustainability of AI are incorrect. When I talk to people who think Zitron is right, I talk about my arguments in those posts, not about my personal theory about why he says the things he does.</p>\n<p>Scott Alexander famously called the “noncentral fallacy”<sup id=\"fnref-4\"><a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fn-4\" class=\"footnote-ref\">4</a></sup> the <a href=\"https://www.lesswrong.com/posts/yCWPkLi8wJvewPbEp/the-noncentral-fallacy-the-worst-argument-in-the-world\">Worst Argument in the World</a>. For me, diagnosing your opponents is the Worst Argument in the World. I cringe every time I see it in the wild (like most cringeworthy behavior, it bothers me because I myself have to struggle against the urge to do it). Just don’t! It’s good at playing to your base, but it doesn’t persuade: anyone who believes your opponents’ views will just be mad that you’re psychoanalyzing them instead of talking about the actual issues at stake.</p>\n<div class=\"footnotes\">\n<hr>\n<ol>\n<li id=\"fn-1\">\n<p><a href=\"/confidence/\">Don’t.</a></p>\n<a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fnref-1\" class=\"footnote-backref\">↩</a>\n</li>\n<li id=\"fn-2\">\n<p>Am I diagnosing the diagnosers here? Maybe, but I think it’s forgivable, since there is no specific argument about the facts at stake.</p>\n<a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fnref-2\" class=\"footnote-backref\">↩</a>\n</li>\n<li id=\"fn-3\">\n<p>The philosopher in me wants to clarify that you could theoretically establish that someone’s motives for believing something are leading them away from the truth. In practice, (a) you cannot do this in an internet argument, and (b) it is always better and easier to make a straightforward argument about what the truth is.</p>\n<a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fnref-3\" class=\"footnote-backref\">↩</a>\n</li>\n<li id=\"fn-4\">\n<p>“You’re a fringe member of some group which has members I have an emotional reaction to, therefore I will have the same reaction to you even though you yourself don’t do those things.” “Group” here is to be understood as “Christian” or “Italian”, not something like the <a href=\"https://en.wikipedia.org/wiki/Westboro_Baptist_Church\">WBC</a> where the fact of membership itself is what’s being judged.</p>\n<a href=\"https://seangoedecke.com/dont-diagnose-your-opponents/#fnref-4\" class=\"footnote-backref\">↩</a>\n</li>\n</ol>\n</div>",
+    "description": "",
+    "is_fulltext": true,
+    "source": "seangoedecke.com RSS feed",
+    "pub_date": "Sun, 11 Oct 2026 00:00:00 GMT",
+    "fetched_at": "2026-10-11T12:26:05.609222",
+    "url_hash": "2a1f28f1e16908b6300746ccc5f21811",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "其他"
+      ],
+      "summary": "文章主张在辩论中应聚焦于对方观点本身的事实与论据，而非揣测其背后的心理动机，因为“诊断对手”是一种无法被证伪、只服务于情绪宣泄的修辞手段。",
+      "key_points": [
+        "诊断对手指不讨论论点本身，而追问对方为何持此立场，如指责其出于私利或恐惧。",
+        "诊断之所以流行，是因为它无法被反驳：对方越辩解，越显得诊断正确。",
+        "作者认为诊断对手是“世界上最糟糕的论证”，只讨好己方阵营，无法说服任何人。"
+      ],
+      "analysis": [
+        "在技术社区争论中，动机揣测常替代事实讨论，导致讨论质量下降，作者提醒这无助于判断观点真伪。",
+        "实践建议：若要诊断对手，应先具备关于其观点错误的扎实论证，否则应专注于事实层面的反驳。",
+        "该观点对在线辩论有普遍意义，提醒人们警惕将心理分析当作论据的倾向，尽管作者承认自己也难以完全避免。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 4739,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Dwarf Fortress uses version control now",
+    "link": "https://simonwillison.net/2026/Oct/11/dwarf-fortress/",
+    "content": "\n    <p>I remember hearing a while ago that Dwarf Fortress didn't use version control. That fact has been lodged in my head, because given its inherent complexity I have trouble imagining a codebase that would benefit from version control <em>more</em>. That's art.</p>\n<p>I went looking and I'm sad to report that the days without version control appear to have ended. Quoting Tarn Adams over time:</p>\n<ul>\n<li>March 2013: <a href=\"https://www.reddit.com/r/IAmA/comments/1avszc/comment/c919fo8/?solution=43270267461a564b43270267461a564b&amp;js_challenge=1&amp;jsc_token=2824be10929bdc604753c70a67a1c3310860c2cae0f946ff767fab3727807a35&amp;jsc_orig_r=\">\"I don't use version control -- I didn't like the feeling of having the code get committed into a black box thingy with no immediate upside\"</a></li>\n<li>March 2016: <a href=\"https://www.pcgamer.com/dwarf-fortress-creator-on-how-hes-42-towards-simulating-existence/3/\">\"I don’t even use version control. If you don’t know what that is then you’re not gonna yell at me. If you even know what version control is you’re gonna be like, ‘You don’t use version control? You don’t use source control? What is wrong with you? How can you even work? I’m just not cut out for it, in a sense. It’s been 15 years, so the reasons have change over time, but that’s my current understanding of it.\"</a> </li>\n<li>March 2023: <a href=\"https://www.gamedeveloper.com/programming/how-tarn-adams-upgraded-and-optimized-dwarf-fortress-for-its-official-steam-release\">\"I've got Discord channels to check and version control stuff to use now, so the process is definitely a little more involved\"</a></li>\n</ul>\n<p>That March 2023 quote comes from an interview about the release on Steam which <a href=\"https://www.pcgamer.com/after-spending-20-years-simulating-reality-the-dwarf-fortress-devs-have-to-get-used-to-a-new-one-being-millionaires/\">made them millionaires</a>. I'm a tiny bit sad that they gave in before they hit that milestone, but what an impressive run.</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/version-control\">version-control</a></p>\n\n\n\n",
+    "description": "I remember hearing a while ago that Dwarf Fortress didn't use version control. That fact has been lodged in my head, because given its inherent complexity I have trouble imagining a codebase that would benefit from version control more. That's art. I went looking and I'm sad to report that the days without version control appear to have ended. Quoting Tarn Adams over time: March 2013: \"I don't use version control -- I didn't like the feeling of having the code get committed into a black box thin",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-10-11T00:52:37+00:00",
+    "fetched_at": "2026-10-11T12:26:04.527284",
+    "url_hash": "5e79fa48416b161bcfde7d270f02ef20",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "工具"
+      ],
+      "summary": "Dwarf Fortress 开发者 Tarn Adams 从长期拒绝版本控制，到 2023 年确认已使用版本控制，标志这一以复杂度著称的项目终于纳入现代开发实践。",
+      "key_points": [
+        "年 Adams 称不用版本控制，觉得提交进黑盒没有即时好处",
+        "年他仍不用版本控制，自嘲知道的人会质疑他怎么工作",
+        "年他表示现在要查 Discord、用版本控制，流程更复杂"
+      ],
+      "analysis": [
+        "复杂代码库长期缺乏版本控制风险极高，此事说明习惯阻力可能比技术难度更持久",
+        "转向版本控制与 Steam 发行、团队协作和流程正规化同步发生，反映项目规模变化会倒逼工程实践升级",
+        "对独立开发者而言，早期可凭个人记忆管理代码，但一旦涉及多平台发布和长期维护，版本控制几乎不可避免"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1345,
+      "analysis_truncated": false
+    }
   }
 ]
