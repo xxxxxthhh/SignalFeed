@@ -97869,5 +97869,36 @@
       "analysis_input_chars": 1951,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "Weekly Update 528: Reading AI-generated Code & the Economics of Solar",
+    "link": "https://www.troyhunt.com/weekly-update-528/",
+    "content": "<img src=\"https://storage.ghost.io/c/fb/33/fb3391dc-723d-4e74-b95a-d641b5feb38e/content/images/2026/11/dK01FOVwq4A-HD--1-.jpg\" alt=\"Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar\"><p>By pure timing coincidence, <a href=\"https://x.com/josephfcox/status/2115814382001172714?ref=troyhunt.com\" rel=\"noreferrer\">the Proton CEO&apos;s AI @ Proton, Engineering Manifesto</a> made headlines around the same time as this week&apos;s video. The guy&apos;s management style and choice of language have really rubbed a lot of people up the wrong way, and deservedly so, IMHO. However... this section of his screed really resonated with me:</p><blockquote>Your job has fundamentally changed. It is no longer to write code, and LLMs are not here to help you write better code faster. Your job is to help the LLM write better code faster.</blockquote><p>Dev jobs as we know them are gone. Dead. And if you disagree, you&apos;re in for a shock in the very near future. But at the same time:</p>\n<!--kg-card-begin: html-->\n<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I don&apos;t remember the last time tech has been this exciting. It&apos;s white hot right now. Anyone who loves technology and computers is probably having a great time right now.</p>&#x2014; Jack Rhysider &#x1f3f4;&#x200d;&#x2620;&#xfe0f; (@JackRhysider) <a href=\"https://x.com/JackRhysider/status/2116291909228634498?ref_src=twsrc%5Etfw&amp;ref=troyhunt.com\">October 30, 2026</a></blockquote>\n<script async src=\"https://platform.x.com/widgets.js\" charset=\"utf-8\"></script>\n<!--kg-card-end: html-->\n<p>Yes! <em>This!</em> Not handwriting code &quot;old school&quot; isn&apos;t something to lament; rather, our unprecedented ability to innovate, create and build things that are meaningful to us is something to be enormously excited about. Anyway, on that topic:</p>\n<!--kg-card-begin: html-->\n<div><div style=\"width: 170px; display: inline-block; margin-right: 3px;\"><a href=\"https://itunes.apple.com/au/podcast/troy-hunts-weekly-update-podcast/id1176454699?ref=troy-hunt\"><img src=\"https://storage.ghost.io/c/fb/33/fb3391dc-723d-4e74-b95a-d641b5feb38e/content/images/2018/05/Listen-on-Apple-Podcasts.svg\" alt=\"Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar\"></a></div><div style=\"width: 175px; display: inline-block; margin-right: 3px;\"><a href=\"https://www.youtube.com/playlist?list=PL7LAAxaabizMAXnJe0s3xjQ30q12EVmjt&amp;ref=troyhunt.com\"><img src=\"https://storage.ghost.io/c/fb/33/fb3391dc-723d-4e74-b95a-d641b5feb38e/content/images/2024/09/Watch-and-Listen-on-YouTube.svg\" alt=\"Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar\"></a></div><div style=\"width: 118px; display: inline-block; margin-right: 3px;\"><a href=\"https://open.spotify.com/show/7jMtKFohdrw6qmz8AkLqit?ref=troy-hunt\"><img src=\"https://storage.ghost.io/c/fb/33/fb3391dc-723d-4e74-b95a-d641b5feb38e/content/images/2019/10/spotify.svg\" class=\"kg-image\" alt=\"Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar\"></a></div><div style=\"width: 120px; display: inline-block;\"><a href=\"https://omny.fm/shows/troy-hunt-weekly-update/playlists/podcast.rss?ref=troy-hunt\"><img src=\"https://storage.ghost.io/c/fb/33/fb3391dc-723d-4e74-b95a-d641b5feb38e/content/images/2018/07/Download-via-RSS.svg\" alt=\"Weekly Update 528: Reading AI-generated Code &amp; the Economics of Solar\"></a></div><iframe width=\"100%\" height=\"480\" src=\"https://www.youtube.com/embed/dK01FOVwq4A\" title=\"YouTube video player\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen loading=\"lazy\" spellcheck=\"false\"></iframe></div>\n<!--kg-card-end: html-->\n",
+    "description": "By pure timing coincidence, the Proton CEO&apos;s AI @ Proton, Engineering Manifesto made headlines around the same time as this week&apos;s video. The guy&apos;s management style and choice of language have really rubbed a lot of people up the wrong way, and deservedly so, IMHO.",
+    "is_fulltext": true,
+    "source": "Troy Hunt",
+    "pub_date": "Sun, 01 Nov 2026 07:35:23 GMT",
+    "fetched_at": "2026-11-01T12:15:31.057333",
+    "url_hash": "1249e07d897fa8166747fd9ac81f102c",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "职业发展"
+      ],
+      "summary": "文章借Proton CEO的争议性言论指出，开发者的核心工作正从亲手写代码转向引导LLM写出更好的代码，并认为这一转变值得兴奋而非哀叹。",
+      "key_points": [
+        "Proton CEO称开发者职责已变为帮助LLM更快写出更好的代码，而非自己写代码。",
+        "该言论的管理风格与措辞引发广泛反感，但作者认同其中关于角色转变的判断。",
+        "作者引用Jack Rhysider的观点，强调当下是技术创新最令人兴奋的时期。"
+      ],
+      "analysis": [
+        "这一判断若成立，意味着开发者的核心竞争力将从语法熟练度转向问题拆解、代码审查与AI协作能力。",
+        "CEO言论引发反感说明：即便趋势判断正确，表达方式与对从业者情绪的忽视也会削弱说服力。",
+        "实践上应主动练习阅读和验证AI生成代码，把节省的编码时间投入设计与创新，而非单纯追求产出速度。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1116,
+      "analysis_truncated": false
+    }
   }
 ]
