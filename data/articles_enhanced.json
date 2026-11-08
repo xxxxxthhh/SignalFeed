@@ -99882,5 +99882,67 @@
       "analysis_input_chars": 7000,
       "analysis_truncated": true
     }
+  },
+  {
+    "title": "Yours Truly on Full Stack Creator, Talking About the New MacBook Pros With PROLED XDR Displays",
+    "link": "https://www.youtube.com/watch?v=f2GZtWuUPl0",
+    "content": "\n<p>Tyler Stalman and David Altizer were kind enough to have me on their show this week. These new MacBook Pros are very fun computers that are very fun to talk about.</p>\n\n<p>(We even sneak in some love for <a href=\"https://www.ricoh-imaging.co.jp/english/brand/gr/index.html\">Ricoh’s legendary GR line</a> of compact cameras. I used my original GR-D from 20 years ago to shoot <a href=\"https://www.flickr.com/photos/gruber/4309828383/in/photostream/\">this 2010 photo of Steve Jobs and Walt Mossberg</a> that I linked to in my feature-length “<a href=\"https://daringfireball.net/2026/11/touch_and_glow\">Touch and Glow</a>” piece yesterday.)</p>\n\n<div>\n<a  title=\"Permanent link to ‘Yours Truly on Full Stack Creator, Talking About the New MacBook Pros With PROLED XDR Displays’\"  href=\"https://daringfireball.net/linked/2026/11/07/full-stack-creator-macbook-pro-proled-xdr\">&nbsp;★&nbsp;</a>\n</div>\n\n\t",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-11-08T00:25:44Z",
+    "fetched_at": "2026-11-08T05:10:39.825292",
+    "url_hash": "46ad297842a9bf13f1df0d14c6414999",
+    "ai_enhanced": {
+      "tags": [
+        "硬件",
+        "产品设计"
+      ],
+      "summary": "作者受邀参加 Full Stack Creator 播客，讨论新款 MacBook Pro 及其 PROLED XDR 显示屏，并顺带提及理光 GR 系列相机。",
+      "key_points": [
+        "作者以嘉宾身份参与 Tyler Stalman 与 David Altizer 的播客节目",
+        "节目核心话题是新款 MacBook Pro 及其搭载的 PROLED XDR 显示屏",
+        "作者用 20 年前的初代 GR-D 拍摄过乔布斯与莫斯伯格的照片"
+      ],
+      "analysis": [
+        "文章本质是播客引出与个人趣闻分享，而非产品评测，读者应预期获取观点而非参数细节。",
+        "将 MacBook Pro 与理光 GR 并置，暗示作者关注创作者工具生态而非单一设备性能。",
+        "短文未展开技术论证，对 PROLED XDR 的实际表现不宜据此文做判断。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 424,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
+    "link": "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+    "content": "\n    \n<p><strong><a href=\"https://github.com/simonw/datasette/issues/3046\">datasette #3046: Don&#x27;t serve link: rel=next HTTP headers to Firefox for HTML pages</a></strong></p>\nI was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Prefetch\">HTTP prefetch</a> to the next page of rows in that table.</p>\n<p>This was happening because Datasette pages serve an HTTP <code>link</code> header like this:</p>\n<p><code>link: &lt;https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv&gt;; rel=\"next\"</code></p>\n<p>This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching unnecessary data and the Datasette server is having to render an entire page that then gets thrown away.</p>\n<p>I dug in and learned that Firefox has <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=175418\">an issue</a> that has been open for 24 years about this behavior...</p>\n<p>And one of the early comments on that issue links to <a href=\"https://simonwillison.net/2002/Oct/17/mozillaPrefetching/\">my blog post from 2002</a> complaining about this feature. I hadn't just forgotten that I had written about it, I had forgotten the feature entirely!\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/firefox\">firefox</a>, <a href=\"https://simonwillison.net/tags/html\">html</a>, <a href=\"https://simonwillison.net/tags/mozilla\">mozilla</a>, <a href=\"https://simonwillison.net/tags/datasette\">datasette</a></p>\n\n\n\n",
+    "description": "datasette #3046: Don&#x27;t serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: &lt;https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv&gt;; rel=\"next\" This is bad. A tiny fraction of the visitors to ",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-11-07T23:57:46+00:00",
+    "fetched_at": "2026-11-08T05:10:37.751296",
+    "url_hash": "0a2489bb33f85f22a12d4adaf9c64e25",
+    "ai_enhanced": {
+      "tags": [
+        "Web开发",
+        "性能优化"
+      ],
+      "summary": "Datasette 项目发现 Firefox 会因页面返回的 link rel=next HTTP 头而预取下一页，导致无谓的请求和服务器渲染开销，因此决定不再向 Firefox 的 HTML 页面发送该头。",
+      "key_points": [
+        "Datasette 表页面通过 link 头声明 rel=next，Firefox 据此自动预取下一页数据。",
+        "预取行为浪费带宽和服务器渲染资源，因为只有极少数用户会真正点击下一页。",
+        "Firefox 相关 issue 已开放 24 年，作者发现自己 2002 年就曾撰文批评该特性。"
+      ],
+      "analysis": [
+        "该案例说明 HTTP 链接头虽语义正确，但浏览器实现差异可能带来意外的性能副作用，服务端需按客户端做适配。",
+        "对高流量分页页面，禁用不必要的预取可显著降低服务器负载和无效渲染，属于低成本性能优化。",
+        "长期未修复的浏览器行为提醒开发者：不能假设规范意图与实现一致，应通过实际网络面板观察真实请求。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1037,
+      "analysis_truncated": false
+    }
   }
 ]
