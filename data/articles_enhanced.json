@@ -102571,5 +102571,67 @@
       "analysis_input_chars": 928,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "Variable Electricity Pricing - the Highs and the Lows",
+    "link": "https://shkspr.mobi/blog/2026/11/variable-electricity-pricing-the-highs-and-the-lows/",
+    "content": "<p>For one glorious day in September, we had several hours where we were <em>paid</em> to use electricity.</p>\n\n<img src=\"https://shkspr.mobi/blog/wp-content/uploads/2026/09/plunge.webp\" alt=\"Line graph showing plunge pricing.\" width=\"1020\" height=\"587\" class=\"alignleft\">\n\n<p>Our home is on Octopus Energy's variable price tariff. Our smart-meter sends back readings every half-hour. That means the energy company can set a different price every half hour. Rather than paying a flat rate of 30p per kWh, we pay a rate which constantly changes throughout the day.</p>\n\n<p>I built a little display out of an old Android tablet. It sits in our kitchen and looks like this:</p>\n\n<img src=\"https://shkspr.mobi/blog/wp-content/uploads/2026/09/tablet.webp\" alt=\"Small tablet with a colourful graph on it.\" width=\"3749\" height=\"2108\" class=\"alignleft\">\n\n<p>To be clear, we have <em>chosen</em> this tariff. It is not mandatory. You are free to choose a fixed price tariff if you want. It fits our lifestyle (just about) but we could choose to change back any time we want.</p>\n\n<p>When the sun is shining and the wind a-howling, the UK produces more electricity than it can consume. Our country frequently sells electricity to its neighbours - but it can also sell it to its internal customers. So, for a few hours a day, our meter runs backwards and our electricity bills go down.</p>\n\n<p>That's the happy path. What happens when the skies are cloudy and the wind is still? Prices go up. The other day, we saw this alarming spike:</p>\n\n<img src=\"https://shkspr.mobi/blog/wp-content/uploads/2026/11/Imagepipe_63.webp\" alt=\"An energy spike of 91p / kWh.\" width=\"2048\" height=\"1542\" class=\"alignleft\">\n\n<p>Yikes! Variable pricing can be unexpectedly high. In Texas a few years ago, a storm caused wholesale prices to rise so much that it caused immediate and long-term financial damage to some people:</p>\n\n<blockquote><p>The average price for electricity in Texas in the winter is about 12 cents per kilowatt-hour […] Texas utility regulators allowed that price to rise to $9 per kilowatt-hour.</p>\n\n<p><a href=\"https://www.npr.org/sections/live-updates-winter-storms-2021/2021/02/21/969912613/after-days-of-mass-outages-some-texas-residents-now-face-huge-electric-bills\">After Days Of Mass Outages, Some Texas Residents Now Face Huge Electricity Bills</a></p></blockquote>\n\n<p>The bill-shock was immense:</p>\n\n<blockquote><p>For a home that uses 2,000 kWh per month, prices at $9/kWh work out to over $640 per day in energy charges. By comparison, that same household would typically pay $2 per day.</p>\n\n<p><a href=\"https://web.archive.org/web/20210629123316/https://www.griddy.com/post/griddy-update-why-energy-prices-were-sky-high-this-week\">Griddy Update: Why energy prices were sky high this week</a></p></blockquote>\n\n<p>Luckily, Octopus caps the maximum we can pay at £1/kWh. That's still 3x the typical cost, but nowhere near the bankruptcy levels seen in the USA.</p>\n\n<h2 id=\"how-do-we-cope-with-this\"><a href=\"https://shkspr.mobi/blog/2026/11/variable-electricity-pricing-the-highs-and-the-lows/#how-do-we-cope-with-this\">How Do We Cope With This?</a></h2>\n\n<p>There are basically two strategies available to minimise our bills.</p>\n\n<ol>\n<li>Electricity Shifting</li>\n<li>Demand Shifting</li>\n</ol>\n\n<p>We have a <a href=\"https://shkspr.mobi/blog/2021/03/1-year-of-edent_solar-we-are-100-offset/\">solar array</a> and a <a href=\"https://shkspr.mobi/blog/2023/08/review-moixa-4-8kwh-solar-battery/\">big battery</a>. During the day our battery soaks up the sunshine. Because it has an Internet connection, it knows the half-hourly prices - so it discharges at the most expensive times.</p>\n\n<p>That's good enough for watching TV, boiling the kettle, and the like. But the battery doesn't contain enough charge or have enough oomph to run everything like the oven, tumble dryer, and aluminium smelter at once. Which leads us on to demand shifting.</p>\n\n<p>If you saw that evening prices were a quid a kilowatt hour, what behaviours would you change? I put the tumble dryer on early. I made a dinner which didn't require the oven. I read my pre-charged eReader rather than playing on a console.</p>\n\n<p>Did I <em>have</em> to do that? No. I am insulated by the battery - but that won't happen all the time. There will be days when the sun hasn't shone enough to fill up the battery for later. There will be days when I <em>need</em> a hot dinner. There will be days when I want to watch a movie on TV.</p>\n\n<p>Those days will be expensive.</p>\n\n<h2 id=\"is-this-the-future\"><a href=\"https://shkspr.mobi/blog/2026/11/variable-electricity-pricing-the-highs-and-the-lows/#is-this-the-future\">Is This The Future?</a></h2>\n\n<p>I dream of a day when every home has solar panels and a battery. A distributed grid is a resilient grid.</p>\n\n<p>Until then, I don't think a variable tariff is useful for <em>most</em> people. I suspect that the average person doesn't want to delay dinner by an hour just to save £3.14, or to needlessly hoover the house because they'll earn 71p for it.</p>\n\n<p>This is a fun experiment for us. The occasional surge price isn't going to bankrupt us, and we don't have complex needs which mean restricting our energy usage would be catastrophic. But it is easy to see how the lack of predictability could seriously inconvenience someone or cause them needless distress.</p>\n\n<p>I broadly think that people should be more aware of their energy usage. A little bit of behavioural change among many people can lead to a significant positive impact. But I'm also grateful for the £1 cap!</p>\n\n<p>If you'd like to try a variable electricity tariff, <a href=\"https://share.octopus.energy/metal-dove-988\">join Octopus and we both get £50</a>.</p>\n<img src=\"https://shkspr.mobi/blog/wp-content/themes/edent-wordpress-theme/info/okgo.php?ID=75793&amp;HTTP_REFERER=RSS\" alt=\"\" width=\"1\" height=\"1\" loading=\"eager\">",
+    "description": "For one glorious day in September, we had several hours where we were paid to use electricity. Our home is on Octopus Energy's variable price tariff. Our smart-meter sends back readings every half-hour. That means the energy company can set a different price every half hour. Rather than paying a flat rate of 30p per kWh, we pay a rate which constantly changes throughout the day. I built a…",
+    "is_fulltext": true,
+    "source": "Terence Eden’s Blog",
+    "pub_date": "Sun, 15 Nov 2026 12:34:58 +0000",
+    "fetched_at": "2026-11-15T18:40:55.977559",
+    "url_hash": "dee2e82ebd04e4ffb7b825ff97645c96",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "产品设计"
+      ],
+      "summary": "作者基于Octopus动态电价与智能电表实践，展示可变电价在可再生能源富余时可用电获利，但也会出现价格尖峰，需靠电池与用电行为转移来应对。",
+      "key_points": [
+        "动态电价每半小时随供需变化，九月曾出现数小时负电价，用电反而获得报酬。",
+        "阴天无风时电价会飙升，德州曾出现9美元/千瓦时导致居民巨额账单的极端案例。",
+        "作者靠太阳能加电池在高价时段放电，并通过提前烘干、避开烤箱等需求转移降低费用。"
+      ],
+      "analysis": [
+        "动态电价把电网供需信号传导到家庭，能激励用户在低价时段用电，但要求用户具备自动化设备或行为灵活性。",
+        "若无价格上限和电池缓冲，极端尖峰可能给普通家庭带来财务冲击，因此监管封顶与用户保护机制很关键。",
+        "该模式短期更适合有储能和可控负荷的技术型用户，大规模推广需依赖分布式储能普及和更友好的自动化产品设计。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 4163,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "The Legion of PCAST",
+    "link": "https://www.whitehouse.gov/ostp/presidents-council-of-advisors-on-science-and-technology/",
+    "content": "\n<p><a href=\"https://daringfireball.net/linked/2026/11/13/sacks\">I wrote about David Sacks the other day</a>, in the context of his being one of the Trump 2.0 gang that might get left holding the bag if this Jensen Huang/Nvidia scandal blows up the AI boom/bubble. Sacks <em>was</em> the administration’s “AI czar” — <a href=\"https://www.cnbc.com/2026/03/26/david-sacks-trump-crypto-ai-czar.html\">until March</a>, when he announced his time was up. (His position as a “special government employee” was limited to 130 days. Sacks is definitely special.)</p>\n\n<p>At the moment Sacks remains co-chair of the <a href=\"https://www.whitehouse.gov/ostp/presidents-council-of-advisors-on-science-and-technology/\">President’s Council of Advisors on Science and Technology</a> (PCAST), a <a href=\"https://en.wikipedia.org/wiki/Legion_of_Doom\">Legion of Doom</a>-style committee of billionaire Trump backers, whose members include, in alphabetical order after the co-chairs:</p>\n\n<ul>\n<li>David Sacks — Co-chair</li>\n<li>Michael Kratsios — Co-chair</li>\n<li>Marc Andreessen (Andreessen Horowitz)</li>\n<li>Pam Bondi (fired as Trump attorney general <a href=\"https://thehill.com/homenews/administration/5814055-pam-bondi-donald-trump-loyalty-firing/\">for insufficient cravenness</a>, no background whatsoever in science or technology)</li>\n<li>Sergey Brin (Google)</li>\n<li>Safra Catz (Oracle)</li>\n<li>Michael Dell (Dell Technologies)</li>\n<li>Jacob DeWitte (Oklo — nuclear power startup, fission)</li>\n<li>Fred Ehrsam (Coinbase — crypto)</li>\n<li>Larry Ellison (Oracle)</li>\n<li>David Friedberg (Ohalo — biotech)</li>\n<li>Jensen Huang (Nvidia)</li>\n<li>John Martinis (Qolab — quantum computing)</li>\n<li>Bob Mumgaard (Commonwealth Fusion Systems — nuclear power, fusion)</li>\n<li>Lisa Su (AMD)</li>\n<li>Mark Zuckerberg (Meta)</li>\n</ul>\n\n<p>Not represented: anyone from Apple, Microsoft, or Amazon. There’s a game of reverse musical chairs here, and, amongst the multi-trillion-dollar tech Goliaths, it’s Nvidia, Google, and Meta who are still sitting in seats, soaking up the stench of a <a href=\"https://time.com/article/2026/10/29/trump-approval-rating-midterm-elections-republicans/\">historically unpopular president</a> — whose unpopularity is fueled first and foremost, <a href=\"https://www.nbcnews.com/politics/2026-elections/exit-polls\">according to election exit polls</a>, by his abject corruption. Apple, Microsoft, and Amazon have seemingly made their <a href=\"https://www.dictionary.com/browse/irish-goodbye\">Irish goodbyes</a>. Being associated with Trump now doesn’t just put you on the wrong side of popular party politics, but on the wrong side of being perceived as crooked.</p>\n\n<p>Curiously absent from PCAST is Elon Musk, who I think got his licks in all at once with <a href=\"https://www.newyorker.com/magazine/2025/06/23/what-did-elon-musk-accomplish-at-doge\">the DOGE fiasco in Trump 2.0’s first year</a>.</p>\n\n<div>\n<a  title=\"Permanent link to ‘The Legion of PCAST’\"  href=\"https://daringfireball.net/linked/2026/11/15/legion-of-pcast\">&nbsp;★&nbsp;</a>\n</div>\n\n\t",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-11-15T17:21:24Z",
+    "fetched_at": "2026-11-15T18:40:48.805907",
+    "url_hash": "d1087f559f2a89537bd0b378798b2400",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "其他"
+      ],
+      "summary": "文章批评PCAST已成为由亿万富翁特朗普支持者组成的“末日军团”，并指出苹果、微软、亚马逊缺席而英伟达、谷歌、Meta仍在其中，认为与特朗普关联如今意味着被视为腐败。",
+      "key_points": [
+        "PCAST由David Sacks和Michael Kratsios共同主持，成员包括多位科技巨头CEO和特朗普金主。",
+        "苹果、微软、亚马逊未派代表参加PCAST，作者形容为“不告而别”。",
+        "作者称特朗普不受欢迎主要源于其腐败，关联特朗普会损害企业声誉。"
+      ],
+      "analysis": [
+        "文章反映科技巨头在政治站队上的分化，企业需权衡与争议政治人物关联的声誉风险。",
+        "PCAST成员构成偏向特朗普盟友而非科学技术多元代表，可能影响该委员会的政策公信力。",
+        "作者观点带有强烈倾向性，读者应结合其他信源判断科技公司与政治互动的实际影响。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 2048,
+      "analysis_truncated": false
+    }
   }
 ]
