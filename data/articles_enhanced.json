@@ -103686,5 +103686,160 @@
       "analysis_input_chars": 635,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "Email Dumpster Diving",
+    "link": "https://blog.jim-nielsen.com/2026/email-dumpster-diving/",
+    "content": "<p>Sometimes, for fun, I like to go rummage around in my email’s Spam folder.</p>\n<p class=\"image-container\"><img src=\"https://cdn.jim-nielsen.com/blog/2026/phishing-emails-spam.png\" width=\"700\" height=\"525\" alt=\"Menu showing Important, Scheduled, Spam with 96, Trash, and Manage subscriptions.\" data-og-image />\n\n</p><p>Why? Who knows (probably a question for a licensed medical professional).</p>\n<p>I think there’s some part of me that chases the dopamine hit of  finding a “needle in the haystack”: an email flagged as spam that shouldn’t be (which <em>almost never</em> happens, so I guess this behavior falls under the label of addictive/impulsive seeking).</p>\n<p>I think there’s also a part of me that enjoys keeping a finger on the pulse of scam tactics, like “Let’s see how <a href=\"https://notes.jim-nielsen.com/n/2026-11-17-1253/\" >people are trying to trick me</a> today…” Almost like a form of inoculation: deliberate exposure to scam tactics in a controlled environment. It helps me develop an immunity, which comes in handy when family members come to me with their emails and ask, “Is this legit?”</p>\n<p>Here’s a little exposure to what I’ve seen recently.</p>\n<p>First: I see a lot of emails that exploit the way cloud services bill us. For example: “You’ve hit your limits! Better log in or you’ll lose access!” Or, “Your credit card has expired. Better log in and enter your new credit card so you can keep doing what you’re doing.” ⁣</p>\n<p class=\"image-container\"><img src=\"https://cdn.jim-nielsen.com/blog/2026/phishing-emails-cloud.png\" width=\"1200\" height=\"900\" alt=\"Cloud storage renewal payment failed notification with expired payment method alert and update button.\" />\n\n</p><p>(Note the little green banner at the top — “This message was sent from a trusted sender.” A kind of <a href=\"https://knowyourmeme.com/memes/elizabeth-holmes-and-nathan-fielder-why-would-i-deceive-you\" >“Why would I deceive you?”</a>)</p>\n<p>These emails are interesting not only as an exercise in analyzing scam tactics, but also as a meta-commentary on legitimate software use cases.</p>\n<p>For example, isn’t it interesting how difficult it can be to distinguish scammer tactics from legitimate software company  practices? “Hey, you better give us your credit card or you’ll lose access to your thing!” That’s what ransomware is;  it’s also what SaaS is, lol.</p>\n<p>It’s kinda funny, yeah? No, just me? Ok, I digress. Next email.</p>\n<p>This is an interesting one. Usually phishing emails are pretty overt in their intentions: click this big button and get taken to a page where you do what we want, e.g. enter sensitive info like a password or credit card. (Again, interesting that legitimate marketing teams follow the same strategy lol. It’s called a “CTA”: click here and do what we want.)</p>\n<p>In this case, however, the email claims to be from a “Gina Rinehart” and tries to establish credibility by saying, “Look I’m a real person! Here’s a link to my Wikipedia page.” No CTA to a sus web page here at all.</p>\n<p class=\"image-container\"><img src=\"https://cdn.jim-nielsen.com/blog/2026/phishing-emails-gina.png\" width=\"1200\" height=\"675\" alt=\"Email from Gina Rinehart offering a $2 million donation, with contact details and Wikipedia link.\" />\n\n</p><p>I do wonder what would happen if I emailed back. I’m sure somewhere down that road is a solicitation for my bank info or the like. I’d love to mess with them, but I got better things to do with my time (like write this blog post).</p>\n<p>Ok, last email. I came across this one in my Spam folder:</p>\n<p class=\"image-container\"><img src=\"https://cdn.jim-nielsen.com/blog/2026/phishing-emails-irs.png\" width=\"1200\" height=\"900\" alt=\"IRS banner with US flag, text ‘Claim your child's Trump Account today!’, gold Trump Accounts logo, text about accounts for children, and ‘Download the App’ button.\" />\n\n</p><p>“Oh interesting,” I thought. “Somebody is trying to ride the <a href=\"https://www.irs.gov/trumpaccounts\" >Trump Accounts</a> initiative from the current administration and trick folks into divulging sensitive information.” Makes sense. Totally plausible vector for attack.</p>\n<p>But then as I do my email forensics (examine where the links point to, inspect the sender, etc.) I find something surprising:</p>\n<p class=\"image-container\"><img src=\"https://cdn.jim-nielsen.com/blog/2026/phishing-emails-irs-address.png\" width=\"700\" height=\"525\" alt=\"Email from IRS with subject 'Claim your child's Trump Account' to Jim Nielsen, showing a context menu with options including 'Block Sender'.\" />\n\n</p><p>Turns out, <code>service.govdelivery.com</code> is a legitimate domain and <code>irs@ service.govdelivery.com</code> is <a href=\"https://www.irs.gov/help/how-to-know-its-the-irs#:~:text=irs@service.govdelivery.com\" >listed on the IRS’ website</a> as the official sender for their bulletins. (The email headers check out too.)</p>\n<p>On top of that, the CTAs in the email all point to officially sanctioned websites, App Store apps, etc. In other words: this is actually a legitimate email from the United States Government that was flagged as Spam in Gmail, lol.</p>\n<p>And there it is: my needle in the haystack. The dopamine hit I need to continue with this ridiculous, fun, and informative habit.</p>\n<hr />\n\n<p>\n  Reply via:\n  <a\n    href=\"mailto:jimniels%2Bblog@gmail.com?subject=Re:%20blog.jim-nielsen.com/2026/email-dumpster-diving/\"\n    >Email</a\n  >\n  · <a href=\"https://mastodon.social/@jimniels\">Mastodon</a> ·\n  <a href=\"https://bsky.app/profile/jim-nielsen.com\">Bluesky</a>\n</p>\n\n",
+    "description": "Sometimes, for fun, I like to go rummage around in my email’s Spam folder. Why? Who knows (probably a question for a licensed medical professional). I think there’s some part of me that chases the dopamine hit of finding a “needle in the haystack”: an email flagged as spam that shouldn’t be (which almost never happens, so I guess this behavior falls under the label of addictive/impulsive seeking). I think there’s also a part of me that enjoys keeping a finger on the pulse of scam tactics, like “",
+    "is_fulltext": true,
+    "source": "Jim Nielsen’s Blog",
+    "pub_date": "Wed, 18 Nov 2026 19:00:00 GMT",
+    "fetched_at": "2026-11-19T06:36:20.965406",
+    "url_hash": "d2d8edc9f9d821827e38df4ebf1cbfad",
+    "ai_enhanced": {
+      "tags": [
+        "网络安全",
+        "其他"
+      ],
+      "summary": "作者通过翻看垃圾邮件文件夹，分析诈骗邮件手法以增强防骗免疫力，并发现合法SaaS的催缴话术与勒索软件高度相似，最终在垃圾箱里找到一封被误判的美国政府合法邮件。",
+      "key_points": [
+        "作者把翻垃圾邮件当作受控接触骗术的“接种”方式，用于帮家人辨别可疑邮件。",
+        "许多钓鱼邮件利用云服务账单话术制造紧迫感，与合法SaaS催付费逻辑难以区分。",
+        "一封看似蹭热点诈骗的IRS邮件经查证为官方合法发送，却被Gmail误判为垃圾邮件。"
+      ],
+      "analysis": [
+        "该文提示安全素养可通过主动、受控地观察真实诈骗样本习得，比被动警告更有效。",
+        "合法软件与勒索软件在“不给钱就断供”的话术上趋同，用户需以域名、链接指向和发件人验证而非语气判断真伪。",
+        "垃圾邮件过滤器仍会误伤政府官方通知，重要机构邮件应结合官方渠道二次核实，避免漏读。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 3584,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Supersequences and Superpermutations",
+    "link": "https://www.johndcook.com/blog/2026/11/18/supersequences/",
+    "content": "<p>A word is <em>universal</em> if it contains every permutation of its alphabet as a subsequence: the letters must appear in order, but gaps are allowed.</p>\n<p>For example, you can find all six permutations of the digits 1, 2, and 3 inside the string 1231213. Not all permutations can be found as a contiguous substring—that would be a superpermutation—but all can be found as a subsequence.</p>\n<p>The word</p>\n<p style=\"padding-left: 40px;\">01234567890123456780293451670823451960782134506978231405678213904567823109456782301</p>\n<p>is universal for the set of 10 digits. This word was discovered some time ago, but Jason Davies has recently proved that this the smallest universal word on 10 digits. It has 83 characters, and Davies proved that no word of 82 characters is universal over the digits. See his paper <a href=\"https://github.com/jasondavies/permutation-supersequence-length\">here</a>.</p>\n<p>I&#8217;m surprised that all 10! = 3,628,800 permutations of 10 digits can be found as subsequences of such a relatively short word.</p>\n<p>Universal words, or <strong>supersequences</strong>, are easily confused with <strong>superpermutations</strong>. See OEIS sequences <a href=\"https://oeis.org/A062714\">A062714</a> and <a href=\"https://oeis.org/A180632\">A180632</a>. Minimal length superpermuations are necessarily longer than minimal length supersequences [1] since the requirements on the former are stricter, requiring permutations to appear as contiguous substrings and not merely as subsequences. In other words, every superpermutation is a supersequence, but not vice versa.</p>\n<p>For example,</p>\n<p style=\"padding-left: 40px;\">123412314231243121342132413214321</p>\n<p>is a minimal superpermutation on four symbols while</p>\n<p style=\"padding-left: 40px;\">123412314213</p>\n<p>is a minimal supersequence.</p>\n<p>Note that it&#8217;s trivial to produce a supersequence: just concatenate all <em>n</em>! permutations of the symbols into one sequence. But finding <em>minimal</em> supersequences and <em>minimal</em> superpermutations is challenging.</p>\n<p>&nbsp;</p>\n<p>[1] For <em>n</em> = 1 or 2 the minimal supersequence and minimal superpermutation are the same. For <em>n</em> &gt; 2 they are not.</p>The post <a href=\"https://www.johndcook.com/blog/2026/11/18/supersequences/\">Supersequences and Superpermutations</a> first appeared on <a href=\"https://www.johndcook.com/blog\">John D. Cook</a>.",
+    "description": "A word is universal if it contains every permutation of its alphabet as a subsequence: the letters must appear in order, but gaps are allowed. For example, you can find all six permutations of the digits 1, 2, and 3 inside the string 1231213. Not all permutations can be found as a contiguous substring—that would [&#8230;] The post Supersequences and Superpermutations first appeared on John D. Cook.",
+    "is_fulltext": true,
+    "source": "John D. Cook",
+    "pub_date": "Thu, 19 Nov 2026 00:10:21 +0000",
+    "fetched_at": "2026-11-19T06:36:03.025593",
+    "url_hash": "f37d46e98d1cb0c66499b5a216514136",
+    "ai_enhanced": {
+      "tags": [
+        "其他",
+        "软件工程"
+      ],
+      "summary": "文章区分了超序列（允许间隔的子序列包含所有排列）与超排列（要求连续子串），并介绍10个数字的最短超序列为83个字符，由Jason Davies证明。",
+      "key_points": [
+        "超序列仅要求排列作为子序列出现，超排列要求作为连续子串出现，后者条件更严格。",
+        "个数字的所有3628800个排列可被一个83字符的超序列全部包含为子序列。",
+        "Jason Davies最近证明不存在82字符的超序列能覆盖10个数字的所有排列。"
+      ],
+      "analysis": [
+        "该结果展示了组合数学中紧凑编码的可能性，对理解排列覆盖问题的下界有理论意义。",
+        "超序列与超排列的区分有助于避免概念混淆，在算法设计和序列分析中需明确需求类型。",
+        "寻找最短超序列的计算挑战可能启发启发式搜索或形式化验证方法的研究。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1888,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "If the Windows documentation doesn’t list a particular technology as supporting an operation, does that mean that it doesn’t support it?",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20261118-00/?p=112870/",
+    "content": "<p>In the Windows documentation for various file system operations, you will often find a section in the Remarks that says</p>\n<blockquote class=\"q\">\n<p>This function is supported by the following technologies.</p>\n<table class=\"cp3\" style=\"border-collapse: collapse;\" border=\"1\" cellspacing=\"0\" cellpadding=\"3\">\n<tbody>\n<tr>\n<th>Technology</th>\n<th>Supported</th>\n</tr>\n<tr>\n<td>Server Message Block (SMB) 3.0 protocol</td>\n<td>Yes</td>\n</tr>\n<tr>\n<td>SMB 3.0 Transparent Failover (TFO)</td>\n<td>Yes</td>\n</tr>\n<tr>\n<td>SMB 3.0 with Scale-out File Shares (SO)</td>\n<td>Yes</td>\n</tr>\n<tr>\n<td>Cluster Shared Volume File System (CsvFS)</td>\n<td>Yes</td>\n</tr>\n<tr>\n<td>Resilient File System (ReFS)</td>\n<td>Yes</td>\n</tr>\n</tbody>\n</table>\n</blockquote>\n<p>But what about network protocols that aren&#8217;t on the list? Does their absence mean that they aren&#8217;t supported?</p>\n<p>The table lists the file systems and network protocols that we has information for. If something is not on the list, that doesn&#8217;t mean that it doesn&#8217;t support it. It just means that we don&#8217;t know whether it supports it.</p>\n<p>If it definitely didn&#8217;t support it, then it would have been in the table with a &#8220;No&#8221;, like this one for <a href=\"https://learn.microsoft.com/windows/win32/api/fileapi/nf-fileapi-getvolumeinformationbyhandlew\"> <code>Get­File­Information­By­Handle</code></a>:</p>\n<table class=\"cp3\" style=\"border-collapse: collapse;\" border=\"1\" cellspacing=\"0\" cellpadding=\"3\">\n<tbody>\n<tr>\n<th>Technology</th>\n<th>Supported</th>\n</tr>\n<tr>\n<td>Server Message Block (SMB) 3.0 protocol</td>\n<td>No</td>\n</tr>\n<tr>\n<td>SMB 3.0 Transparent Failover (TFO)</td>\n<td>No</td>\n</tr>\n<tr>\n<td>SMB 3.0 with Scale-out File Shares (SO)</td>\n<td>No</td>\n</tr>\n<tr>\n<td>Cluster Shared Volume File System (CsvFS)</td>\n<td>Yes</td>\n</tr>\n<tr>\n<td>Resilient File System (ReFS)</td>\n<td>Yes</td>\n</tr>\n</tbody>\n</table>\n<p>Since third parties can implement their own network protocols,¹ the Windows documentation cannot be comprehensive. It just documents what it knows. If you want information about some other network protocol or file system driver, you&#8217;ll have to consult the documentation for the product that implements the protocol or file system you are interested in.</p>\n<p>¹ I noticed <a href=\"https://openafs.org/pages/windows.html\">AFS</a> and <a href=\"https://www.paragon-software.com/home/apfs-windows/\"> APFS</a> and I didn&#8217;t even make it to the letter B.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20261118-00/?p=112870/\">If the Windows documentation doesn&#8217;t list a particular technology as supporting an operation, does that mean that it doesn&#8217;t support it?</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>\n",
+    "description": "Windows documents what it knows, but it doesn't know what third party network protocols support. The post If the Windows documentation doesn&#8217;t list a particular technology as supporting an operation, does that mean that it doesn&#8217;t support it? appeared first on The Old New Thing.",
+    "is_fulltext": true,
+    "source": "The Old New Thing",
+    "pub_date": "Wed, 18 Nov 2026 15:00:00 +0000",
+    "fetched_at": "2026-11-19T06:35:58.280259",
+    "url_hash": "b39bf871ef6ffd51119beb61469062e9",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "其他"
+      ],
+      "summary": "Windows 文档中未列出某技术不代表不支持，只表示微软不了解其支持情况；明确不支持的技术会标为“No”。",
+      "key_points": [
+        "文档表格只列出微软有信息的技术，缺失项意味着“未知”而非“不支持”。",
+        "明确不支持的技术会在表格中标注“No”，如 GetFileInformationByHandle 对 SMB 3.0。",
+        "第三方可实现自有网络协议，因此 Windows 文档无法穷举所有支持情况。"
+      ],
+      "analysis": [
+        "实践上不能把文档缺失当作否定证据，应查阅具体协议或文件系统产品的文档确认。",
+        "该说明提醒开发者区分“文档未覆盖”与“明确不支持”，避免误判兼容性。",
+        "对第三方生态而言，微软仅记录已知信息，兼容性判断需结合实现方文档。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1817,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "★ The 50-Yard Line",
+    "link": "https://daringfireball.net/2026/11/the_50-yard_line",
+    "content": "\n<p>Ever since the Huang/Nvidia scandal erupted, I’ve been thinking about a short post I wrote back in March, under the headline “<a href=\"https://daringfireball.net/linked/2026/03/31/jensen-huang\">Jensen Huang Doesn’t Smell Anything</a>”:</p>\n\n<blockquote>\n  <p>Nvidia CEO Jensen Huang, during an on-stage interview at The Hill\n&amp; Valley Forum <a href=\"https://www.youtube.com/watch?v=9WkGNe27r_Q\">last summer</a>, was asked “What do you see as America’s\nunique advantages that other countries don’t have?”</p>\n\n<p>His answer, after taking a moment to think, “America’s unique\nadvantage that no country could possibly have is President Trump.”</p>\n\n<p>Huang, newly appointed to the <a href=\"https://daringfireball.net/linked/2026/03/31/presidents-council-of-advisors-on-science-and-technology\">aforelinked</a> President’s Council\nof Advisors on Science and Technology, seemingly <a href=\"https://politicalwire.com/2026/03/30/can-trumps-approval-fall-even-further/\">doesn’t smell\nthe growing stink</a>.</p>\n</blockquote>\n\n<p>The stink was the historically low (and sinking) popularity to which Trump’s 2.0 presidency had sunk. Undeniable to anyone in touch with reality. Huang’s obsequious Trump-fellating answer to that question would have been eye-catching even when Trump first rolled back into office with an aggressive agenda and a surplus of political capital from a clear election victory — but it was, frankly, a startling thing to say at any point. It makes a lot more sense, though, <a href=\"https://daringfireball.net/linked/2026/11/18/huang-tweets\">given what’s come to light in the last 10 days</a>.</p>\n\n<p>If you’re not paying close attention you might think Huang’s was the sort of answer any major tech CEO might have given. But it’s not. That was a really unusual thing for Huang to say, way out of line with how corporate leaders typically approach politics. The typical approach for large publicly held corporations is to avoid partisan politics. Advocate only for policies directly related to the company’s business, and otherwise stay out. The political winds change direction every few years. George Bush senior in 1988 was the last new president elected from the same party as the outgoing incumbent, and he only lasted one term. It makes no sense for a corporation that intends to continue thriving for more than the next few years to closely align itself with one party — unless they believe that party will remain in power for the foreseeable future, à la the FDR/Truman Democrats, who won five consecutive presidential elections from 1932 to 1948 (and seven out of nine through 1968).</p>\n\n<p>One metaphor I use for politics is a football field. Democrats on the left, Republicans on the right. CEOs typically stay as close as they can to the 50-yard line in the middle of the field. That way, when an election puts the other party in power, they don’t have to move — they just need to turn around. That’s how someone like Tim Cook could maintain good relations with the White House from Obama to Trump to Biden back to Trump again. He just stayed close to midfield and turned around after each election.</p>\n\n<p>Remaining as close as possible to political midfield under Trump required unseemly obsequious tribute, unprecedented in modern U.S. history. <a href=\"https://daringfireball.net/linked/2025/01/03/allen-tim-cook-1m-trump-inauguration\">Million-dollar tickets</a> to his inauguration. <a href=\"https://daringfireball.net/2025/08/gold_frankincense_and_silicon\">That ridiculous gold trophy</a>. Embarrassing stuff. But that’s ultimately <a href=\"https://daringfireball.net/linked/2025/01/04/consider-cook-as-a-tragic-figure\">a reflection of Trump’s avarice</a>, not the politics of Cook personally or Apple as a company. That was the price to stay on the 50-yard line. Cook has often repeated that his two personal heroes are <a href=\"https://www.cultofmac.com/news/klan-mlk-bobby-kennedy-inspired-apple-ceo-tim-cook\">Martin Luther King Jr. and Bobby Kennedy</a> (senior, to be clear). He keeps portraits of both of them <a href=\"https://www.vanityfair.com/news/tim-cook-apple-vision-pro\">in his office</a>. He never swapped them out for portraits of, say, Ronald Reagan. Apple never changed its internal policies or language regarding racial and LGBT equality. The Apple homepage never stopped celebrating Martin Luther King Jr. Day — <a href=\"https://daringfireball.net/linked/2025/01/20/apple-homepage-mlk\">even when it coincided with Trump’s second inauguration</a>.</p>\n\n<p>And yet Trump remains so enamored of Cook that he <a href=\"https://daringfireball.net/linked/2026/11/12/trump-weighs-in\">floated his name</a> to succeed Huang at Nvidia. <a href=\"https://www.usatoday.com/story/news/politics/2026/04/21/trump-praises-tim-cook-tim-apple/89717408007/\">Tim Apple</a> remains the apple of Trump’s eye. Yet Apple had nothing to change or apologize for when Biden came into office, nor will they again if, as now <a href=\"https://polymarket.com/event/which-party-wins-2028-us-presidential-election\">seems likely</a>, Trump is succeeded in 2029 by a Democrat elected to clean up his kakistocratic kleptomaniacal mess. (Presumably Apple will gladly pony up at least <a href=\"https://daringfireball.net/linked/2026/10/15/trump-ballroom-donor-list\">another $25 million</a> to restore the East Wing after Trump’s <a href=\"https://x.com/HillaryClinton/status/2121291689231032754\">architecturally ungodly ballroom edifice</a> is torn down.) And Apple certainly won’t need lawyers to defend them from charges of corruption and/or breaches of national security. Nvidia, not so much.</p>\n\n<p>This is what we should want: business leaders who endeavor to stay out of partisan politics, not hopelessly enmesh themselves in it. Industry and politics cannot operate in isolation, but they should avoid intertwinement except where necessary. Great companies stand the test of time. That’s not feasible if you hitch your corporate wagon to one party or the other, no matter the political moment. We don’t think of Procter &amp; Gamble, Coca-Cola, or Berkshire Hathaway as being Democratic or Republican companies. You cannot chart their fortunes over time based on which party was in power in any given decade. You may well have strong political opinions that are far from the 50-yard line, on one side or the other. I do. But you shouldn’t look for those opinions to be validated by industry executives, any more than you should look for business and product-design decisions to be made by elected government officials. True American values put country over party when it comes to business. And, as Calvin Coolidge aptly put it, “The chief business of the American people is business.”</p>\n\n<p>America does possess unique advantages that other countries don’t have. Personal liberties enshrined in our Bill of Rights. A vibrant, diverse, ever-changing melting pot of a citizenry. A strong tradition of the rule of law, placing no man above it. Competitive markets that allow new entrants to supplant entrenched incumbents. Any CEO worth their salt should have an answer to the question of America’s unique advantages that holds true no matter who, from which party, is currently president. And they should <em>believe</em> it.</p>\n\n<p>What makes Huang’s answer so off-putting isn’t that it was so abjectly partisan — politically tone-deaf to the inevitability of Democrats coming back into power, and perversely obsequious to Trump personally — but that Donald Trump is the antithesis to the entire above list of things that actually give America unique advantages other countries don’t have. Trump and the MAGA movement are also decidedly American and uniquely so, but they represent what’s <em>worst</em> about America.</p>\n\n<p>But I give Huang credit for honesty. Clearly, he believed what he said. Huang didn’t just stray from the 50-yard line — he broke for Trump’s end zone.</p>\n\n    ",
+    "description": "CEOs typically stay as close as they can to the 50-yard line in the middle of the political playing field. That way, when an election puts the other party in power, they don’t have to move — they just need to turn around.",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-11-19T02:51:37Z",
+    "fetched_at": "2026-11-19T06:35:46.316864",
+    "url_hash": "1dbb4704fd759417648cea173c375dfb",
+    "ai_enhanced": {
+      "tags": [
+        "技术趋势",
+        "职业发展"
+      ],
+      "summary": "文章以黄仁勋公开谄媚特朗普为例，批评科技企业CEO偏离政治中线、过度绑定单一政党，主张企业应像苹果那样坚守50码线以穿越政治周期。",
+      "key_points": [
+        "黄仁勋称美国独特优势是特朗普，作者认为这远超常规企业CEO的政治表态尺度",
+        "作者用橄榄球场比喻政治：CEO应靠近50码线，换届时只需转身而非迁移",
+        "库克虽向特朗普献金但未改苹果价值观与政策，因此拜登上台后无需道歉或调整"
+      ],
+      "analysis": [
+        "文章揭示企业政治站队的长期风险：若绑定某一政党，政权更替时将面临合规、声誉与法律成本，苹果与英伟达的对比即为例证",
+        "对科技高管的实践启示是：可进行必要的政治互动以维持关系，但应避免在价值观和政策上做出不可逆的党派倾斜",
+        "该文也反映美国科技界与特朗普2.0政府关系的紧张背景，企业需评估高管个人政治表态对公司品牌与政府合同的影响"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 6433,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "datasette-arrows 0.1a0",
+    "link": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+    "content": "\n    \n        <p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-arrows/releases/tag/0.1a0\">datasette-arrows 0.1a0</a></p>\n        <p><a href=\"https://docs.datasette.io/en/latest/changelog.html#a43-2026-11-15\">Datasette 1.0a43</a> added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The <a href=\"https://docs.datasette.io/en/latest/plugin_hooks.html#register-output-renderer-datasette\">register_output_renderer()</a> plugin hook can now be used to implement the same pattern for other formats.</p>\n<p>I've learned never to release a new plugin feature without accompanying it with a plugin that uses it.</p>\n<p>Claude Fable 5.2 suggested the <a href=\"https://arrow.apache.org/docs/python/ipc.html\">Apache Arrow streaming</a> format as a good option, and built this plugin in almost a single shot.</p>\n<p>Add the plugin to Datasette (<code>datasette install datasette-arrows</code>) and the export dialog gains this new Arrow option:</p>\n<p><img alt=\"Export data modal for the threads table. The TSV and CSV exports are now joined by Arrow, showing &quot;All 927 rows&quot; and the text Apache Arrow IPC stream, for DuckDB, pandas, Polars and other tools. There is a Download button and a Copy URL button.\" src=\"https://static.simonwillison.net/static/2026/arrow-export-dialog.webp\" /></p>\n<p>This screenshot is from Datasette's <code>main</code> branch - the most recent release doesn't yet group streaming formats such as Arrow with the TSV and CSV in the \"All rows in this table\" section, but that's coming in the next alpha release.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/datasette\">datasette</a>, <a href=\"https://simonwillison.net/tags/projects\">projects</a></p>\n    \n\n",
+    "description": "Release: datasette-arrows 0.1a0 Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. I've learned never to release a new plugin feature without acco",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-11-18T17:09:59+00:00",
+    "fetched_at": "2026-11-19T06:35:44.396302",
+    "url_hash": "f83dd886acd480eb4820b502b153bcd4",
+    "ai_enhanced": {
+      "tags": [
+        "数据库",
+        "开源项目"
+      ],
+      "summary": "Datasette 1.0a43 支持插件实现流式导出格式后，作者发布 datasette-arrows 0.1a0 插件，为 Datasette 增加 Apache Arrow 流式导出选项。",
+      "key_points": [
+        "Datasette 核心已支持流式 CSV/TSV，可导出百万行数据而无需全部载入内存。",
+        "register_output_renderer() 插件钩子现可用于为其他格式实现同样的流式导出模式。",
+        "datasette-arrows 由 Claude Fable 5.2 建议并几乎一次性构建，安装后导出对话框新增 Arrow 选项。"
+      ],
+      "analysis": [
+        "该插件验证了新插件钩子的可用性，体现作者“发布新插件能力必附带示例插件”的实践原则。",
+        "流式导出降低大数据量场景的内存压力，Arrow 格式的加入有利于与数据分析生态对接。",
+        "当前最新发布版尚未将 Arrow 与 CSV/TSV 一起归入“全表行”分组，下一 alpha 版将完善该界面。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1061,
+      "analysis_truncated": false
+    }
   }
 ]
