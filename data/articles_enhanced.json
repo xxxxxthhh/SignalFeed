@@ -105513,5 +105513,160 @@
       "analysis_input_chars": 5169,
       "analysis_truncated": false
     }
+  },
+  {
+    "title": "Comments and emails",
+    "link": "https://herman.bearblog.dev/comments-and-emails/",
+    "content": "<p>I'm regularly asked why Bear doesn't have built-in comments, guestbooks, or contact forms. They're all trivial to build (a text box and a send button), and I could add them in an afternoon. But they're not included by design.</p>\n<p>The problem with all three is what they let in. A comment box or contact form accepts anything from anyone. Spam bots find them quickly, so whoever runs the blog ends up moderating a queue. And the people who comment don't have to identify themselves as most of these forms ask for a name and email address and check neither.</p>\n<p>This week a blogger on Bear received a particularly nasty message via an embedded, third-party contact form on their blog, the sender could type anything into the email boxes and press send. It was signed with a fake name, and used the public email address of another blogger, essentially impersonating someone else to stir up trouble. What arrived was, in effect, a shitty, anonymous note.</p>\n<p>Anonymous notes are the worst kind to receive. There's nobody to reply to, nothing to block, and the perpetrator doesn't have a social incentive to behave.</p>\n<p>This is why Bear's solution to all three is a link with your email address in it (and if you're worried about scrapers, use a dedicated alias or separate address). Your email provider already does the heavy lifting on spam filtering, and a message generally has to come from a real account you can reply to or block. A contact form would have to recreate that verification with confirmation links, and most don't bother.</p>\n<p>Naturally, people can still get nasty emails from throwaway accounts, but the sender still has to set up that account or alias first, which adds just enough friction to discourage it. I suspect most nastiness online is impulsive, and the friction of email is just enough to let that impulse pass.</p>\n<p>I wrote <a href='/if-people-would-just/'>recently</a> that good systems are ones that well-behaved people barely notice. Email works the same way. A reader who wants to say they enjoyed your post already has an address, and is happy for you to see it. Someone wanting to stay completely anonymous to send a shitty email has to go out of their way to set it up.</p>\n<p>If you'd like readers to be able to reach you, the docs explain how to set up a <a href='https://docs.bearblog.dev/comments/' target='_blank'>reply via email link</a> and a <a href='https://docs.bearblog.dev/guestbook/' target='_blank'>guestbook</a> that runs on email.</p>\n<p>And if you think I'm wrong about any of this, <a href='/contact/'>you can get in touch with me here</a>.</p>\n",
+    "description": "Why Bear doesn't have comments",
+    "is_fulltext": true,
+    "source": "Herman's blog",
+    "pub_date": "2026-11-24T07:25:02.637022+00:00",
+    "fetched_at": "2026-11-24T09:03:02.887659",
+    "url_hash": "05aa3e6eaa0c6386b7fc1e14638a6378",
+    "ai_enhanced": {
+      "tags": [
+        "产品设计",
+        "网络安全"
+      ],
+      "summary": "Bear博客刻意不内置评论、留言板和联系表单，因为这类匿名输入渠道会招来垃圾信息和恶意骚扰；改用邮件链接，借助邮箱服务商的过滤与账号可追溯性提高作恶成本。",
+      "key_points": [
+        "评论框和联系表单接受任何人输入，垃圾机器人会迅速找到并迫使博主审核队列。",
+        "第三方联系表单可被伪造姓名和邮箱，本周有博主因此收到冒充他人的恶意匿名留言。",
+        "邮件链接要求发送者拥有可回复或可屏蔽的真实账号，额外摩擦足以劝退冲动型恶意。"
+      ],
+      "analysis": [
+        "产品设计上，减少匿名输入入口是用摩擦换质量：它牺牲少量便利，却把审核和过滤成本转移给成熟的邮件生态。",
+        "安全层面，可追溯的账号体系比自建表单更有效，因为邮箱服务商已承担反垃圾和身份验证的主要工作。",
+        "实践建议：若需读者互动，优先使用带别名保护的邮件链接或基于邮件的留言方案，避免嵌入无验证的第三方表单。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 2375,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Am I A Design Engineer?",
+    "link": "https://blog.jim-nielsen.com/2026/am-i-a-design-engineer/",
+    "content": "<p>If you ask me, “What is design engineering?” part of me wants to respond, “I know it when I see it.” In other words: I can’t tell you all that it is, but I can tell you what it is not.</p>\n<p>To me, design engineering is not defined by:</p>\n<ul>\n<li><a href=\"https://notes.jim-nielsen.com/n/2026-11-16-2248/\" >Making fancy micro-interactions and posting them to Twitter.</a></li>\n<li>Making elaborate animations for marketing websites.</li>\n<li>Constructing elaborate prototypes in a design tool (e.g. Figma) that have no basis in the reality of 1) how browsers work, or 2) your company’s source space.</li>\n</ul>\n<p>Despite these personal beliefs about the term, I find its colloquial use different. Here’s my perception of terms these days:</p>\n<ul>\n<li>“Design Engineer” — too heavily weighted towards visual design   and animation, not enough weight in the work of practical engineering.</li>\n<li>“Product Engineer” — too heavily weighted towards factory engineering (e.g. can you manage agents upon agents within a system to churn out something fast?) and not enough weight in design/product thinking.</li>\n</ul>\n<p>Which makes me want to (selfishly) invent another term: Product Design Engineer.</p>\n<ul>\n<li>Pro: it covers multiple disciplines; Product, Design, and Engineering.</li>\n<li>Con: it covers multiple disciplines; what a diluted mouthful.</li>\n</ul>\n<p>But merely combining nouns doesn’t describe the work. To me, design engineering isn’t about encompassing multiple disciplines. It’s about working in the <a href=\"https://blog.jim-nielsen.com/2021/designing-between-the-lines/\" >relationships between them</a>.</p>\n<p>For this reason, I’ve always been partial to the idea of <a href=\"https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction\" >Human-Computer Interaction</a>. HCI is fundamentally multidisciplinary, so people with varied interests and backgrounds in computers (design, engineering, product, etc.) and humans (psychology, art, literature, etc.) contribute to its success.</p>\n<p>I tend to think of the role of a design engineer to be along the lines of asking questions like:</p>\n<ul>\n<li>How do computers work? What are they good at? What are they bad at?</li>\n<li>How do humans work? What are they good at? What are they bad at?</li>\n</ul>\n<p>With that framing, you then ask: “Given some human problem, how can I leverage computation (<a href=\"https://notes.jim-nielsen.com/n/2026-11-06-1008/\" >if at all</a>) to solve it?”</p>\n<p>Maybe that solution comes in the form of <a href=\"https://blog.jim-nielsen.com/2026/humane-interfaces/\" >a humane interface</a>, or a better button, or clearer prose, or <a href=\"https://notes.jim-nielsen.com/n/2026-11-19-2109/\" >an optimized API call</a>, or maybe just an email/text.</p>\n<p>Or maybe it’s no software at all. Because design engineers live in the relationships between disciplines, I believe they are well positioned to understand a problem and argue that additional software may be a worse, not better, solution.</p>\n<p>Maybe I’m not even describing “design engineering” anymore. Maybe I’m just describing the kind of work I enjoy doing and wishing there was a label for it. “Jim Nielsen–Style Software Maker.” If you’re looking to fill that role, I know a guy.</p>\n<hr />\n\n<p>\n  Reply via:\n  <a\n    href=\"mailto:jimniels%2Bblog@gmail.com?subject=Re:%20blog.jim-nielsen.com/2026/am-i-a-design-engineer/\"\n    >Email</a\n  >\n  · <a href=\"https://mastodon.social/@jimniels\">Mastodon</a> ·\n  <a href=\"https://bsky.app/profile/jim-nielsen.com\">Bluesky</a>\n</p>\n\n",
+    "description": "If you ask me, “What is design engineering?” part of me wants to respond, “I know it when I see it.” In other words: I can’t tell you all that it is, but I can tell you what it is not. To me, design engineering is not defined by: Making fancy micro-interactions and posting them to Twitter. Making elaborate animations for marketing websites. Constructing elaborate prototypes in a design tool (e.g. Figma) that have no basis in the reality of 1) how browsers work, or 2) your company’s source space.",
+    "is_fulltext": true,
+    "source": "Jim Nielsen’s Blog",
+    "pub_date": "Mon, 23 Nov 2026 19:00:00 GMT",
+    "fetched_at": "2026-11-24T09:02:47.778051",
+    "url_hash": "20a2d5bd574521f75d5e1a39d673bad8",
+    "ai_enhanced": {
+      "tags": [
+        "产品设计",
+        "职业发展"
+      ],
+      "summary": "作者认为设计工程不应被窄化为视觉动效或脱离实际的Figma原型，而应是在人机交互视角下，跨越设计、工程与产品之间关系来解决问题的能力。",
+      "key_points": [
+        "设计工程常被误解为花哨微交互、营销动画或脱离浏览器与代码现实的原型。",
+        "作者提出“产品设计工程师”一词，但认为仅拼接名词无法描述跨学科关系中的工作。",
+        "设计工程师应追问计算机与人的优劣，再判断是否用软件、何种形式解决问题。"
+      ],
+      "analysis": [
+        "该文为设计工程岗位的职责边界提供了反思框架，有助于团队在招聘与分工时避免把该角色简化为动效制作。",
+        "强调跨学科关系而非学科叠加，提示从业者补足对人、浏览器实现和公司代码库的现实理解。",
+        "作者保留“不用软件也是好方案”的判断空间，这对产品决策中抑制过度工程化有实践参考价值。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 2762,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "Finite Projective Spaces",
+    "link": "https://www.johndcook.com/blog/2026/11/23/finite-projective-spaces/",
+    "content": "<p>Just as there are <a href=\"https://www.johndcook.com/blog/2026/11/08/finite-geometries/\">finite projective planes</a>, there are also finite projective spaces of higher dimension.</p>\n<p>The axioms of a projective space are</p>\n<ol dir=\"ltr\">\n<li>Any two distinct points lie on exactly one line.</li>\n<li>If <em>A</em>, <em>B</em>, <em>C</em>, and <em>D</em> are distinct points and the lines <em>AB</em> and <em>CD</em> meet, then the lines <em>AC</em> and <em>BD</em> also meet.</li>\n<li>Every line contains at least three points.</li>\n<li>There are at least two lines.</li>\n</ol>\n<p>The second axiom is subtly different from its counterpart for projective planes. It allows for skew lines but not parallel lines. There&#8217;s no explicit concept of dimension in these axioms, but dimension can be well-defined by induction.</p>\n<p>What I find most interesting about finite projective spaces is that they are in some sense simpler than projective planes. Usually higher dimensions allow for more complicated behavior, but at least as far as classification goes, higher dimensional spaces are simpler.</p>\n<p>Finite projective planes are not determined by the number of points they contain. As mentioned in <a href=\"https://www.johndcook.com/blog/2026/11/08/finite-geometries/\">this post</a>, there are four different projective planes with 10 points. It is unknown how many different projective planes there are with 17 points; there are at least 22. But for dimension <em>d</em> ≥ 3, there is at most one projective space with a specified number of points.</p>\n<p>Given a prime power <em>q</em>, there is a unique field <em>F </em>with <em>q</em> elements, and one can construct a projective space of dimension <em>d</em> over <em>F</em> analogously to how one constructs a real projective space of dimension <em>d</em>: Take the non-zero vectors in <em>F</em><sup><em>d</em> + 1</sup> and mod out by non-zero scalar multiples. And up to isomorphism this is the <strong>only</strong> way to construct a finite projective space if <em>d</em> ≥ 3. In technical terms, finite projective planes can be non-Desarguesian but higher-dimensionsal projective spaces cannot.</p>\n<h2>Related posts</h2>\n<ul>\n<li class='link'><a href='https://www.johndcook.com/blog/2026/11/09/finite-affine-planes/'>Finite affine planes</a></li>\n<li class='link'><a href='https://www.johndcook.com/blog/2026/11/09/finite-hyperbolic-planes/'>Finite hyperbolic planes</a></li>\n<li class='link'><a href='https://www.johndcook.com/blog/2026/11/09/combinatorial-designs/'>Combinatorial designs</a></li>\n</ul>The post <a href=\"https://www.johndcook.com/blog/2026/11/23/finite-projective-spaces/\">Finite Projective Spaces</a> first appeared on <a href=\"https://www.johndcook.com/blog\">John D. Cook</a>.",
+    "description": "Just as there are finite projective planes, there are also finite projective spaces of higher dimension. The axioms of a projective space are Any two distinct points lie on exactly one line. If A, B, C, and D are distinct points and the lines AB and CD meet, then the lines AC and BD also meet. [&#8230;] The post Finite Projective Spaces first appeared on John D. Cook.",
+    "is_fulltext": true,
+    "source": "John D. Cook",
+    "pub_date": "Mon, 23 Nov 2026 23:49:05 +0000",
+    "fetched_at": "2026-11-24T09:02:33.134385",
+    "url_hash": "f1f7e29bcd27a85ea61c4f010ca91105",
+    "ai_enhanced": {
+      "tags": [
+        "其他",
+        "软件工程"
+      ],
+      "summary": "有限射影空间在维度 d≥3 时由点数唯一确定（同构意义下唯一），而有限射影平面则可能对应多个不同构结构，高维反而更简单。",
+      "key_points": [
+        "射影空间公理中第二公理允许斜线但排除平行线，维度可通过归纳法良定义。",
+        "有限射影平面不由点数决定：10 点有 4 种，17 点至少 22 种且总数未知。",
+        "对素数幂 q 和维度 d≥3，存在唯一有限域 F_q 上的射影空间构造，且同构意义下唯一。"
+      ],
+      "analysis": [
+        "该结论揭示了维数提升对分类复杂度的反向影响，提示在组合设计中高维结构可能更易刻画。",
+        "有限射影平面可非 Desarguesian 而高维射影空间不可，说明低维情形存在额外自由度，分类需区别对待。",
+        "实践中若需构造或枚举有限射影空间，d≥3 时可依赖有限域唯一性简化问题，而平面情形需谨慎处理多解。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1940,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "[Sponsor] Finalist Daily Planner Meets iPhone Duo",
+    "link": "https://www.finalist.works/iphone-duo-planner/?utm_source=df-nov-2026",
+    "content": "\n<p>Finalist has always been a paper planner in software, and now iPhone Duo is the perfect iPhone for it. Customize each Duo pose:</p>\n\n<ul>\n<li>Closed: agenda with outstanding habits. </li>\n<li>Opened: timeline on the left and the tasks on the right, drag across to pencil in your day. </li>\n<li>Propped like a laptop: keep an eye on time left before your next task, with agenda below.</li>\n</ul>\n\n<p>It’s as flexible as your iPhone Duo, with Markdown notes that work in Obsidian, planner swimlanes, Journal, Pencil sketches, Reminders, and Lists.</p>\n\n<p>Apple picked it for Apps that shine on iPhone Duo. And it works great on iPhone, iPad, Mac and Watch.</p>\n\n<div>\n<a  title=\"Permanent link to ‘Finalist Daily Planner Meets iPhone Duo’\"  href=\"https://daringfireball.net/feeds/sponsors/2026/11/finalist_daily_planner_meets_i\">&nbsp;★&nbsp;</a>\n</div>\n\n\t",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-11-24T00:03:56Z",
+    "fetched_at": "2026-11-24T09:02:19.599934",
+    "url_hash": "4ca15152fd93cba97c7261202d8717be",
+    "ai_enhanced": {
+      "tags": [
+        "产品设计",
+        "移动开发"
+      ],
+      "summary": "Finalist 将纸笔规划器的体验带入软件，并针对 iPhone Duo 的折叠形态做了三种姿态适配，获苹果推荐。",
+      "key_points": [
+        "闭合时显示日程与待办习惯，展开时左右分栏呈现时间线与任务。",
+        "支持像笔记本一样支起，显示下一任务倒计时与下方日程。",
+        "兼容 Markdown 笔记、Obsidian、泳道、Journal、Pencil 草图与提醒事项。"
+      ],
+      "analysis": [
+        "该案例说明折叠屏适配不只是放大界面，而是按物理姿态重新组织信息层级，对移动产品设计有参考价值。",
+        "深度兼容 Obsidian 与 Markdown 意味着工具型应用正通过开放格式降低用户迁移成本，增强长期留存。",
+        "获苹果编辑推荐表明，围绕新硬件形态做差异化体验仍是独立开发者获取曝光的重要路径。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 626,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "datasette-charts 0.2a0",
+    "link": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+    "content": "\n    \n        <p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-charts/releases/tag/0.2a0\">datasette-charts 0.2a0</a></p>\n        <p>I introduced this new charting plugin for Datasette <a href=\"https://simonwillison.net/2026/Nov/23/datasette-charts/\">yesterday</a>. Today it's gained integration with <a href=\"https://agent.datasette.io/\">Datasette Agent</a>, so now you can ask chat for a chart and it will create one for you using the same underlying chart suggestion and generation tools.</p>\n<p>Here's a demo video, recorded on <a href=\"https://agent.datasette.io/\">agent.datasette.io</a>  where you can sign in with GitHub to try the plugin yourself:</p>\n<figure>\n  <video controls playsinline preload=\"none\"\n         width=\"1440\" height=\"1080\"\n         style=\"max-width: 100%; height: auto\"\n         poster=\"https://static.simonwillison.net/static/cors-allow/2026/datasette-charts-agent-demo.webp\"\n         aria-label=\"Demo of the Datasette charts agent (silent screen recording)\"\n         aria-describedby=\"charts-demo-desc\">\n    <source src=\"https://static.simonwillison.net/static/cors-allow/2026/datasette-charts-agent-demo.mp4\" type=\"video/mp4\">\n    <a href=\"https://static.simonwillison.net/static/cors-allow/2026/datasette-charts-agent-demo.mp4\">Download the video (MP4)</a>\n  </video>\n  <figcaption id=\"charts-demo-desc\" style=\"margin-top: 1em\">\n    I prompt Datasette Agent to \"Use #stats to show sqlite-utils downloads over time as a chart\" - where typing \"#stats\" opens a table search box. It shows me a chart inline in the chat, and when I click \"Open in the chart builder\" it opens the chart in a panel along with the table page. I use the table page to switch to a chart of \"datasette\", then when I ask the agent \"what does the chart show?\" it notices that I changed the content in the panel and describes the new Datasette chart to me.\n  </figcaption>\n</figure>\n\n<p>Here's <a href=\"https://gist.github.com/simonw/12646fcc72dddae3d4ac04b496c20af2\">a Markdown export</a> of the chat from the video.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/datasette-agent\">datasette-agent</a>, <a href=\"https://simonwillison.net/tags/datasette\">datasette</a>, <a href=\"https://simonwillison.net/tags/visualization\">visualization</a></p>\n    \n\n",
+    "description": "Release: datasette-charts 0.2a0 I introduced this new charting plugin for Datasette yesterday. Today it's gained integration with Datasette Agent, so now you can ask chat for a chart and it will create one for you using the same underlying chart suggestion and generation tools. Here's a demo video, recorded on agent.datasette.io where you can sign in with GitHub to try the plugin yourself: Download the video (MP4) I prompt Datasette Agent to \"Use #stats to show sqlite-utils downloads over time a",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-11-24T04:24:29+00:00",
+    "fetched_at": "2026-11-24T09:02:17.793597",
+    "url_hash": "8b97ff5ac1379cdca7d50106b380a3ff",
+    "ai_enhanced": {
+      "tags": [
+        "工具",
+        "AI/机器学习"
+      ],
+      "summary": "Datasette 图表插件 datasette-charts 发布 0.2a0，新增与 Datasette Agent 的集成，用户可通过对话让 AI 自动生成图表。",
+      "key_points": [
+        "该版本实现了与 Datasette Agent 的集成，支持在聊天中请求生成图表。",
+        "演示中通过 #stats 触发表格搜索，AI 可内联展示图表并支持在图表构建器中打开。",
+        "当用户在面板中切换图表内容后，Agent 能识别变化并描述新图表。"
+      ],
+      "analysis": [
+        "这表明 Datasette 生态正将 AI 代理与数据可视化工具深度结合，降低图表创建门槛。",
+        "对话式图表生成与面板状态感知的结合，可能提升数据探索的交互效率。",
+        "该插件仍为 alpha 版本，实际稳定性和适用范围需进一步观察。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 1046,
+      "analysis_truncated": false
+    }
   }
 ]
