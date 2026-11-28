@@ -107091,5 +107091,159 @@
       "analysis_input_chars": 7000,
       "analysis_truncated": true
     }
+  },
+  {
+    "title": "UI style guides",
+    "link": "https://aresluna.org/ui-style-guides",
+    "content": "A library of every single UI style guide and guideline document",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Aresluna",
+    "pub_date": "2026-11-27T22:07:21+0000",
+    "fetched_at": "2026-11-28T06:58:28.413387",
+    "url_hash": "8f73edaf7e594a8ede3e7a3e39cd0f7f",
+    "ai_enhanced": {
+      "tags": [
+        "产品设计",
+        "软件工程"
+      ],
+      "summary": "文章以“UI style guides”为主题，聚焦于界面风格指南在设计与开发协作中的作用，但材料仅为RSS摘要，具体论述细节有限。",
+      "key_points": [
+        "UI风格指南用于统一界面视觉与交互规范，减少设计与开发之间的理解偏差。",
+        "风格指南通常涵盖颜色、字体、间距、组件状态等基础设计令牌与规则。",
+        "摘要信息有限，未展开具体工具、流程或案例层面的深入讨论。"
+      ],
+      "analysis": [
+        "风格指南是设计系统落地的关键文档，能提升产品一致性与团队协作效率，但需结合具体项目实践才能发挥价值。",
+        "由于材料仅为摘要，无法判断文章是否涉及自动化工具或代码集成方案，读者需查阅原文获取完整方法论。"
+      ],
+      "analysis_source": "summary",
+      "analysis_input_chars": 15,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "The agent tax has arrived: Google Workspace's MCP pricing",
+    "link": "https://martinalderson.com/posts/the-agent-tax-has-arrived/?utm_source=rss&utm_medium=rss&utm_campaign=feed",
+    "content": "<p>Google has <a href=\"https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html\">announced some major changes</a> to their Google Workspace (Gmail, Google Docs and all related apps) pricing, as part of their new MCP rollout.</p>\n<p>I think this is the first major product that's attempting to tax agentic use cases. I'm not sure it will work.</p>\n<h2>What Google actually announced</h2>\n<p>Effectively two things. Firstly, all agents need to use MCP, not API to interact with Google. Quite how they plan on enforcing this I'm not sure, as the best I suspect they can do is behavioural profiling of what APIs get called, which seems to be quite difficult. I strongly believe this is mostly targeted at large AI companies and not smaller developers or solo users; but it is likely to have serious impact on any company that is (or will) start integrating agentic workflows into their products.</p>\n<p>Secondly, a new pricing tier for said MCPs. In true Google style it's complicated, but in essence it's <a href=\"https://developers.google.com/workspace/guides/quota-cost-estimator\">a charge per 1000 requests</a>, with different types of requests using different pricing tiers. Roughly speaking, you can read 1000 emails via MCP for $0.20.</p>\n<p>There is a free tier of 5,000 calls a day, but this is grouped across all access for a specific Google Cloud project. Probably fine for solo use or a smaller business's internal agentic tooling, but past that it is going to be a major issue.</p>\n<h2>The asymmetry: apps get a massive free allowance, agents don't</h2>\n<p>There is an enormous difference in the allowances for &quot;legacy&quot; applications using the REST API vs the new tiers for MCP.</p>\n<p>On the REST API, each <em>user</em> of the API gets its own allowance. On the free tier for REST, each user can do <a href=\"https://developers.google.com/workspace/gmail/api/reference/quota\">6,000 quota units per minute</a> of requests. This roughly equates to reading 100 emails a minute, <em>per user</em>. There is another project level cap of 20,000 emails a minute.</p>\n<p>Previously going above this required a quota request but wasn't charged for. Now you have to move to the paid tier to go higher, but even there a REST app gets a huge free daily allowance - 10 million email reads a day - before it pays anything. MCP on the paid tier gets none.</p>\n<p>So the real way to look at this is that if you are building a REST API you can read 20,000 emails a minute for free, but if you are building some agentic tooling you can read 5,000 emails a <em>day</em> for free, and if you need more than that you get charged around $0.20 per thousand for every email you read, including the first 5,000.</p>\n<p>It's an enormous difference, and puts the <a href=\"https://developers.googleblog.com/2018/05/introducing-google-maps-platform.html\">Google Maps pricing changes</a> of yore to shame in scale.</p>\n<h2>Why is Google doing this?</h2>\n<p>I strongly suspect there are two key drivers.</p>\n<p>Firstly, given Google has fumbled agentic workflows <em>so badly</em> (until very recently, asking Gemini in Google Slides to bold some text would give you a &quot;Sorry, can't do that&quot; response), I'm sure that MCP access via OpenAI and Claude (and others) has absolutely exploded. The usage graph of these products with Google Workspace via MCP connectors must be going hyperbolic and no doubt has seriously ruffled the feathers of the product leadership at Google.</p>\n<p>Given this, I suspect this is one way to throw some banana skins in the way of Anthropic and OpenAI. If you have business users paying $20/month for ChatGPT or Claude and many of these users read and search their Gmail from it, it starts becoming a <em>serious</em> clip of their margins. If a user searches and reads emails adding up to 10,000 requests via the MCP, that is going to cost the frontier labs $2/month, <em>per user</em>. Given they do have significant compute costs against these subscription based users, it's likely to badly impact the unit economics of many of these accounts.</p>\n<p>So I'm guessing the thoughts are at Google HQ they can stem the tide of users using MCP in <em>external</em> products by making it expensive for those external AI products to use their Google Workspace data.</p>\n<p>It also puts the frontier labs in a difficult position. They can either eat the cost of these MCP calls, which hurts margins at the worst possible time with investors combing through their financials as they become public companies. Or they can cap usage (and potentially pass the cost on), but this leads to a poor user experience, and perhaps shifts some people back to using Gemini for agentic tasks - as Gemini won't have these caps.</p>\n<p>Secondly, I have had a feeling for a while that Google's search business is more fragile than it looks. Search revenue still grew 12% <a href=\"https://www.cnbc.com/2026/10/28/alphabet-googl-earnings-q3-2026.html\">last quarter</a>, but that missed analyst estimates by over $1.5bn, and I think agents doing the searching instead of humans is only going to make that worse.</p>\n<p>The revenue from this is small fry next to search. But it gives Google a story to tell investors: if agents are going to replace humans clicking around their products, they have a way to charge the agents instead.</p>\n<h2>Who follows?</h2>\n<p>If this works out then I suspect we will see a rush of other companies trying the same strategy.</p>\n<p>Any system of record - Salesforce, Atlassian, Intuit to name some at random - will be (very) tempted to try this strategy.</p>\n<p>The difficulty is that you need to be <em>very</em> sure that you really <em>are</em> a system of record. Agents are eating a <em>lot</em> of SaaS workflows. There is the risk this backfires entirely, and someone just downloads their data via CSV or some other old school mechanism and just has their agent query that.</p>\n<p>Obviously at enterprise this is different. I still don't recommend anyone vibecode a Salesforce replacement, despite how many times I hear people thinking about it. But I think for B2C and smaller-tier B2B introducing these restrictions is a good way to get your churn rate to skyrocket, <em>especially</em> given a lot of legacy SaaS products have already very poor MCP usage and are at risk of being completely forgotten about.</p>\n<p>Finally, keep in mind that agents have also <em>massively</em> reduced switching costs. You can just point an agent at SaaS product A with a browser tab connected and ask it to migrate data to product B (which could be a self hosted open source solution). It's scarily good at doing this - often enumerating internal APIs to bulk download data and transform it to the new system.</p>\n<p>I saw the Cloudflare CEO <a href=\"https://x.com/eastdakota/status/2126089370893529224\">tweet</a> that he's tempted to set up a Gmail competitor on the back of this. This may open the floodgates of users switching from legacy SaaS. It certainly doesn't <em>feel</em> right to me that we pay a (rapidly increasing) amount for Google Workspace, and now they want to charge us <em>again</em> to read our own data in a different AI system.</p>\n<h2>Conclusion</h2>\n<p>This is no doubt going to be a fast moving topic. But this is the first mainstream attempt at an agent tax and a 'post agents' SaaS billing structure.</p>\n<p>The agent tax is simple enough to describe. The same data, from the same account, costs effectively nothing when an app reads it and $0.20 per thousand when an agent does. You're not paying for a new feature or more compute. You're paying because of <em>what</em> is doing the asking.</p>\n<p>That's a big shift. For twenty years the deal with SaaS was that you pay per seat and the API comes along for free, because the API made the product stickier. Agents break that deal. A seat that used to make a few hundred requests a day by clicking around can now make tens of thousands, and half of them come from a competitor's product. Google's answer is to stop pricing the human and start pricing the agent.</p>\n<p>I can see the logic. But it only works if your customers can't leave, and agents are exactly the thing making it easier to leave. Charging people a second time to read their own email is a good way to make them wonder why they're paying the first time.</p>\n<p>Honestly I don't know if this sticks. If it does, expect every system of record to have its own agent tax within a year. If it doesn't, I wouldn't be surprised if the pricing looks very different by the time billing starts in April.</p>\n",
+    "description": "Google is charging agents per request for Workspace data that apps read for free. Why I think they're doing it, who might follow, and why it could backfire.",
+    "is_fulltext": true,
+    "source": "Martin Alderson",
+    "pub_date": "Fri, 27 Nov 2026 00:00:00 GMT",
+    "fetched_at": "2026-11-28T06:58:24.139350",
+    "url_hash": "43aa3aee0bcbf040cdca59527f04a2f9",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "技术趋势"
+      ],
+      "summary": "Google Workspace 推出 MCP 新定价，对代理式访问按请求量收费，而对传统 REST API 应用保留巨额免费额度，实质是向 AI 代理征收“代理税”。",
+      "key_points": [
+        "所有代理必须通过 MCP 而非 API 访问 Google Workspace，执行难度大但主要针对大型 AI 公司。",
+        "MCP 付费层每千次请求约 0.20 美元，免费层每日仅 5000 次调用，按 Google Cloud 项目合并计算。",
+        "REST API 每用户每分钟可读约 100 封邮件且免费，MCP 付费后连前 5000 次也计费，差距悬殊。"
+      ],
+      "analysis": [
+        "此举可能意在抬高 OpenAI、Anthropic 等外部代理使用 Gmail 等数据的成本，保护 Gemini 的代理场景并缓解搜索业务焦虑。",
+        "若模式奏效，Salesforce 等系统记录型 SaaS 可能跟进，但中小型产品贸然效仿会推高流失率，因代理已显著降低迁移成本。",
+        "对企业而言，需重新评估代理工作流的 API 成本结构，并关注数据可迁移性，避免被单一平台的代理税锁定。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 6999,
+      "analysis_truncated": true
+    }
+  },
+  {
+    "title": "Could we use the CoreApplication Properties to manage the lifetime of an object that refuses to be marshaled?",
+    "link": "https://devblogs.microsoft.com/oldnewthing/20261127-00/?p=112901/",
+    "content": "<p>We&#8217;ve been looking at why it seems like the <code>Core­Application.<wbr />Properties</code> frees objects when their source apartment shuts down, and why that is just a mirage.</p>\n<p>But this was all in the context of figuring out how to create a fake agile reference to an object that refuses to be marshaled, so let&#8217;s see if any of this helps us.</p>\n<p>If you have an object that refuses to be marshaled (by implementing <i>INoMarshal</i>), then we learned that <a title=\"Making an agile version of a Windows Runtime delegate in C++/WinRT, part 3\" href=\"https://devblogs.microsoft.com/oldnewthing/20260722-00/?p=112552\"> the <code>Ro­Get­Agile­Reference</code> function cannot create an agile reference to it</a>. And since the <code>Core­Application.<wbr />Properties</code> uses <code>Ro­Get­Agile­Reference</code> to store non-agile objects, trying to store such an object in the <code>Core­Application.<wbr />Properties</code> fails with <code>CO_<wbr />E_<wbr />NOT_<wbr />SUPPORTED</code>.</p>\n<p>So you&#8217;re back to square one: You have a non-marshalable object, so how do you create an agile reference to it, while still honoring the promise not to use the object from another apartment?</p>\n<p>We can proceed with the same solution: Put the non-marshable object inside a marshalable object, and then use the marshalable wrapper.</p>\n<p>The original solution merely carried the marshalable object around and used it to access the non-marshalable object. I guess we could instead store it in the <code>Core­Application.<wbr />Properties</code> under a newly-generated key, and then remember the key. When it&#8217;s time to invoke the delegate, we go back to <code>Core­Application.<wbr />Properties</code>, look up the key, get the wrapper, and then use it to access the original non-marshalable object. And at destruction, we delete the entry from the <code>Core­Application.<wbr />Properties</code>.</p>\n<p>I mean, I guess you could do that, but it seems like an awful lot of unnecessary work. You have to remember <i>something</i>, either the marshalable wrapper or the key to the marshalable wrapper. May as well just remember the marshalable wrapper itself to avoid unnecessary complexity. The <code>Core­Application.<wbr />Properties</code> is not adding any value.</p>\n<p>The post <a href=\"https://devblogs.microsoft.com/oldnewthing/20261127-00/?p=112901/\">Could we use the CoreApplication Properties to manage the lifetime of an object that refuses to be marshaled?</a> appeared first on <a href=\"https://devblogs.microsoft.com/oldnewthing\">The Old New Thing</a>.</p>\n",
+    "description": "It doesn't help with the underlying problem. The post Could we use the CoreApplication Properties to manage the lifetime of an object that refuses to be marshaled? appeared first on The Old New Thing.",
+    "is_fulltext": true,
+    "source": "The Old New Thing",
+    "pub_date": "Fri, 27 Nov 2026 15:00:00 +0000",
+    "fetched_at": "2026-11-28T06:57:43.442408",
+    "url_hash": "2e5d5d899f9aa166f79d14c5efa60a76",
+    "ai_enhanced": {
+      "tags": [
+        "软件工程",
+        "系统架构"
+      ],
+      "summary": "文章结论是：用 CoreApplication.Properties 管理不可封送对象的生命周期没有实际价值，因为仍需自行记住包装器或键，直接持有可封送包装器更简单。",
+      "key_points": [
+        "实现 INoMarshal 的对象无法通过 RoGetAgileReference 创建敏捷引用。",
+        "CoreApplication.Properties 依赖 RoGetAgileReference，因此存储此类对象会失败并返回 CO_E_NOT_SUPPORTED。",
+        "可行方案是用可封送包装器包裹不可封送对象，但存入 Properties 再记键反而增加复杂度。"
+      ],
+      "analysis": [
+        "该结论提醒开发者：CoreApplication.Properties 并非通用生命周期管理器，对不可封送对象无额外帮助。",
+        "实践中应优先直接持有可封送包装器，避免引入不必要的键管理和查找开销。",
+        "文章也隐含说明：理解 API 底层依赖（如 RoGetAgileReference）有助于快速判断方案可行性。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 2043,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "OpenAI Countersues Apple for Stealing Trade Secrets",
+    "link": "https://www.ft.com/content/af599e07-d44c-4068-ab84-6ee3c85551d4?syn-25a6b1a6=1",
+    "content": "\n<p>Tim Bradshaw and Michael Acton, reporting for the Financial Times:</p>\n\n<blockquote>\n  <p>“Apple set quite a trap for employees,” the complaint said.\n“Bright young minds thought they would work in Cupertino. Instead\nthey were joining Hotel California: you can check out any time you\nlike, but you can never leave.”</p>\n\n<p>Apple said: “OpenAI’s counterclaims are a transparent attempt to\ndistract from the substance of Apple’s lawsuit, in which OpenAI\nhas already been ordered to stop using Apple’s confidential\ninformation.”</p>\n</blockquote>\n\n<p>So much has happened this year that this lawsuit — which is only in the earliest stages — feels like old news.</p>\n\n<div>\n<a  title=\"Permanent link to ‘OpenAI Countersues Apple for Stealing Trade Secrets’\"  href=\"https://daringfireball.net/linked/2026/11/27/openai-countersues-apple\">&nbsp;★&nbsp;</a>\n</div>\n\n\t",
+    "description": "",
+    "is_fulltext": true,
+    "source": "Daring Fireball",
+    "pub_date": "2026-11-27T23:50:33Z",
+    "fetched_at": "2026-11-28T06:57:33.334127",
+    "url_hash": "78f5c315c4e6de580f6911dbbe85a949",
+    "ai_enhanced": {
+      "tags": [
+        "AI/机器学习",
+        "其他"
+      ],
+      "summary": "OpenAI对苹果提起反诉，指控其以“ Hotel California”式雇佣条款困住员工并窃取商业秘密，苹果则称反诉是转移焦点的手段。",
+      "key_points": [
+        "OpenAI反诉称苹果设下雇佣陷阱，员工想走却走不了。",
+        "苹果回应称OpenAI反诉是转移诉讼实质的透明伎俩。",
+        "苹果诉讼中已获令要求OpenAI停止使用其机密信息。"
+      ],
+      "analysis": [
+        "此案反映AI巨头间人才与技术争夺白热化，雇佣限制条款可能成为法律争议焦点。",
+        "反诉策略或旨在拖延苹果主案进程，但若法院认定反诉缺乏依据，可能损害OpenAI信誉。",
+        "案件尚处早期，最终结果对科技行业竞业协议与商业秘密保护实践影响有待观察。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 620,
+      "analysis_truncated": false
+    }
+  },
+  {
+    "title": "datasette-charts 0.4a0",
+    "link": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+    "content": "\n    \n        <p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-charts/releases/tag/0.4a0\">datasette-charts 0.4a0</a></p>\n        <p>The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of friction points in the design. This release addresses those, which should make building additional chart plugins a whole lot more ergonomic.</p>\n<p>I've also added a website for the plugin, at <a href=\"https://charts.datasette.io/\">charts.datasette.io</a>. The new website includes a <a href=\"https://charts.datasette.io/docs/plugins/\">tutorial for plugin authors</a>, and <a href=\"https://charts.datasette.io/gallery/\">a gallery</a> showing all of the core charts and annotations, each one linking to an interactive demo on <a href=\"https://lite.datasette.io/\">Datasette Lite</a>.</p>\n<p><img alt=\"Screenshot of a documentation page section showing a two-by-two grid of cards, each with a chart screenshot, a heading, a description, a link and a collapsed disclosure. Heading: &quot;Annotations&quot;. Intro text: &quot;Notes drawn on a chart: lines, shaded ranges, callouts and text. They are part of the chart's spec, so they are kept in the link to the chart. Documentation for annotations.&quot; where &quot;Documentation for annotations&quot; is a link. Card 1: an area line chart titled &quot;Rows per quarter of published_at&quot;, y-axis labelled &quot;↑ Rows&quot; with ticks 0, 20, 40, 60, 80, 100, 120, 140, 160 and x-axis ticks 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, with a vertical dashed line just before 2023 labelled &quot;Datasette 1.0a0&quot;; the line peaks near 150 in mid 2020 and near 138 in early 2023. Caption &quot;SCREENSHOT&quot;. Heading &quot;A line at an x value&quot;. Text &quot;A dashed line across the chart at a date, here the day of a release.&quot; Link &quot;Try this demo yourself&quot;. Disclosure &quot;▶ Chart spec&quot;. Card 2: a stacked bar chart titled &quot;Rows per year of upload_time by packagetype&quot;, legend &quot;bdist_wheel&quot; (blue) and &quot;sdist&quot; (orange), y-axis labelled &quot;↑ Rows&quot; with ticks 0, 100, 200, 300, 400, 500, 600 and x-axis ticks 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, with a solid red horizontal line at 500 labelled &quot;500 uploads a year&quot;; the bars for 2020, 2021 and 2023 rise above the line. Caption &quot;SCREENSHOT&quot;. Heading &quot;A line at a y value&quot;. Text &quot;A reference line at a value, drawn solid and in red.&quot; Link &quot;Try this demo yourself&quot;. Disclosure &quot;▶ Chart spec&quot;. Card 3: a blue histogram titled &quot;Distribution of latitude&quot;, y-axis labelled &quot;↑ Rows&quot; with ticks 0, 1,000, 2,000, 3,000, 4,000, 5,000, 6,000, 7,000, 8,000 and x-axis labelled &quot;latitude →&quot; with ticks −80, −60, −40, −20, 0, 20, 40, 60, with a grey shaded band from roughly −23 to 23 labelled &quot;The tropics&quot;; the tallest bar is just above 7,000 at around 40. Caption &quot;SCREENSHOT&quot;. Heading &quot;A shaded range&quot;. Text &quot;A band between two x values, on a histogram.&quot; Link &quot;Try this demo yourself&quot;. Disclosure &quot;▶ Chart spec&quot;. Card 4: a scatter plot of blue dots titled &quot;generation_gwh_2017 against capacity_mw&quot;, y-axis labelled &quot;↑ generation_gwh_2017&quot; with ticks 0, 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 35,000, 40,000 and x-axis labelled &quot;capacity_mw →&quot; with ticks 0, 1,000, 2,000, 3,000, 4,000, 5,000, showing an upward trend, with one black dot at the far right near 5,400 capacity and 31,000 generation joined by a short line to the label &quot;Gravelines, France&quot;. Caption &quot;SCREENSHOT&quot;. Heading &quot;A callout on a point&quot;. Text &quot;A dot on one data point with a line to its label. On a scatter plot the callout gives both x and y.&quot; Link &quot;Try this demo yourself&quot;. Disclosure &quot;▶ Chart spec&quot;.\" src=\"https://static.simonwillison.net/static/2026/datasette-charts-gallery.webp\" /></p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/datasette-charts\">datasette-charts</a>, <a href=\"https://simonwillison.net/tags/datasette\">datasette</a>, <a href=\"https://simonwillison.net/tags/visualization\">visualization</a>, <a href=\"https://simonwillison.net/tags/datasette-lite\">datasette-lite</a></p>\n    \n\n",
+    "description": "Release: datasette-charts 0.4a0 The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of friction points in the design. This release addresses those, which should make building additional chart plugins a whole lot more ergonomic. I've also added a website for the plugin, at charts.datasette.io.",
+    "is_fulltext": true,
+    "source": "Simon Willison's Weblog",
+    "pub_date": "2026-11-27T23:57:17+00:00",
+    "fetched_at": "2026-11-28T06:57:31.285482",
+    "url_hash": "2d81134d365adf97624f617536c48b4d",
+    "ai_enhanced": {
+      "tags": [
+        "开源项目",
+        "工具"
+      ],
+      "summary": "datasette-charts 0.4a0 发布，修复了插件钩子设计中的摩擦点，使第三方图表插件开发更顺手，并上线了配套网站与教程。",
+      "key_points": [
+        "作者用 Claude Opus 5.5 构建实验插件来测试钩子，发现多处设计摩擦点。",
+        "新版本针对这些摩擦点改进，目标是让开发额外图表插件更符合人体工学。",
+        "新增 charts.datasette.io 网站，含插件作者教程与核心图表、标注的交互式演示画廊。"
+      ],
+      "analysis": [
+        "插件钩子经过真实第三方使用验证后再迭代，体现了以开发者体验为中心的设计方法。",
+        "配套教程和 Datasette Lite 交互演示降低了新插件作者的上手门槛，有望促进生态扩展。",
+        "借助 AI 快速构建实验插件来暴露 API 设计问题，是一种值得关注的开发实践。"
+      ],
+      "analysis_source": "fulltext",
+      "analysis_input_chars": 762,
+      "analysis_truncated": false
+    }
   }
 ]
